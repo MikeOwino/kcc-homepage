@@ -1,0 +1,109 @@
+import React from 'react'
+import styled from 'styled-components'
+import UnicornTitle from './UnicornTitle'
+
+const ApplyWrap = styled.div`
+  padding-top: 200px;
+`
+
+const Content = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+`
+const ApplyListWrap = styled.div`
+  margin-top: 75px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+`
+
+const ApplyItem = styled.div<{ bg: string }>`
+  position: relative;
+  width: 520px;
+  height: 714px;
+  padding: 107px 40px 42px 40px;
+  background: url(${({ bg }) => bg}) top center no-repeat;
+  & + & {
+    margin-left: 30px;
+  }
+`
+const Title = styled.div`
+  font-family: 'SF Pro Display Bold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 57px;
+
+  color: #0b1013;
+`
+const Desc = styled.div`
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+  margin-top: 42px;
+  /* or 178% */
+  color: #0b1013;
+`
+
+const ApplyButton = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 240px;
+  height: 64px;
+  left: 40px;
+  bottom: 42px;
+  background: #0b1013;
+  font-family: 'SF Pro Display Bold';
+  font-weight: 900;
+  font-size: 24px;
+  /* identical to box height, or 133% */
+  color: #ffffff;
+  cursor: pointer;
+`
+
+const Apply = () => {
+  return (
+    <ApplyWrap>
+      <Content>
+        <UnicornTitle title="How Can I Apply for the Unicorn Contest?" />
+        <ApplyListWrap>
+          <ApplyItem bg={require('../../../assets/images/unicorn/green.png').default}>
+            <Title>For KCC’s Native Projects</Title>
+            <Desc>
+              The project needs to complete a due diligence form and the team needs to be KYC certified.KYC certified
+              before the end of event.{' '}
+            </Desc>
+            <ApplyButton>Apply Now</ApplyButton>
+          </ApplyItem>
+          <ApplyItem bg={require('../../../assets/images/unicorn/orange.png').default}>
+            <Title>For Cross-chain Projects </Title>
+            <Desc>
+              Cross-chain projects need to meet the following conditions：
+              <br /> 1. Complete a due diligence form and team members KYC before the end of event. <br />
+              2. the project needs to be live and in continuous operation for more than 1 month in other blockchains.
+              <br />
+              3. Some projects need to provide audit reports (if applicable based on protocol type)
+            </Desc>
+            <ApplyButton>Apply Now</ApplyButton>
+          </ApplyItem>
+        </ApplyListWrap>
+        <Desc style={{ color: '#fff', marginTop: '60px' }}>
+          *Reminder: Unicorn Contest data will only be calculated for projects operating on KCC during the contest
+          period.
+        </Desc>
+      </Content>
+    </ApplyWrap>
+  )
+}
+
+export default Apply

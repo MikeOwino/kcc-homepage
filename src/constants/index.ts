@@ -100,6 +100,11 @@ export const KCC = {
       logo: require('../assets/images/home/tokenview.png').default,
       route: 'https://tokenview.com/en',
     },
+    {
+      name: 'Conflux',
+      logo: require('../assets/images/home/conflux.png').default,
+      route: 'https://tokenview.com/en',
+    },
   ],
 }
 

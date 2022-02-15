@@ -4,6 +4,9 @@ import UnicornTitle from './UnicornTitle'
 
 const KCCDescWrap = styled.div`
   padding-top: 200px;
+  @media (max-width: 768px) {
+    padding-top: 65px;
+  }
 `
 
 const KCCEarthLogo = require('../../../assets/images/unicorn/kcc-earth-logo.png').default
@@ -11,6 +14,10 @@ const KCCEarthLogo = require('../../../assets/images/unicorn/kcc-earth-logo.png'
 const ContentWrap = styled.div`
   width: 100%;
   background: url(${KCCEarthLogo}) top center no-repeat;
+  @media (max-width: 768px) {
+    background: url(${KCCEarthLogo}) -200px 0px no-repeat;
+    background-size: auto 60%;
+  }
 `
 
 const Content = styled.div`
@@ -18,7 +25,9 @@ const Content = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
+  width: 100%;
   max-width: 1200px;
+  padding: 0 24px;
 `
 
 const Text = styled.div`
@@ -38,6 +47,17 @@ const TextWrap = styled.div`
   margin-top: 170px;
   max-width: 589px;
   margin-bottom: 170px;
+  @media (max-width: 768px) {
+    margin-top: 60px;
+    margin-bottom: 76px;
+  }
+`
+
+const Line = styled.div`
+  width: 24px;
+  height: 4px;
+  background: #ffffff;
+  margin-bottom: 12px;
 `
 
 const KCCDesc = () => {
@@ -47,6 +67,7 @@ const KCCDesc = () => {
       <ContentWrap>
         <Content>
           <TextWrap>
+            <Line />
             <Text>
               KuCoin Community Chain is a high-performance decentralized public chain built by the fans of KuCoin and
               KCS.

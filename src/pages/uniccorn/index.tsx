@@ -27,6 +27,10 @@ const RankWrap = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
+  @media (max-width: 768px) {
+    padding: 0 6px;
+    padding-top: 47px;
+  }
 `
 
 const RankImage = styled.img`

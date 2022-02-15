@@ -8,11 +8,20 @@ const BannerWrap = styled.div`
   width: 100%;
   height: 863px;
   background: url(${BannerBg}) 540px top no-repeat;
+  @media (max-width: 768px) {
+    height: 440px;
+    background: url(${BannerBg}) 120px top no-repeat;
+    background-size: auto 100%;
+  }
 `
 
 const TopPic = styled.img`
   width: 380px;
   height: 162px;
+  @media (max-width: 768px) {
+    width: 175px;
+    height: 74px;
+  }
 `
 
 const BannerTitle = styled.div`
@@ -23,11 +32,24 @@ const BannerTitle = styled.div`
   line-height: 95px;
   color: #ffffff;
   margin-top: 20px;
+  @media (max-width: 768px) {
+    font-family: 'SF Pro Display Bold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: #ffffff;
+    padding-left: 24px;
+    margin-top: -20px;
+  }
 `
 
 const BannerContent = styled.div`
   height: 100%;
   padding-left: 120px;
+  @media (max-width: 768px) {
+    padding-left: 0px;
+  }
 `
 
 const BannerDesc = styled.div`
@@ -40,6 +62,12 @@ const BannerDesc = styled.div`
   color: #ffffff;
   margin-top: 44px;
   max-width: 580px;
+  @media (max-width: 768px) {
+    padding-left: 24px;
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 317px;
+  }
 `
 
 const Banner = () => {

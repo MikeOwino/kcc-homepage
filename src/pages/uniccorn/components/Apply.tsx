@@ -1,9 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import UnicornTitle from './UnicornTitle'
+import { useResponsive } from '../../../utils/responsive'
+
+const applyLink = 'https://tally.so/r/3lMeXw'
 
 const ApplyWrap = styled.div`
   padding-top: 200px;
+  @media (max-width: 768px) {
+    padding-top: 124px;
+  }
 `
 
 const Content = styled.div`
@@ -21,6 +27,11 @@ const ApplyListWrap = styled.div`
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    flex-flow: column nowrap;
+    margin-top: 40px;
+    padding: 0 16px;
+  }
 `
 
 const ApplyItem = styled.div<{ bg: string }>`
@@ -31,6 +42,19 @@ const ApplyItem = styled.div<{ bg: string }>`
   background: url(${({ bg }) => bg}) top center no-repeat;
   & + & {
     margin-left: 30px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    min-height: 714px;
+    background: url(${({ bg }) => bg}) top center no-repeat;
+    background-size: 100% 100%;
+    padding: 80px 25px 180px 25px;
+    & + & {
+      margin-left: 0px;
+      margin-top: 33px;
+    }
   }
 `
 const Title = styled.div`
@@ -51,6 +75,9 @@ const Desc = styled.div`
   margin-top: 42px;
   /* or 178% */
   color: #0b1013;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `
 
 const ApplyButton = styled.div`
@@ -72,6 +99,8 @@ const ApplyButton = styled.div`
 `
 
 const Apply = () => {
+  const { isMobile } = useResponsive()
+
   return (
     <ApplyWrap>
       <Content>
@@ -83,7 +112,13 @@ const Apply = () => {
               The project needs to complete a due diligence form and the team needs to be KYC certified.KYC certified
               before the end of event.{' '}
             </Desc>
-            <ApplyButton>Apply Now</ApplyButton>
+            <ApplyButton
+              onClick={() => {
+                window.open(applyLink)
+              }}
+            >
+              Apply Now
+            </ApplyButton>
           </ApplyItem>
           <ApplyItem bg={require('../../../assets/images/unicorn/orange.png').default}>
             <Title>For Cross-chain Projects </Title>
@@ -94,10 +129,23 @@ const Apply = () => {
               <br />
               3. Some projects need to provide audit reports (if applicable based on protocol type)
             </Desc>
-            <ApplyButton>Apply Now</ApplyButton>
+            <ApplyButton
+              onClick={() => {
+                window.open(applyLink)
+              }}
+            >
+              Apply Now
+            </ApplyButton>
           </ApplyItem>
         </ApplyListWrap>
-        <Desc style={{ color: '#fff', marginTop: '60px' }}>
+        <Desc
+          style={{
+            color: '#fff',
+            marginTop: isMobile ? '30px' : '60px',
+            fontSize: isMobile ? '14px' : '18px',
+            padding: isMobile ? '0 24px' : '0px',
+          }}
+        >
           *Reminder: Unicorn Contest data will only be calculated for projects operating on KCC during the contest
           period.
         </Desc>

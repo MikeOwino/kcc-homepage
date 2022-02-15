@@ -7,6 +7,9 @@ const UnicornTitleWrap = styled.div`
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    padding: 0 24px;
+  }
 `
 
 const Title = styled.div`
@@ -19,17 +22,30 @@ const Title = styled.div`
   text-align: center;
   color: #ffffff;
   margin: 0 20px;
+  @media (max-width: 768px) {
+    font-size: 26px;
+    line-height: 31px;
+    margin: 0 8px;
+  }
 `
 
 const UnicornIcon = styled.img`
   width: 50px;
   height: 46px;
+  @media (max-width: 768px) {
+    width: 25px;
+    height: 23px;
+  }
 `
 
 const UnicornReverseIcon = styled.img`
   width: 50px;
   height: 46px;
   transform: rotateY(180deg);
+  @media (max-width: 768px) {
+    width: 25px;
+    height: 23px;
+  }
 `
 
 const UnicornTitle: FunctionComponent<{ title: string }> = ({ title }) => {

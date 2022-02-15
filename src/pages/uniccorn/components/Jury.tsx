@@ -5,6 +5,10 @@ import UnicornTitle from './UnicornTitle'
 const JuryWrap = styled.div`
   padding-top: 230px;
   padding-bottom: 100px;
+  @media (max-width: 768px) {
+    padding-top: 110px;
+    padding-bottom: 40px;
+  }
 `
 
 const Content = styled.div`
@@ -23,6 +27,11 @@ const JuryListWrap = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  @media (max-width: 768px) {
+    margin-top: 60px;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
 `
 
 const JuryItem = styled.div`
@@ -33,6 +42,11 @@ const JuryItem = styled.div`
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
+  @media (max-width: 768px) {
+    & + & {
+      margin-top: 30px;
+    }
+  }
 `
 
 const Image = styled.img`
@@ -60,6 +74,11 @@ const Desc = styled.div`
   margin-top: 42px;
   /* or 178% */
   color: #0b1013;
+  @media (max-width: 768px) {
+    margin-top: 30px;
+    padding: 0 33px;
+    font-size: 14px;
+  }
 `
 
 const juryList1 = [

@@ -4,6 +4,9 @@ import UnicornTitle from './UnicornTitle'
 
 const BenefitWrap = styled.div`
   padding-top: 210px;
+  @media (max-width: 768px) {
+    padding-top: 65px;
+  }
 `
 
 const Content = styled.div`
@@ -25,6 +28,12 @@ const Desc = styled.div`
   color: #ffffff;
   margin-top: 85px;
   max-width: 900px;
+  @media (max-width: 768px) {
+    margin-top: 32px;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 24px;
+  }
 `
 const CardList = styled.div`
   display: flex;
@@ -33,6 +42,11 @@ const CardList = styled.div`
   align-items: center;
   width: 100%;
   margin-top: 100px;
+  @media (max-width: 768px) {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    margin-top: 32px;
+  }
 `
 
 const CardItem = styled.div`
@@ -46,6 +60,11 @@ const CardItem = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    & + & {
+      margin-top: 16px;
+    }
+  }
 `
 
 const CardImage = styled.img`
@@ -87,7 +106,7 @@ const Benefit = () => {
   return (
     <BenefitWrap>
       <Content>
-        <UnicornTitle title="What are the benefits to participate? " />
+        <UnicornTitle title="What are the benefits to participate?" />
         <Desc>
           To support projects and facilitate their growth，the Unicorn Contest will offer massive rewards & incentives
           to the most-outstanding projects!

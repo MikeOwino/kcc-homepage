@@ -1,9 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import UnicornTitle from './UnicornTitle'
+import { useResponsive } from '../../../utils/responsive'
 
 const AwardWrap = styled.div`
   padding-top: 210px;
+  @media (max-width: 768px) {
+    padding-top: 110px;
+  }
 `
 
 const Content = styled.div`
@@ -25,6 +29,14 @@ const Desc = styled.div`
   color: #ffffff;
   margin-top: 85px;
   max-width: 900px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 32px;
+    padding: 0 24px;
+    margin-top: 32px;
+    text-align: left;
+    width: 90%;
+  }
 `
 const CardList = styled.div`
   display: flex;
@@ -33,6 +45,12 @@ const CardList = styled.div`
   align-items: center;
   width: 100%;
   margin-top: 100px;
+
+  @media (max-width: 768px) {
+    margin-top: 48px;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
 `
 
 const Link = styled.a`
@@ -44,6 +62,14 @@ const AwardImage = styled.img`
   height: 142px;
   & + & {
     margin-left: 40px;
+  }
+  @media (max-width: 768px) {
+    width: 90%;
+    max-width: 400px;
+    & + & {
+      margin-left: 0px;
+      margin-top: 30px;
+    }
   }
 `
 
@@ -59,6 +85,7 @@ const awardList2 = [
 ]
 
 const Award = () => {
+  const { isMobile } = useResponsive()
   return (
     <AwardWrap>
       <Content>
@@ -78,7 +105,7 @@ const Award = () => {
             return <AwardImage src={avatar} key={index} />
           })}
         </CardList>
-        <CardList style={{ marginTop: '70px' }}>
+        <CardList style={{ marginTop: isMobile ? '30px' : '70px' }}>
           {awardList2.map((avatar, index) => {
             return <AwardImage src={avatar} key={index} />
           })}

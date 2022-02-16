@@ -16,7 +16,7 @@ import Jury from './components/Jury'
 
 const UnicornPageWrap = styled.div`
   position: relative;
-  background: #0d1113;
+  background: #0b1013;
   height: auto;
   z-index: 1;
   padding-top: 80px;

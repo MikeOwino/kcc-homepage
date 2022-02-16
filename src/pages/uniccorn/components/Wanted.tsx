@@ -19,6 +19,7 @@ const WantedContent = styled.div`
   margin: 0 auto;
   padding: 25px 75px;
   background: url(${WantedBg}) top center no-repeat;
+  background-size: 100% 100%;
   // background: rgba(49, 225, 185, 0.1);
   /* border: 14px solid transparent;
   border-image-slice: 27 fill;
@@ -277,7 +278,7 @@ const TypeList = [
   {
     index: 'I',
     title: 'Infrastructure Projects',
-    list: ['Oracles', 'Frond Ends', 'Wallets', 'Block Explorers', 'Analytics'],
+    list: ['Oracles', 'Front Ends', 'Wallets', 'Block Explorers', 'Analytics'],
     icon: require('../../../assets/images/unicorn/t1.png').default,
   },
   {

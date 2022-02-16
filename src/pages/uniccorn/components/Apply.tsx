@@ -96,6 +96,10 @@ const ApplyButton = styled.div`
   /* identical to box height, or 133% */
   color: #ffffff;
   cursor: pointer;
+  @media (max-width: 768px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `
 
 const Apply = () => {

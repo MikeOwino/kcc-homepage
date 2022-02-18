@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import UnicornTitle from './UnicornTitle'
 import { useResponsive } from '../../../utils/responsive'
 
-const RoadmapWrap = styled.div``
+const RoadmapWrap = styled.div`
+  padding-top: 260px;
+`
 
 const Content = styled.div`
   width: 100%;
@@ -24,6 +26,8 @@ const Desc = styled.div`
   text-align: center;
   color: #ffffff;
   margin-top: 78px;
+  margin-bottom: 124px;
+  
   @media (max-width: 768px) {
     margin-top: 32px;
     padding: 0 24px;
@@ -42,6 +46,106 @@ const RoadmapImage = styled.img`
   }
 `
 
+const bg = require('../../../assets/images/unicorn/roadmap-bg.png').default
+
+const ListWrap = styled.div`
+  width: 775px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background: url(${bg}) center 50px no-repeat;
+`
+
+const ListItem = styled.div<{ index: number }>`
+  align-self: ${({ index }) => {
+    if (index % 2 === 0) {
+      return 'flex-start'
+    }
+    return 'flex-end'
+  }};
+  border: ${({ index }) => {
+    if (index % 2 === 0) {
+      return '2px solid #31E1B9'
+    }
+    return '2px solid #FFB547'
+  }};
+  border-radius: 8px;
+  background: #0b1013;
+  width: 320px;
+  height: 120px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left:24px;
+  &+&{
+    margin-top:28px;
+  }
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.1);
+  }
+`
+const DateText = styled.div<{index:number}>`
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+  /* identical to box height, or 160% */
+  color: ${({ index }) => {
+  if (index % 2 === 0) {
+      return '#31e1b9'
+  }
+  return '#FFB547'
+  }};
+`
+
+const DateSubText = styled.div < { index: number }>`
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 200% */
+  color: ${({ index }) => {
+    if (index % 2 === 0) {
+      return '#31e1b9'
+    }
+    return '#FFB547'
+  }};
+  max-width: 265px;
+`
+const roadmapList = [
+  {
+    date: '2022-02-28',
+    text: 'Application Stage',
+  },
+  {
+    date: '2022-03-20',
+    text: 'Technology access&deployment',
+  },
+  {
+    date: '2022-04-01',
+    text: 'Data Competition',
+  },
+  {
+    date: '2022-04-20',
+    text: 'Selection by the competition jury(Deciding on the top ten projects)',
+  },
+  {
+    date: '2022-04-23',
+    text: 'Community voting (Determine specific rankings)',
+  },
+  {
+    date: '2022-04-26',
+    text: 'Award announcement',
+  },
+]
+
 const Roadmap = () => {
   const { isMobile } = useResponsive()
   return (
@@ -56,7 +160,17 @@ const Roadmap = () => {
         {isMobile ? (
           <RoadmapImage src={require('../../../assets/images/unicorn/m-roadmap.png').default} />
         ) : (
-          <RoadmapImage src={require('../../../assets/images/unicorn/roadmap.png').default} />
+          // <RoadmapImage src={require('../../../assets/images/unicorn/roadmap.png').default} />
+          <ListWrap>
+            {roadmapList.map((road, index) => {
+              return (
+                <ListItem key={index} index={index}>
+                  <DateText index={index}>{road.date}</DateText>
+                  <DateSubText index={index}>{road.text}</DateSubText>
+                </ListItem>
+              )
+            })}
+          </ListWrap>
         )}
       </Content>
     </RoadmapWrap>

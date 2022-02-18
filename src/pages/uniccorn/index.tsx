@@ -13,6 +13,7 @@ import Benefit from './components/Benefit'
 import Award from './components/Award'
 import Apply from './components/Apply'
 import Jury from './components/Jury'
+import Rank from './components/Rank'
 
 const UnicornPageWrap = styled.div`
   position: relative;
@@ -53,13 +54,13 @@ const UnicornPage: React.FunctionComponent = () => {
       </Helmet>
       {/* banner */}
       <Banner />
-      <KCCDesc />
+      {/* <KCCDesc /> */}
       <Wanted />
-      <Roadmap />
       <Benefit />
-      <RankWrap>
+      {/* <RankWrap>
         <RankImage src={require('../../assets/images/unicorn/rank.png').default} />
-      </RankWrap>
+      </RankWrap> */}
+      <Roadmap />
       <Award />
       <Apply />
       <Jury />

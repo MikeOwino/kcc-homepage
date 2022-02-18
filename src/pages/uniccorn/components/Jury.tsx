@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FadeInUp } from '../../../utils/animation'
 import UnicornTitle from './UnicornTitle'
 
 const JuryWrap = styled.div`
@@ -98,33 +99,35 @@ const juryList2 = [
 const Jury = () => {
   return (
     <JuryWrap>
-      <Content>
-        <UnicornTitle title="KCC Unicorn Contest Jury" />
-        <Desc style={{ color: '#fff', marginTop: '60px', maxWidth: '960px', textAlign: 'center' }}>
-          KCC GODAO has invited top industry players to form the Unicorn Contest jury to enable a more comprehensive and
-          objective evaluation of all entries
-        </Desc>
-        <JuryListWrap>
-          {juryList1.map((jury, index) => {
-            return (
-              <JuryItem key={index}>
-                <Image src={jury.logo} />
-                <JuryName>{jury.name}</JuryName>
-              </JuryItem>
-            )
-          })}
-        </JuryListWrap>
-        <JuryListWrap style={{ marginTop: '40px' }}>
-          {juryList2.map((jury, index) => {
-            return (
-              <JuryItem key={index}>
-                <Image src={jury.logo} />
-                <JuryName>{jury.name}</JuryName>
-              </JuryItem>
-            )
-          })}
-        </JuryListWrap>
-      </Content>
+      <FadeInUp delay={200}>
+        <Content>
+          <UnicornTitle title="KCC Unicorn Contest Jury" />
+          <Desc style={{ color: '#fff', marginTop: '60px', maxWidth: '960px', textAlign: 'center' }}>
+            KCC GODAO has invited top industry players to form the Unicorn Contest jury to enable a more comprehensive
+            and objective evaluation of all entries
+          </Desc>
+          <JuryListWrap>
+            {juryList1.map((jury, index) => {
+              return (
+                <JuryItem key={index}>
+                  <Image src={jury.logo} />
+                  <JuryName>{jury.name}</JuryName>
+                </JuryItem>
+              )
+            })}
+          </JuryListWrap>
+          <JuryListWrap style={{ marginTop: '40px' }}>
+            {juryList2.map((jury, index) => {
+              return (
+                <JuryItem key={index}>
+                  <Image src={jury.logo} />
+                  <JuryName>{jury.name}</JuryName>
+                </JuryItem>
+              )
+            })}
+          </JuryListWrap>
+        </Content>
+      </FadeInUp>
     </JuryWrap>
   )
 }

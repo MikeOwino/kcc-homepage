@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import UnicornTitle from './UnicornTitle'
+import { FadeInUp } from '../../../utils/animation';
 
 const BenefitWrap = styled.div`
-  padding-top: 210px;
+  padding-top: 230px;
   @media (max-width: 768px) {
     padding-top: 65px;
   }
@@ -26,7 +27,7 @@ const Desc = styled.div`
   line-height: 32px;
   text-align: center;
   color: #ffffff;
-  margin-top: 85px;
+  margin-top: 80px;
   max-width: 900px;
   @media (max-width: 768px) {
     margin-top: 32px;
@@ -60,6 +61,11 @@ const CardItem = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    position: relative;
+    transform: translateY(-20px);
+  }
   @media (max-width: 768px) {
     & + & {
       margin-top: 16px;
@@ -74,7 +80,7 @@ const CardImage = styled.img`
 `
 
 const CardDesc = styled.div`
-  width: 220px;
+  width: 100%;
   font-family: 'SF Pro Text';
   font-style: normal;
   font-weight: normal;
@@ -85,6 +91,7 @@ const CardDesc = styled.div`
   text-align: center;
   color: #ffffff;
   height: 280px;
+  padding: 0 20px;
 `
 
 const cardList = [
@@ -105,6 +112,7 @@ const cardList = [
 const Benefit = () => {
   return (
     <BenefitWrap>
+      <FadeInUp>
       <Content>
         <UnicornTitle title="What are the benefits to participate?" />
         <Desc>
@@ -122,7 +130,8 @@ const Benefit = () => {
             )
           })}
         </CardList>
-      </Content>
+        </Content>
+        </FadeInUp>
     </BenefitWrap>
   )
 }

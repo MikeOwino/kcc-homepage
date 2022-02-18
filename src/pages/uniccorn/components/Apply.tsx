@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import UnicornTitle from './UnicornTitle'
 import { useResponsive } from '../../../utils/responsive'
+import { FadeInUp } from '../../../utils/animation'
 
 const applyLink = 'https://tally.so/r/3lMeXw'
 
@@ -40,6 +41,12 @@ const ApplyItem = styled.div<{ bg: string }>`
   height: 714px;
   padding: 107px 40px 42px 40px;
   background: url(${({ bg }) => bg}) top center no-repeat;
+  transition: all 0.3s ease-in-out;
+  
+  &:hover{
+    transform: translateY(-20px);
+  }
+
   & + & {
     margin-left: 30px;
   }
@@ -107,53 +114,55 @@ const Apply = () => {
 
   return (
     <ApplyWrap>
-      <Content>
-        <UnicornTitle title="How Can I Apply for the Unicorn Contest?" />
-        <ApplyListWrap>
-          <ApplyItem bg={require('../../../assets/images/unicorn/green.png').default}>
-            <Title>For KCC’s Native Projects</Title>
-            <Desc>
-              The project needs to complete a due diligence form and the team needs to be KYC certified.KYC certified
-              before the end of event.{' '}
-            </Desc>
-            <ApplyButton
-              onClick={() => {
-                window.open(applyLink)
-              }}
-            >
-              Apply Now
-            </ApplyButton>
-          </ApplyItem>
-          <ApplyItem bg={require('../../../assets/images/unicorn/orange.png').default}>
-            <Title>For Cross-chain Projects </Title>
-            <Desc>
-              Cross-chain projects need to meet the following conditions：
-              <br /> 1. Complete a due diligence form and team members KYC before the end of event. <br />
-              2. the project needs to be live and in continuous operation for more than 1 month in other blockchains.
-              <br />
-              3. Some projects need to provide audit reports (if applicable based on protocol type)
-            </Desc>
-            <ApplyButton
-              onClick={() => {
-                window.open(applyLink)
-              }}
-            >
-              Apply Now
-            </ApplyButton>
-          </ApplyItem>
-        </ApplyListWrap>
-        <Desc
-          style={{
-            color: '#fff',
-            marginTop: isMobile ? '30px' : '60px',
-            fontSize: isMobile ? '14px' : '18px',
-            padding: isMobile ? '0 24px' : '0px',
-          }}
-        >
-          *Reminder: Unicorn Contest data will only be calculated for projects operating on KCC during the contest
-          period.
-        </Desc>
-      </Content>
+      <FadeInUp delay={200}>
+        <Content>
+          <UnicornTitle title="How Can I Apply for the Unicorn Contest?" />
+          <ApplyListWrap>
+            <ApplyItem bg={require('../../../assets/images/unicorn/green.png').default}>
+              <Title>For KCC’s Native Projects</Title>
+              <Desc>
+                The project needs to complete a due diligence form and the team needs to be KYC certified.KYC certified
+                before the end of event.{' '}
+              </Desc>
+              <ApplyButton
+                onClick={() => {
+                  window.open(applyLink)
+                }}
+              >
+                Apply Now
+              </ApplyButton>
+            </ApplyItem>
+            <ApplyItem bg={require('../../../assets/images/unicorn/orange.png').default}>
+              <Title>For Cross-chain Projects </Title>
+              <Desc>
+                Cross-chain projects need to meet the following conditions：
+                <br /> 1. Complete a due diligence form and team members KYC before the end of event. <br />
+                2. the project needs to be live and in continuous operation for more than 1 month in other blockchains.
+                <br />
+                3. Some projects need to provide audit reports (if applicable based on protocol type)
+              </Desc>
+              <ApplyButton
+                onClick={() => {
+                  window.open(applyLink)
+                }}
+              >
+                Apply Now
+              </ApplyButton>
+            </ApplyItem>
+          </ApplyListWrap>
+          <Desc
+            style={{
+              color: '#fff',
+              marginTop: isMobile ? '30px' : '60px',
+              fontSize: isMobile ? '14px' : '18px',
+              padding: isMobile ? '0 24px' : '0px',
+            }}
+          >
+            *Reminder: Unicorn Contest data will only be calculated for projects operating on KCC during the contest
+            period.
+          </Desc>
+        </Content>
+      </FadeInUp>
     </ApplyWrap>
   )
 }

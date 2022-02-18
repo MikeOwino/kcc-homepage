@@ -16,7 +16,7 @@ const RankWrap = styled.div`
 
 const RankContent = styled.div`
   width: 100%;
-  height: 620px;
+  height: 750px;
   margin: 0 auto;
   // background: rgba(49, 225, 185, 0.1);
   /* border: 14px solid transparent;
@@ -102,14 +102,29 @@ const Image = styled.img`
   margin-top:50px;
 `
 
+const Text = styled.div`
+  font-family: 'SF Pro Display Bold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+  /* or 136% */
+  text-align: center;
+  color: #ebdaa9;
+  max-width: 140px;
+  height: 100px;
+  margin-top:20px;
+`
+
 const awardList = [
   {
     award: '$50,000',
-    rank: '4th',
-    icon: require('../../../assets/images/unicorn/gray.png').default,
-    color: '#9C9D9D',
-    bg: require('../../../assets/images/unicorn/4-bg.png').default,
+    rank: '',
+    icon: require('../../../assets/images/unicorn/gray-avatar.png').default,
+    color: '#EBDAA9',
+    bg: require('../../../assets/images/unicorn/gray1.png').default,
     height: '200px',
+    name: 'Gold Unicorn',
   },
   {
     award: '$200,000',
@@ -118,14 +133,16 @@ const awardList = [
     color: '#A853E4',
     bg: require('../../../assets/images/unicorn/2-bg.png').default,
     height: '278px',
+    name: 'Epic Unicorn',
   },
   {
     award: '$300,000',
     rank: '1st',
-    icon: require('../../../assets/images/unicorn/gray.png').default,
+    icon: require('../../../assets/images/unicorn/gold.png').default,
     color: '#F18449',
     bg: require('../../../assets/images/unicorn/1-bg.png').default,
     height: '353px',
+    name: 'Legendary Unicorn',
   },
   {
     award: '$100,000',
@@ -134,14 +151,16 @@ const awardList = [
     color: '#3FC1F1',
     bg: require('../../../assets/images/unicorn/3-bg.png').default,
     height: '233px',
+    name: 'Diamond Unicorn',
   },
   {
     award: '$50,000',
-    rank: '5th',
-    icon: require('../../../assets/images/unicorn/gray.png').default,
-    color: '#9C9D9D',
-    bg: require('../../../assets/images/unicorn/5th-bg.png').default,
+    rank: '',
+    icon: require('../../../assets/images/unicorn/gray-avatar.png').default,
+    color: '#EBDAA9',
+    bg: require('../../../assets/images/unicorn/gray2.png').default,
     height: '173px',
+    name: 'Gold Unicorn',
   },
 ]
 
@@ -164,6 +183,7 @@ const Rank = () => {
                 <AwardBg height={award.height} bg={award.bg}>
                   {award.rank}
                 </AwardBg>
+                <Text style={{color:award.color}}>{ award.name}</Text>
               </RankItem>
             )
           })}

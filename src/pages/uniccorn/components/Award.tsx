@@ -58,17 +58,63 @@ const Link = styled.a`
   color: #00c77f;
 `
 
+
+const AwardText = styled.div`
+  width: 100%;
+  height: 142px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #ffb547;
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform: rotateY(180deg);
+  border-radius: 8px;
+  font-family: 'SF Pro Display Bold';
+
+  padding:0 40px;
+`
+
 const AwardImage = styled.img`
   width: 372px;
   height: 142px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  @media (max-width: 768px) {
+    width: 80%;
+    height: auto;
+    max-width: 400px;
+    & + & {
+      margin-left: 0px;
+      margin-top: 30px;
+    }
+  }
+`
+
+const AwardImageWrap = styled.div`
+  overflow: hidden;
   & + & {
     margin-left: 40px;
   }
+  width: 372px;
+  height: 142px;
   cursor: pointer;
+  transform-style: preserve-3d;
+  perspective: 1000;
 
   &:hover {
-    transition: all 0.3s ease-in-out;
-    transform: scale(1.1);
+    ${AwardImage} {
+      z-index: 1;
+      transform-origin: 0px 0px;
+      transform: rotateX(180deg);
+    }
+    ${AwardText} {
+      z-index: 2;
+      transform: translateY(-100%) rotateY(0deg);
+    }
   }
   @media (max-width: 768px) {
     width: 80%;
@@ -81,15 +127,30 @@ const AwardImage = styled.img`
   }
 `
 
-const awardList1 = [
-  require('../../../assets/images/unicorn/award1.png').default,
-  require('../../../assets/images/unicorn/award2.png').default,
-  require('../../../assets/images/unicorn/award3.png').default,
+const awardList1 = [{
+  src:
+    require('../../../assets/images/unicorn/award1.png').default,
+  text:'Most Innovative Technology',
+}, {
+    src:
+      require('../../../assets/images/unicorn/award2.png').default,
+    text: 'Most Popular Community Award',
+  }, {
+    src:
+    require('../../../assets/images/unicorn/award3.png').default,
+    text:'Best Wallet Experience Award'
+  }
 ]
 
 const awardList2 = [
-  require('../../../assets/images/unicorn/award4.png').default,
-  require('../../../assets/images/unicorn/award5.png').default,
+  {
+    src: require('../../../assets/images/unicorn/award4.png').default,
+    text: 'Most Promising Development Award',
+  },
+  {
+    src: require('../../../assets/images/unicorn/award5.png').default,
+    text:'Best Social Contribution Award'
+  },
 ]
 
 const Award = () => {
@@ -104,19 +165,24 @@ const Award = () => {
             in evaluating all the projects. The applicant projects will have the opportunity to win independent awards
             and receive support from the KCC GoDAO and respecitve award sponsors.
           </Desc>
-          <Desc style={{ marginTop: '42px' }}>
-            KCC community will have voting power on ranking Top 5 projects for the Unicorn Grand Prize. This will take
-            place at <Link href="https://snapshot.org/#/kcc.eth">https://snapshot.org/#/kcc.eth</Link>.
-          </Desc>
+      
 
           <CardList>
             {awardList1.map((avatar, index) => {
-              return <AwardImage src={avatar} key={index} />
+              return (
+                <AwardImageWrap key={index}>
+                  <AwardImage src={avatar.src} key={index} />
+                  <AwardText>{ avatar.text}</AwardText>
+                </AwardImageWrap>
+              )
             })}
           </CardList>
           <CardList style={{ marginTop: isMobile ? '30px' : '70px' }}>
             {awardList2.map((avatar, index) => {
-              return <AwardImage src={avatar} key={index} />
+               return(<AwardImageWrap key={index}>
+                 <AwardImage src={avatar.src} key={index} />
+                 <AwardText>{ avatar.text}</AwardText>
+               </AwardImageWrap>)
             })}
           </CardList>
           <Desc style={{ maxWidth: '100%' }}>

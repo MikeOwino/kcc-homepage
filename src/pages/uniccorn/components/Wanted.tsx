@@ -256,7 +256,7 @@ const DollarImage = styled.img`
   width: 1038px;
   width: 100%;
   height: auto;
-  margin-top: 144px;
+  margin-top: 94px;
   margin-bottom: 80px;
   @media (max-width: 768px) {
     width: 100%;
@@ -273,6 +273,29 @@ const ContentImageWrap = styled.div`
 const ContentImage = styled.img`
   width:100%;
   height: auto;
+`
+
+const Desc = styled.div`
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 85px;
+  max-width: 900px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 32px;
+    padding: 0px;
+    margin-top: 32px;
+    text-align: left;
+    width: 100%;
+  }
+`
+const Link = styled.a`
+  color: #00c77f;
 `
 
 const TypeList = [
@@ -362,7 +385,7 @@ const Wanted = () => {
             Consistent with the vision of KCC, in Unicorn Contest, we welcome many types of projects such as DeFi, NFT,
             GameFi, SocailFi, Metaverse, Web3, etc.{' '}
           </Text>
-          <YellowText style={{ marginTop: isMobile ? '20px' : '45px',fontSize:isMobile?'16px':'34px' }}>
+          <YellowText style={{ marginTop: isMobile ? '20px' : '45px', fontSize: isMobile ? '16px' : '34px' }}>
             The KEY categories that we focus on in Unicorn Competition:
           </YellowText>
           {isMobile ? (
@@ -378,6 +401,13 @@ const Wanted = () => {
           )}
 
           {isMobile && <Rank />}
+          {isMobile && (
+            <Desc style={{ marginTop: '20px' }}>
+              KCC community will have voting power on ranking Top 5 projects for the Unicorn Grand Prize. This will take
+              place at <Link href="https://snapshot.org/#/kcc.eth">https://snapshot.org/#/kcc.eth</Link>.
+            </Desc>
+          )}
+
           <YellowText style={{ marginTop: isMobile ? '45px' : '64px', textAlign: 'left', width: '100%' }}>
             The Purpose
           </YellowText>
@@ -393,6 +423,12 @@ const Wanted = () => {
           </Text>
 
           {!isMobile && <Rank />}
+          {!isMobile && (
+            <Desc style={{ marginTop: '67px' }}>
+              KCC community will have voting power on ranking Top 5 projects for the Unicorn Grand Prize. This will take
+              place at <Link href="https://snapshot.org/#/kcc.eth">https://snapshot.org/#/kcc.eth</Link>.
+            </Desc>
+          )}
           <DollarImage
             src={
               isMobile

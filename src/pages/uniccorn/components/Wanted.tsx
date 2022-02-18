@@ -191,11 +191,11 @@ const YellowDot = styled.div`
 const TypeIcon = styled.img`
   position: relative;
   width: 180px;
-  height: 180px;
+  height: auto;
   @media (max-width: 768px) {
     top:0;
     width: 80px;
-    height: 80px;
+    height:auto;
   }
 `
 
@@ -324,7 +324,7 @@ const TypeCard: React.FunctionComponent<{ type: TypeItem; index: number }> = ({ 
       <TypeIcon src={type.icon} />
 
         <LeftBox style={{ textAlign: 'left', paddingLeft: isMobile ? '0px' : '32px' }}>
-          <TypeTitle style={{ marginTop: isMobile ? '35px' : '67px', textAlign: 'left' }}>{type.title}</TypeTitle>
+          <TypeTitle style={{ marginTop: isMobile ? '20px' : '67px', textAlign: 'left' }}>{type.title}</TypeTitle>
           <>
             {type.list.map((typeName, index) => {
               return (
@@ -362,7 +362,7 @@ const Wanted = () => {
             Consistent with the vision of KCC, in Unicorn Contest, we welcome many types of projects such as DeFi, NFT,
             GameFi, SocailFi, Metaverse, Web3, etc.{' '}
           </Text>
-          <YellowText style={{ marginTop: isMobile ? '20px' : '45px' }}>
+          <YellowText style={{ marginTop: isMobile ? '20px' : '45px',fontSize:isMobile?'16px':'34px' }}>
             The KEY categories that we focus on in Unicorn Competition:
           </YellowText>
           {isMobile ? (

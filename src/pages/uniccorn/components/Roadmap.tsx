@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import UnicornTitle from './UnicornTitle'
 import { useResponsive } from '../../../utils/responsive'
+import { FadeInUp } from '../../../utils/animation'
 
 const RoadmapWrap = styled.div`
   padding-top: 260px;
@@ -153,6 +154,7 @@ const Roadmap = () => {
   const { isMobile } = useResponsive()
   return (
     <RoadmapWrap>
+      <FadeInUp delay={200}>
       <Content>
         <UnicornTitle title="Roadmap" />
         <Desc>
@@ -175,7 +177,8 @@ const Roadmap = () => {
             })}
           </ListWrap>
         )}
-      </Content>
+        </Content>
+        </FadeInUp>
     </RoadmapWrap>
   )
 }

@@ -71,7 +71,8 @@ const AwardImage = styled.img`
     transform: scale(1.1);
   }
   @media (max-width: 768px) {
-    width: 90%;
+    width: 80%;
+    height: auto;
     max-width: 400px;
     & + & {
       margin-left: 0px;

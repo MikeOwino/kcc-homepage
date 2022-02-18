@@ -7,9 +7,10 @@ import { FadeInUp } from '../../../utils/animation'
 const RankWrap = styled.div`
   width: 100%;
   padding-top: 20px;
-  margin:0 auto;
+  margin: 0 auto;
   @media (max-width: 768px) {
-    padding-bottom: 54px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 `
 
@@ -29,6 +30,7 @@ const RankContent = styled.div`
   position: relative;
   @media (max-width: 768px) {
     padding: 0px 10px;
+    height: auto;
   }
 `
 
@@ -77,6 +79,7 @@ const RankItem = styled.div`
   align-items: center;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+
   &:hover {
     ${AwardAvatar} {
       position: relative;
@@ -88,6 +91,15 @@ const RankItem = styled.div`
       transform:  rotateY(360deg);
     }
   }
+  @media (max-width:768px){
+    width:20%;
+  }
+`
+
+const Image = styled.img`
+  width:100%;
+  height: auto;
+  margin-top:50px;
 `
 
 const awardList = [
@@ -137,8 +149,12 @@ const Rank = () => {
   const { isMobile } = useResponsive()
 
   return (
+
     <RankWrap>
-      <FadeInUp>
+      {isMobile ? (
+        <Image src={ require('../../../assets/images/unicorn/m-rank.png').default}/>
+      ): (
+         <FadeInUp>
         <RankContent>
           {awardList.map((award, index) => {
             return (
@@ -153,6 +169,8 @@ const Rank = () => {
           })}
         </RankContent>
       </FadeInUp>
+      )}
+     
     </RankWrap>
   )
 }

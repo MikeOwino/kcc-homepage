@@ -10,6 +10,7 @@ const WantedWrap = styled.div`
   padding-top: 185px;
   @media (max-width: 768px) {
     padding-bottom: 54px;
+    padding-top: 76px;
   }
 `
 
@@ -108,10 +109,11 @@ const YellowText = styled.div`
   letter-spacing: 2.7px;
   color: #ffb547;
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 24px;
     line-height: 19px;
     color: #ffb547;
     text-align: center;
+    letter-spacing: 0px;
   }
 `
 
@@ -121,25 +123,14 @@ const TypeCardWrap = styled.div<{ index: number }>`
   display: inline-block;
   position: absolute;
   border: 2px solid #31e1b9;
-
-  left: ${({ index }) => {
-    return `${index * 484}px`
-  }};
-
-  & + & {
-    margin-left: 44px;
-  }
-
   @media (max-width: 768px) {
-    border: 1px solid #31e1b9;
-    width: 234px;
-    height: 319px;
-    left: ${({ index }) => {
-      return `${index * 242}px`
-    }};
-
+    position: relative;
+    border: 1px dashed #31e1b9;
+    width: 100%;
+    height: auto;
+    padding:30px 22px;
     & + & {
-      margin-left: 8px;
+      margin-top: 54px;
     }
   }
 `
@@ -161,18 +152,18 @@ const TypeIndex = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 32px;
+  right: 32px;
   top: -54px;
   background: #0f2524;
   @media (max-width: 768px) {
     font-size: 42px;
     line-height: 54px;
-    background: #102e29;
+    background: #13312b;
     width: 63px;
     height: 56px;
     z-index: 99;
-    left: 17px;
-    top: -28px;
+    right: 32px;
+    top: -30px;
   }
 `
 
@@ -181,14 +172,12 @@ const TypeTitle = styled.div`
   font-style: normal;
   font-weight: bold;
   font-size: 52px;
-  line-height: 62px;
   color: #ffb547;
   text-align: center;
-  height: 124px;
+  height: auto;
   @media (max-width: 768px) {
     font-size: 27px;
     line-height: 33px;
-    height: 65px;
   }
 `
 
@@ -200,16 +189,13 @@ const YellowDot = styled.div`
 `
 
 const TypeIcon = styled.img`
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
+  position: relative;
   width: 180px;
   height: 180px;
   @media (max-width: 768px) {
-    width: 95px;
-    height: 95px;
-    right: 10px;
-    bottom: 10px;
+    top:0;
+    width: 80px;
+    height: 80px;
   }
 `
 
@@ -237,8 +223,7 @@ const TypeListWrap = styled.div`
   position: relative;
   padding-top: 100px;
   width: 1080px;
-  overflow: scroll;
-  height: 800px;
+  height: auto;
   ::-webkit-scrollbar {
     opacity: 0;
   }
@@ -250,9 +235,13 @@ const TypeListWrap = styled.div`
   }
 
   @media (max-width: 768px) {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
     padding-top: 38px;
     width: 100%;
-    height: 380px;
+    height: auto;
   }
 `
 
@@ -332,8 +321,9 @@ const TypeCard: React.FunctionComponent<{ type: TypeItem; index: number }> = ({ 
   return (
     <TypeCardWrap index={index}>
       <TypeIndex>{type.index}</TypeIndex>
-      {type.list.length ? (
-        <LeftBox style={{ textAlign: 'left', paddingLeft: isMobile ? '16px' : '32px' }}>
+      <TypeIcon src={type.icon} />
+
+        <LeftBox style={{ textAlign: 'left', paddingLeft: isMobile ? '0px' : '32px' }}>
           <TypeTitle style={{ marginTop: isMobile ? '35px' : '67px', textAlign: 'left' }}>{type.title}</TypeTitle>
           <>
             {type.list.map((typeName, index) => {
@@ -346,12 +336,6 @@ const TypeCard: React.FunctionComponent<{ type: TypeItem; index: number }> = ({ 
             })}
           </>
         </LeftBox>
-      ) : (
-        <TypeCenterBox>
-          <TypeTitle style={{ marginTop: index === 3 ? '-40px' : '0px' }}>{type.title}</TypeTitle>
-        </TypeCenterBox>
-      )}
-      <TypeIcon src={type.icon} />
     </TypeCardWrap>
   )
 }
@@ -378,7 +362,7 @@ const Wanted = () => {
             Consistent with the vision of KCC, in Unicorn Contest, we welcome many types of projects such as DeFi, NFT,
             GameFi, SocailFi, Metaverse, Web3, etc.{' '}
           </Text>
-          <YellowText style={{ marginTop: isMobile ? '26px' : '45px' }}>
+          <YellowText style={{ marginTop: isMobile ? '20px' : '45px' }}>
             The KEY categories that we focus on in Unicorn Competition:
           </YellowText>
           {isMobile ? (
@@ -393,7 +377,8 @@ const Wanted = () => {
             </ContentImageWrap>
           )}
 
-          <YellowText style={{ marginTop: isMobile ? '10px' : '64px', textAlign: 'left', width: '100%' }}>
+          {isMobile && <Rank />}
+          <YellowText style={{ marginTop: isMobile ? '45px' : '64px', textAlign: 'left', width: '100%' }}>
             The Purpose
           </YellowText>
           <Text style={{ marginTop: isMobile ? '12px' : '30px' }}>
@@ -406,11 +391,12 @@ const Wanted = () => {
             SocailFi, Metaverse, Web3. Unicorn Contest provides a platform for projects to create new and exciting
             innovations, gain more support and attract the world's attention.
           </Text>
-          <Rank />
+
+          {!isMobile && <Rank />}
           <DollarImage
             src={
               isMobile
-                ? require('../../../assets/images/unicorn/m-reward.png').default
+                ? require('../../../assets/images/unicorn/m-dollar.png').default
                 : require('../../../assets/images/unicorn/dollar.png').default
             }
           />

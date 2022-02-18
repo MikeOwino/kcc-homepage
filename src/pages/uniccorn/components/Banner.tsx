@@ -14,23 +14,31 @@ const bnAnimation = keyframes`
      background: url(${BannerBg}) 540px top no-repeat;
   }
 `
+const bnH5Animation = keyframes`
+  0%{
+    background: url(${BannerBg}) 600px top no-repeat;
+  }
+  100%{
+     background: url(${BannerBg}) 120px top no-repeat;
+  }
+`
 
 const BannerWrap = styled.div<{ show: boolean }>`
   width: 100%;
   height: 863px;
 
-
   ${({ show }) =>
-    show && css`
-          background: url(${BannerBg}) 540px top no-repeat;
-        `
-  };
+    show &&
+    css`
+      background: url(${BannerBg}) 540px top no-repeat;
+    `};
 
   animation: ${bnAnimation} 1s ease-in-out 0.1s;
   @media (max-width: 768px) {
     height: 440px;
     background: url(${BannerBg}) 120px top no-repeat;
     background-size: auto 100%;
+    animation: none;
   }
 `
 

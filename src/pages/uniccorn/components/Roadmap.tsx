@@ -5,6 +5,9 @@ import { useResponsive } from '../../../utils/responsive'
 
 const RoadmapWrap = styled.div`
   padding-top: 260px;
+  @media (max-width:768px){
+    padding-top:100px;
+  }
 `
 
 const Content = styled.div`
@@ -27,12 +30,13 @@ const Desc = styled.div`
   color: #ffffff;
   margin-top: 78px;
   margin-bottom: 124px;
-  
+
   @media (max-width: 768px) {
     margin-top: 32px;
     padding: 0 24px;
     font-size: 14px;
     line-height: 28px;
+    margin-bottom: 60px;
   }
 `
 const RoadmapImage = styled.img`
@@ -41,7 +45,7 @@ const RoadmapImage = styled.img`
   height: auto;
   @media (max-width: 768px) {
     width: 86%;
-    margin-top: 50px;
+    margin-top: 0px;
     max-width: 400px;
   }
 `
@@ -84,7 +88,6 @@ const ListItem = styled.div<{ index: number }>`
     margin-top:28px;
   }
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
   &:hover{
     transform: scale(1.1);
   }

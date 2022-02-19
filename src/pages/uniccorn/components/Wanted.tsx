@@ -290,7 +290,7 @@ const Desc = styled.div`
     line-height: 32px;
     padding: 0px;
     margin-top: 32px;
-    text-align: left;
+    text-align: center;
     width: 100%;
   }
 `

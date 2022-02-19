@@ -74,8 +74,12 @@ const AwardText = styled.div`
   transform: rotateY(180deg);
   border-radius: 8px;
   font-family: 'SF Pro Display Bold';
-
-  padding:0 40px;
+  padding: 0 40px;
+  @media (max-width: 768px) {
+    padding: 0 40px;
+    font-size: 20px;
+    line-height: 24px;
+  }
 `
 
 const AwardImage = styled.img`
@@ -84,7 +88,7 @@ const AwardImage = styled.img`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   @media (max-width: 768px) {
-    width: 80%;
+    width: 100%;
     height: auto;
     max-width: 400px;
     & + & {
@@ -117,9 +121,8 @@ const AwardImageWrap = styled.div`
     }
   }
   @media (max-width: 768px) {
-    width: 80%;
-    height: auto;
-    max-width: 400px;
+    width: 323px;
+    height: 123px;
     & + & {
       margin-left: 0px;
       margin-top: 30px;

@@ -171,7 +171,7 @@ const Rank = () => {
 
     <RankWrap>
       {isMobile ? (
-        <Image src={ require('../../../assets/images/unicorn/m-rank.png').default}/>
+        <Image src={ require('../../../assets/images/unicorn/m-ranking.png').default}/>
       ): (
          <FadeInUp>
         <RankContent>

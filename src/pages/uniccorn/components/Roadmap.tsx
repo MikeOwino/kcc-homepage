@@ -52,6 +52,7 @@ const RoadmapImage = styled.img`
 `
 
 const bg = require('../../../assets/images/unicorn/roadmap-bg.png').default
+const mbg = require('../../../assets/images/unicorn/m-roadmap-bg.png').default
 
 const ListWrap = styled.div`
   width: 775px;
@@ -61,6 +62,12 @@ const ListWrap = styled.div`
   justify-content: flex-start;
   align-items: center;
   background: url(${bg}) center 50px no-repeat;
+  @media (max-width: 768px) {
+    background: url(${mbg}) left 50px no-repeat;
+    width: 100%;
+    max-width: 300px;
+
+  }
 `
 
 const ListItem = styled.div<{ index: number }>`
@@ -84,16 +91,26 @@ const ListItem = styled.div<{ index: number }>`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
-  padding-left:24px;
-  &+&{
-    margin-top:28px;
+  padding-left: 24px;
+  & + & {
+    margin-top: 28px;
   }
   transition: all 0.3s ease-in-out;
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
+  @media (max-width: 768px) {
+    width: 240px;
+    height: auto;
+    min-height: 106px;
+    padding: 20px;
+    align-self: flex-end;
+    & + & {
+      margin-top: 20px;
+    }
+  }
 `
-const DateText = styled.div<{index:number}>`
+const DateText = styled.div<{ index: number }>`
   font-family: 'SF Pro Display';
   font-style: normal;
   font-weight: bold;
@@ -101,14 +118,17 @@ const DateText = styled.div<{index:number}>`
   line-height: 32px;
   /* identical to box height, or 160% */
   color: ${({ index }) => {
-  if (index % 2 === 0) {
+    if (index % 2 === 0) {
       return '#31e1b9'
-  }
-  return '#FFB547'
+    }
+    return '#FFB547'
   }};
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `
 
-const DateSubText = styled.div < { index: number }>`
+const DateSubText = styled.div<{ index: number }>`
   font-family: 'SF Pro Text';
   font-style: normal;
   font-weight: normal;
@@ -122,31 +142,34 @@ const DateSubText = styled.div < { index: number }>`
     return '#FFB547'
   }};
   max-width: 265px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `
 const roadmapList = [
   {
-    date: '2022-02-28',
-    text: 'Application Stage',
+    date: 'Feb 23 - March 7',
+    text: 'Warm-up & Marketing',
   },
   {
-    date: '2022-03-20',
-    text: 'Technology access&deployment',
+    date: 'March 7 -April 9',
+    text: 'Submission and Technical Integration',
   },
   {
-    date: '2022-04-01',
+    date: 'April 11 - April 30',
     text: 'Data Competition',
   },
   {
-    date: '2022-04-20',
-    text: 'Selection by the competition jury(Deciding on the top ten projects)',
+    date: 'May 05 - May 09',
+    text: 'Overall Top 10 and some individual award & prize-winning projects announced',
   },
   {
-    date: '2022-04-23',
-    text: 'Community voting (Determine specific rankings)',
+    date: 'May 10 - May 12',
+    text: 'Community voting for Final Top 5 ranked projects on snapshot.eth',
   },
   {
-    date: '2022-04-26',
-    text: 'Award announcement',
+    date: 'May 13',
+    text: 'Grant Prize Winning Projects Announced',
   },
 ]
 
@@ -162,10 +185,7 @@ const Roadmap = () => {
           most-outstanding projects at the end of the contest. Winners will get awarded and rewarded by KCC along with
           other sponsors of the event. To be more specific, please follow the roadmap as a reference:
         </Desc>
-        {isMobile ? (
-          <RoadmapImage src={require('../../../assets/images/unicorn/m-roadmap.png').default} />
-        ) : (
-          // <RoadmapImage src={require('../../../assets/images/unicorn/roadmap.png').default} />
+
           <ListWrap>
             {roadmapList.map((road, index) => {
               return (
@@ -176,7 +196,7 @@ const Roadmap = () => {
               )
             })}
           </ListWrap>
-        )}
+
         </Content>
         </FadeInUp>
     </RoadmapWrap>

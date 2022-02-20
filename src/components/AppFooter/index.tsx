@@ -14,6 +14,8 @@ import { KCC } from '../../constants'
 export interface AppFooterProps {}
 
 const AppFooterWrap = styled.div`
+  position: relative;
+  z-index: 99;
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;

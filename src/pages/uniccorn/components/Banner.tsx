@@ -31,7 +31,7 @@ const BannerWrap = styled.div<{ show: boolean }>`
   ${({ show }) =>
     show &&
     css`
-      background: url(${BannerBg}) 540px top no-repeat,#000;
+      background: url(${BannerBg}) 540px top no-repeat,rgb(11,16,19);
     `};
 
   animation: ${bnAnimation} 1s ease-in-out 0.1s;

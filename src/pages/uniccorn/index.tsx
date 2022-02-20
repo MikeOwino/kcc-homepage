@@ -67,7 +67,7 @@ const settings = {
   starColor: { r: 255, g: 255, b: 255 },/*stars color*/
   starColorRangeMin: 10,/*stars color range min of starBgColor*/
   starColorRangeMax: 100,/*stars color range max of starBgColor*/
-  starfieldBackgroundColor: { r: 0, g: 0, b: 0 },/*background color*/
+  starfieldBackgroundColor: { r: 11, g: 16, b: 19 },/*background color*/
   starDirection: 1,/*stars moving in which direction*/
   starSpeed: 20,/*stars moving speed*/
   starSpeedMax: 200,/*stars moving speed max*/

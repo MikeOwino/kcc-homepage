@@ -59,7 +59,7 @@ const settings = {
   addMouseControls: false,/*enable/disable mouse controls*/
   addTouchControls: true,/*enable/disable touch controls*/
   hideContextMenu: true,/*enable/disable canvas context menu*/
-  starCount: 1666,/*count of active/moving stars*/
+  starCount: 666,/*count of active/moving stars*/
   starBgCount:0,/*count of inactive/background stars*/
   starBgColor: { r: 255, g: 255, b: 255 },/*background stars color*/
   starBgColorRangeMin: 10,/*background stars color range min of starBgColor*/

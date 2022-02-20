@@ -26,11 +26,12 @@ const bnH5Animation = keyframes`
 const BannerWrap = styled.div<{ show: boolean }>`
   width: 100%;
   height: 863px;
-
+  position: relative;
+  z-index: 1;
   ${({ show }) =>
     show &&
     css`
-      background: url(${BannerBg}) 540px top no-repeat;
+      background: url(${BannerBg}) 540px top no-repeat,#000;
     `};
 
   animation: ${bnAnimation} 1s ease-in-out 0.1s;

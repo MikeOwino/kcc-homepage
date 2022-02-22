@@ -5,9 +5,9 @@ import { useResponsive } from '../../../utils/responsive'
 import { FadeInUp } from '../../../utils/animation'
 
 const RoadmapWrap = styled.div`
-  padding-top: 260px;
-  @media (max-width:768px){
-    padding-top:100px;
+  padding-top: 210px;
+  @media (max-width: 768px) {
+    padding-top: 100px;
   }
 `
 
@@ -66,7 +66,6 @@ const ListWrap = styled.div`
     background: url(${mbg}) left 50px no-repeat;
     width: 100%;
     max-width: 300px;
-
   }
 `
 
@@ -178,13 +177,13 @@ const Roadmap = () => {
   return (
     <RoadmapWrap>
       <FadeInUp delay={200}>
-      <Content>
-        <UnicornTitle title="Roadmap" />
-        <Desc>
-          Unicorn contest will start on February 2022 and end in April 2022. During this competition, we will select the
-          most-outstanding projects at the end of the contest. Winners will get awarded and rewarded by KCC along with
-          other sponsors of the event. To be more specific, please follow the roadmap as a reference:
-        </Desc>
+        <Content>
+          <UnicornTitle title="Roadmap" />
+          <Desc>
+            Unicorn contest will start on February 2022 and end in April 2022. During this competition, we will select
+            the most-outstanding projects at the end of the contest. Winners will get awarded and rewarded by KCC along
+            with other sponsors of the event. To be more specific, please follow the roadmap as a reference:
+          </Desc>
 
           <ListWrap>
             {roadmapList.map((road, index) => {
@@ -196,9 +195,8 @@ const Roadmap = () => {
               )
             })}
           </ListWrap>
-
         </Content>
-        </FadeInUp>
+      </FadeInUp>
     </RoadmapWrap>
   )
 }

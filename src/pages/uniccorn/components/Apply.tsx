@@ -42,8 +42,8 @@ const ApplyItem = styled.div<{ bg: string }>`
   padding: 107px 40px 42px 40px;
   background: url(${({ bg }) => bg}) top center no-repeat;
   transition: all 0.3s ease-in-out;
-  
-  &:hover{
+
+  &:hover {
     transform: translateY(-20px);
   }
 
@@ -74,14 +74,44 @@ const Title = styled.div`
   color: #0b1013;
 `
 const Desc = styled.div`
+  position: relative;
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 36px;
+  /* or 178% */
+  padding-left: 30px;
+  padding-right: 48px;
+  color: #0b1013;
+  &::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    background: #0b1013;
+    border-radius: 50%;
+    z-index: 11;
+    top: 10px;
+    left: 0px;
+  }
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`
+
+const Desc1 = styled.div`
+  position: relative;
   font-family: 'SF Pro Text';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 32px;
-  margin-top: 42px;
+  margin-top: 60px;
   /* or 178% */
-  color: #0b1013;
+  color: #fff;
   @media (max-width: 768px) {
     font-size: 16px;
   }
@@ -120,10 +150,11 @@ const Apply = () => {
           <ApplyListWrap>
             <ApplyItem bg={require('../../../assets/images/unicorn/green.png').default}>
               <Title>For KCC’s Native Projects</Title>
-              <Desc>
-                The project needs to complete a due diligence form and the team needs to be KYC certified.KYC certified
-                before the end of event.{' '}
-              </Desc>
+
+              <Desc>Needs to complete a due diligence form</Desc>
+              <Desc>Require KYC for at least three team members</Desc>
+              <Desc>Provide audit report (if applicable)</Desc>
+
               <ApplyButton
                 onClick={() => {
                   window.open(applyLink)
@@ -135,12 +166,13 @@ const Apply = () => {
             <ApplyItem bg={require('../../../assets/images/unicorn/orange.png').default}>
               <Title>For Cross-chain Projects </Title>
               <Desc>
-                Cross-chain projects need to meet the following conditions：
-                <br /> 1. Complete a due diligence form and team members KYC before the end of event. <br />
-                2. the project needs to be live and in continuous operation for more than 1 month in other blockchains.
-                <br />
-                3. Some projects need to provide audit reports (if applicable based on protocol type)
+                Needs to be active and in continuous operation for more than 1 month (before application) in other
+                ecologies
               </Desc>
+              <Desc style={{ marginTop: '10px' }}>
+                Needs to complete a due diligence form and at least three team members KYC certified
+              </Desc>
+              <Desc style={{ marginTop: '10px' }}>Provide audit report (if applicable based on protocol type)</Desc>
               <ApplyButton
                 onClick={() => {
                   window.open(applyLink)
@@ -150,7 +182,7 @@ const Apply = () => {
               </ApplyButton>
             </ApplyItem>
           </ApplyListWrap>
-          <Desc
+          <Desc1
             style={{
               color: '#fff',
               marginTop: isMobile ? '30px' : '60px',
@@ -160,7 +192,7 @@ const Apply = () => {
           >
             *Reminder: Unicorn Contest data will only be calculated for projects operating on KCC during the contest
             period.
-          </Desc>
+          </Desc1>
         </Content>
       </FadeInUp>
     </ApplyWrap>

@@ -6,7 +6,7 @@ import { FadeInUp } from '../../../utils/animation'
 
 const RankWrap = styled.div`
   width: 100%;
-  padding-top: 20px;
+  padding-top: 100px;
   margin: 0 auto;
   @media (max-width: 768px) {
     padding-top: 0px;

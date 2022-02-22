@@ -4,6 +4,7 @@ import ThreeLine from './ThreeLine'
 import { useResponsive } from '../../../utils/responsive'
 import { FadeInUp } from '../../../utils/animation'
 import Rank from './Rank'
+import Benefit from './Benefit'
 
 const WantedWrap = styled.div`
   width: 100%;
@@ -128,7 +129,7 @@ const TypeCardWrap = styled.div<{ index: number }>`
     border: 1px dashed #31e1b9;
     width: 100%;
     height: auto;
-    padding:30px 22px;
+    padding: 30px 22px;
     & + & {
       margin-top: 54px;
     }
@@ -193,9 +194,9 @@ const TypeIcon = styled.img`
   width: 180px;
   height: auto;
   @media (max-width: 768px) {
-    top:0;
+    top: 0;
     width: 80px;
-    height:auto;
+    height: auto;
   }
 `
 
@@ -253,10 +254,18 @@ const LeftBox = styled.div`
 `
 
 const DollarImage = styled.img`
-  width: 1038px;
   width: 100%;
   height: auto;
   margin-top: 94px;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 24px;
+  }
+`
+const LiquidityImage = styled.img`
+  width: 100%;
+  height: auto;
+  margin-top: 67px;
   margin-bottom: 80px;
   @media (max-width: 768px) {
     width: 100%;
@@ -267,11 +276,11 @@ const DollarImage = styled.img`
 
 const ContentImageWrap = styled.div`
   width: 1057px;
-  margin-top:36px;
+  margin-top: 36px;
 `
 
 const ContentImage = styled.img`
-  width:100%;
+  width: 100%;
   height: auto;
 `
 
@@ -319,7 +328,7 @@ const TypeList = [
   },
   {
     index: 'IV',
-    title: ' Metaverse Infrastructure',
+    title: ' Metaverse',
     list: [],
     icon: require('../../../assets/images/unicorn/t4.png').default,
   },
@@ -346,25 +355,24 @@ const TypeCard: React.FunctionComponent<{ type: TypeItem; index: number }> = ({ 
       <TypeIndex>{type.index}</TypeIndex>
       <TypeIcon src={type.icon} />
 
-        <LeftBox style={{ textAlign: 'left', paddingLeft: isMobile ? '0px' : '32px' }}>
-          <TypeTitle style={{ marginTop: isMobile ? '20px' : '67px', textAlign: 'left' }}>{type.title}</TypeTitle>
-          <>
-            {type.list.map((typeName, index) => {
-              return (
-                <TypeListItem style={{ marginTop: index === 0 ? (isMobile ? '12px' : '60px') : '0' }}>
-                  <YellowDot style={{ marginRight: '20px' }} />
-                  <Text>{typeName}</Text>
-                </TypeListItem>
-              )
-            })}
-          </>
-        </LeftBox>
+      <LeftBox style={{ textAlign: 'left', paddingLeft: isMobile ? '0px' : '32px' }}>
+        <TypeTitle style={{ marginTop: isMobile ? '20px' : '67px', textAlign: 'left' }}>{type.title}</TypeTitle>
+        <>
+          {type.list.map((typeName, index) => {
+            return (
+              <TypeListItem style={{ marginTop: index === 0 ? (isMobile ? '12px' : '60px') : '0' }}>
+                <YellowDot style={{ marginRight: '20px' }} />
+                <Text>{typeName}</Text>
+              </TypeListItem>
+            )
+          })}
+        </>
+      </LeftBox>
     </TypeCardWrap>
   )
 }
 
 const Wanted = () => {
-
   const ref = React.useRef<HTMLDivElement>(null)
   const { isMobile } = useResponsive()
 
@@ -380,13 +388,19 @@ const Wanted = () => {
             <ThreeLine color="#34EABD" height={isMobile ? 30 : 74} type="dotted" />
           </CenterBox>
           <Text style={{ marginTop: isMobile ? '20px' : '45px' }}>
-            The Unicorn Contest exists to accelerate all Defi projects in the KCC ecosystem, and it will take a big
-            effect in driving innovation and progress within the KCC ecosystem and the whole blockchain industry.
-            Consistent with the vision of KCC, in Unicorn Contest, we welcome many types of projects such as DeFi, NFT,
-            GameFi, SocailFi, Metaverse, Web3, etc.{' '}
+            The Unicorn Contest aims to accelerate all Defi projects in the KCC ecosystem, and it will hopefully take a
+            big effect in driving innovation and progress within the KCC ecosystem and the whole blockchain industry.
+            Consistent with the vision of KCC, Unicorn Contest welcomes many types of projects such as DeFi,
+            Infrastructure, NFT, GameFi, SocailFi, Metaverse, Web3.
           </Text>
-          <YellowText style={{ marginTop: isMobile ? '20px' : '45px', fontSize: isMobile ? '16px' : '34px' }}>
-            The KEY categories that we focus on in Unicorn Competition:
+          <YellowText
+            style={{
+              marginTop: isMobile ? '20px' : '45px',
+              textAlign: 'justify',
+              fontSize: isMobile ? '16px' : '40px',
+            }}
+          >
+            The KEY categories that Unicorn Contest focuses on:
           </YellowText>
           {isMobile ? (
             <TypeListWrap ref={ref}>
@@ -408,19 +422,24 @@ const Wanted = () => {
             </Desc>
           )}
 
-          <YellowText style={{ marginTop: isMobile ? '45px' : '64px', textAlign: 'left', width: '100%' }}>
+          <YellowText
+            style={{
+              fontFamily: 'SF Pro Display Bold',
+              marginTop: isMobile ? '45px' : '64px',
+              textAlign: 'left',
+              width: '100%',
+            }}
+          >
             The Purpose
           </YellowText>
           <Text style={{ marginTop: isMobile ? '12px' : '30px' }}>
             Decentralization has become the zeitgeist of 2022, and as a public chain, KCC is working to build a thriving
-            decentralized ecosystem. In order to prosper the crypto enterprise community and encourage more builders to
-            create more innovative products on KuCoin Community Chain (KCC), we are launching KuCoin Community Chain
-            Unicorn Contest, offering a grand prize pool of $1 million (KCS/Stablecoin) and up to $10 million in
-            liquidity support to accelerate all decentralised projects to build blockchains worldwide. The main aim of
-            the program is to support all decentralized projects including but not limited to DeFi, NFT, GameFi,
-            SocailFi, Metaverse, Web3. Unicorn Contest provides a platform for projects to create new and exciting
-            innovations, gain more support and attract the world's attention.
+            decentralized ecosystem. In order to thrive the crypto enterprise community and encourage more builders to
+            create innovative products on KuCoin Community Chain (KCC), we are launching KuCoin Community Chain Unicorn
+            Contest. The contest offers a grand prize pool of $1 million (KCS/Stablecoin) and up to $10 million in
+            liquidity support to accelerate winning decentralized projects.
           </Text>
+          <Benefit />
 
           {!isMobile && <Rank />}
           {!isMobile && (
@@ -434,6 +453,13 @@ const Wanted = () => {
               isMobile
                 ? require('../../../assets/images/unicorn/m-dollar.png').default
                 : require('../../../assets/images/unicorn/dollar.png').default
+            }
+          />
+          <LiquidityImage
+            src={
+              isMobile
+                ? require('../../../assets/images/unicorn/m-liquidity.png').default
+                : require('../../../assets/images/unicorn/liquidity.png').default
             }
           />
         </WantedContent>

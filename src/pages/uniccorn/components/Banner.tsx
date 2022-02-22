@@ -11,12 +11,12 @@ const bnAnimation = keyframes`
     background: url(${BannerBg}) 1500px top no-repeat;
   }
   100%{
-     background: url(${BannerBg}) 540px top no-repeat;
+     background: url(${BannerBg}) 620px top no-repeat;
   }
 `
 const bnH5Animation = keyframes`
   0%{
-    background: url(${BannerBg}) 600px top no-repeat;
+    background: url(${BannerBg}) 620px top no-repeat;
   }
   100%{
      background: url(${BannerBg}) 120px top no-repeat;
@@ -31,7 +31,7 @@ const BannerWrap = styled.div<{ show: boolean }>`
   ${({ show }) =>
     show &&
     css`
-      background: url(${BannerBg}) 540px top no-repeat,rgb(11,16,19);
+      background: url(${BannerBg}) 620px top no-repeat,rgb(11,16,19);
     `};
 
   animation: ${bnAnimation} 1s ease-in-out 0.1s;
@@ -56,7 +56,7 @@ const BannerTitle = styled.div`
   font-family: 'SF Pro Display Bold';
   font-style: normal;
   font-weight: bold;
-  font-size: 80px;
+  font-size: 72px;
   line-height: 95px;
   color: #ffffff;
   margin-top: 20px;
@@ -88,8 +88,8 @@ const BannerDesc = styled.div`
   line-height: 32px;
   /* or 160% */
   color: #ffffff;
-  margin-top: 44px;
-  max-width: 580px;
+  margin-top: 32px;
+  max-width: 450px;
   @media (max-width: 768px) {
     padding-left: 24px;
     font-size: 16px;
@@ -113,7 +113,7 @@ const Banner = () => {
             KuCoin <br /> Community <br /> Chain(KCC) <br /> Unicorn Contest
           </BannerTitle>
           <BannerDesc>
-            DeFi, NFT, GameFi, SocailFi, Metaverse, Web3 - Building a thriving and vibrant KCC ecosystem{' '}
+          DeFi Infrastructure, NFT, GameFi, SocailFi, Metaverse, Web3 - Building a thriving and vibrant KCC ecosystem 
           </BannerDesc>
         </FadeInUp>
       </BannerContent>

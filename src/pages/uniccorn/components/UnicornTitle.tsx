@@ -48,12 +48,15 @@ const UnicornReverseIcon = styled.img`
   }
 `
 
-const UnicornTitle: FunctionComponent<{ title: string }> = ({ title }) => {
+const UnicornTitle: FunctionComponent<{ title: string; color?: string }> = ({ title, color }) => {
+  const url = color
+    ? require('../../../assets/images/unicorn/yellow-unicorn.png').default
+    : require('../../../assets/images/unicorn/unicorn.png').default
   return (
     <UnicornTitleWrap>
-      <UnicornReverseIcon src={require('../../../assets/images/unicorn/unicorn.png').default} />
-      <Title>{title}</Title>
-      <UnicornIcon src={require('../../../assets/images/unicorn/unicorn.png').default} />
+      <UnicornReverseIcon src={url} />
+      <Title style={{ color: color ?? '#fff' }}>{title}</Title>
+      <UnicornIcon src={url} />
     </UnicornTitleWrap>
   )
 }

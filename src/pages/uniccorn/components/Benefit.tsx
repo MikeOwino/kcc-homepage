@@ -4,7 +4,7 @@ import UnicornTitle from './UnicornTitle'
 import { FadeInUp } from '../../../utils/animation';
 
 const BenefitWrap = styled.div`
-  padding-top: 230px;
+  padding-top: 110px;
   @media (max-width: 768px) {
     padding-top: 65px;
   }
@@ -27,7 +27,7 @@ const Desc = styled.div`
   line-height: 32px;
   text-align: center;
   color: #ffffff;
-  margin-top: 80px;
+  margin-top: 60px;
   max-width: 900px;
   @media (max-width: 768px) {
     margin-top: 32px;
@@ -41,8 +41,8 @@ const CardList = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  margin-top: 80px;
   width: 100%;
-  margin-top: 100px;
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -114,10 +114,9 @@ const Benefit = () => {
     <BenefitWrap>
       <FadeInUp>
       <Content>
-        <UnicornTitle title="What are the benefits to participate?" />
+        <UnicornTitle color="#FFAC3E" title="What are the benefits to participate?" />
         <Desc>
-          To support projects and facilitate their growth，the Unicorn Contest will offer massive rewards & incentives
-          to the most-outstanding projects!
+        To support projects and facilitate their growth, the Unicorn Contest will offer massive rewards & incentives to the most-outstanding projects! 
         </Desc>
 
         <CardList>

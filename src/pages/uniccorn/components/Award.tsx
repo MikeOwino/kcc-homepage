@@ -7,7 +7,7 @@ import { FadeInUp } from '../../../utils/animation'
 const AwardWrap = styled.div`
   padding-top: 210px;
   @media (max-width: 768px) {
-    padding-top: 110px;
+    padding-top: 60px;
   }
 `
 
@@ -35,7 +35,7 @@ const Desc = styled.div`
     line-height: 32px;
     padding: 0 24px;
     margin-top: 32px;
-    text-align: left;
+    text-align: center;
     width: 90%;
   }
 `
@@ -58,7 +58,6 @@ const Link = styled.a`
   color: #00c77f;
 `
 
-
 const AwardText = styled.div`
   width: 100%;
   height: 142px;
@@ -68,13 +67,14 @@ const AwardText = styled.div`
   align-items: center;
   color: #ffb547;
   text-align: center;
-  font-size: 30px;
+  font-size: 36px;
   position: relative;
   transition: all 0.3s ease-in-out;
   transform: rotateY(180deg);
   border-radius: 8px;
   font-family: 'SF Pro Display Bold';
   padding: 0 40px;
+  background: #0b1013;
   @media (max-width: 768px) {
     padding: 0 40px;
     font-size: 20px;
@@ -130,19 +130,19 @@ const AwardImageWrap = styled.div`
   }
 `
 
-const awardList1 = [{
-  src:
-    require('../../../assets/images/unicorn/award1.png').default,
-  text:'Most Innovative Technology',
-}, {
-    src:
-      require('../../../assets/images/unicorn/award2.png').default,
+const awardList1 = [
+  {
+    src: require('../../../assets/images/unicorn/award1.png').default,
+    text: 'Conflux',
+  },
+  {
+    src: require('../../../assets/images/unicorn/award2.png').default,
     text: 'Most Popular Community Award',
-  }, {
-    src:
-    require('../../../assets/images/unicorn/award3.png').default,
-    text:'Best Wallet Experience Award'
-  }
+  },
+  {
+    src: require('../../../assets/images/unicorn/award3.png').default,
+    text: 'Best Wallet Experience Award',
+  },
 ]
 
 const awardList2 = [
@@ -152,7 +152,7 @@ const awardList2 = [
   },
   {
     src: require('../../../assets/images/unicorn/award5.png').default,
-    text:'Best Social Contribution Award'
+    text: 'Best Social Contribution Award',
   },
 ]
 
@@ -166,26 +166,27 @@ const Award = () => {
           <Desc>
             To promote transparency and procedural fairness for the contest, all judges for the contest will participate
             in evaluating all the projects. The applicant projects will have the opportunity to win independent awards
-            and receive support from the KCC GoDAO and respecitve award sponsors.
+            and receive support from the KCC GoDAO and respective award sponsors.
           </Desc>
-      
 
           <CardList>
             {awardList1.map((avatar, index) => {
               return (
                 <AwardImageWrap key={index}>
                   <AwardImage src={avatar.src} key={index} />
-                  <AwardText>{ avatar.text}</AwardText>
+                  <AwardText>{avatar.text}</AwardText>
                 </AwardImageWrap>
               )
             })}
           </CardList>
           <CardList style={{ marginTop: isMobile ? '30px' : '70px' }}>
             {awardList2.map((avatar, index) => {
-               return(<AwardImageWrap key={index}>
-                 <AwardImage src={avatar.src} key={index} />
-                 <AwardText>{ avatar.text}</AwardText>
-               </AwardImageWrap>)
+              return (
+                <AwardImageWrap key={index}>
+                  <AwardImage src={avatar.src} key={index} />
+                  <AwardText>{avatar.text}</AwardText>
+                </AwardImageWrap>
+              )
             })}
           </CardList>
           <Desc style={{ maxWidth: '100%' }}>

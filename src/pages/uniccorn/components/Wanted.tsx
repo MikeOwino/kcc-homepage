@@ -21,14 +21,17 @@ const WantedContent = styled.div`
   width: 1200px;
   height: auto;
   margin: 0 auto;
-  padding: 25px 75px;
-  background: url(${WantedBg}) top center no-repeat;
-  background-size: 100% 100%;
+  padding: 25px 55px;
+  border: 25px solid transparent;
+  border-image-source: url(${WantedBg});
+  border-image-slice: 30 fill;
+  border-image-repeat: round;
+  /* background: url(${WantedBg}) top center no-repeat;
+  background-size: 100% auto; */
   // background: rgba(49, 225, 185, 0.1);
   /* border: 14px solid transparent;
   border-image-slice: 27 fill;
   border-image-repeat: round; */
-
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -36,9 +39,10 @@ const WantedContent = styled.div`
   position: relative;
   overflow: hidden;
   @media (max-width: 768px) {
+    padding: 25px 25px;
     width: calc(100vw - 24px);
     background: #0e2120;
-    border: 14px solid transparent;
+    border: 15px solid transparent;
     border-image-source: url(${WantedBg});
     border-image-slice: 30 fill;
     border-image-repeat: round;
@@ -100,14 +104,13 @@ const Text = styled.div`
 `
 
 const YellowText = styled.div`
-  font-family: 'SF Pro Text';
   font-style: normal;
   font-weight: bold;
   font-size: 34px;
   line-height: 41px;
   /* identical to box height */
   text-align: left;
-  letter-spacing: 2.7px;
+  letter-spacing: 1px;
   color: #ffb547;
   @media (max-width: 768px) {
     font-size: 24px;
@@ -266,7 +269,7 @@ const LiquidityImage = styled.img`
   width: 100%;
   height: auto;
   margin-top: 67px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   @media (max-width: 768px) {
     width: 100%;
     margin-top: 24px;
@@ -396,7 +399,7 @@ const Wanted = () => {
           <YellowText
             style={{
               marginTop: isMobile ? '20px' : '45px',
-              textAlign: 'justify',
+              textAlign: isMobile ? 'left' : 'justify',
               fontSize: isMobile ? '16px' : '40px',
             }}
           >

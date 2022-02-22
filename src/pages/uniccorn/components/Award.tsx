@@ -133,7 +133,7 @@ const AwardImageWrap = styled.div`
 const awardList1 = [
   {
     src: require('../../../assets/images/unicorn/award1.png').default,
-    text: 'Conflux',
+    text: 'Sponsored by Conflux',
   },
   {
     src: require('../../../assets/images/unicorn/award2.png').default,

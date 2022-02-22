@@ -166,20 +166,20 @@ const DescText = styled.div`
 
 const awardList1 = [
   {
-    icon: require('../../../assets/images/unicorn/prize-1.png').default,
+    icon: require('../../../assets/images/unicorn/p-1.png').default,
     title: 'Most Innovative Technology',
     desc: '– Sponsored by Skyman Ventures',
   },
   {
-    icon: require('../../../assets/images/unicorn/prize-2.png').default,
+    icon: require('../../../assets/images/unicorn/p-2.png').default,
     title: 'Top NFT Project',
   },
   {
-    icon: require('../../../assets/images/unicorn/prize-3.png').default,
+    icon: require('../../../assets/images/unicorn/p-3.png').default,
     title: 'Top Social/Dao/Web3 Project',
   },
   {
-    icon: require('../../../assets/images/unicorn/prize-4.png').default,
+    icon: require('../../../assets/images/unicorn/p-4.png').default,
     title: 'Top Infrastructural Project',
   },
 ]
@@ -192,7 +192,7 @@ const Prize = () => {
         <Content>
           <UnicornTitle title="Individual Prizes" />
           <Desc>
-            Individual prizes are <NumberText>$30,000</NumberText> respectively.
+            Individual prizes are <NumberText>$30,000</NumberText> respectively
           </Desc>
 
           <CardList>

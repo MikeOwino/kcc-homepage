@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import UnicornTitle from './UnicornTitle'
-import { FadeInUp } from '../../../utils/animation';
+import { FadeInUp } from '../../../utils/animation'
 
 const BenefitWrap = styled.div`
   padding-top: 110px;
@@ -62,6 +62,10 @@ const CardItem = styled.div`
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease-in-out;
+
+  & + & {
+    margin-left: 40px;
+  }
   &:hover {
     position: relative;
     transform: translateY(-20px);
@@ -69,6 +73,7 @@ const CardItem = styled.div`
   @media (max-width: 768px) {
     & + & {
       margin-top: 16px;
+      margin-left: 0px;
     }
   }
 `
@@ -113,24 +118,25 @@ const Benefit = () => {
   return (
     <BenefitWrap>
       <FadeInUp>
-      <Content>
-        <UnicornTitle color="#FFAC3E" title="What are the benefits to participate?" />
-        <Desc>
-        To support projects and facilitate their growth, the Unicorn Contest will offer massive rewards & incentives to the most-outstanding projects! 
-        </Desc>
+        <Content>
+          <UnicornTitle color="#FFAC3E" title="What are the benefits to participate?" />
+          <Desc>
+            To support projects and facilitate their growth, the Unicorn Contest will offer massive rewards & incentives
+            to the most-outstanding projects!
+          </Desc>
 
-        <CardList>
-          {cardList.map((card, index) => {
-            return (
-              <CardItem key={index}>
-                <CardImage src={card.icon} />
-                <CardDesc>{card.desc}</CardDesc>
-              </CardItem>
-            )
-          })}
-        </CardList>
+          <CardList>
+            {cardList.map((card, index) => {
+              return (
+                <CardItem key={index}>
+                  <CardImage src={card.icon} />
+                  <CardDesc>{card.desc}</CardDesc>
+                </CardItem>
+              )
+            })}
+          </CardList>
         </Content>
-        </FadeInUp>
+      </FadeInUp>
     </BenefitWrap>
   )
 }

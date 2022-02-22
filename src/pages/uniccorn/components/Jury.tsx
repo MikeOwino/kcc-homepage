@@ -111,11 +111,15 @@ const juryList1 = [
 ]
 
 const juryList2 = [
-  { logo: require('../../../assets/images/unicorn/jury6.png').default, name: 'KCC DAO', desc: '' },
-  { logo: require('../../../assets/images/unicorn/jury7.png').default, name: 'Jun Park', desc: 'Hashed' },
-  { logo: require('../../../assets/images/unicorn/jury8.png').default, name: 'Péter Garamvölgyi', desc: 'Conflux' },
-  { logo: require('../../../assets/images/unicorn/jury9.png').default, name: 'Tracy', desc: 'Cointelegraph' },
-  { logo: require('../../../assets/images/unicorn/jury10.png').default, name: 'Jacob', desc: 'HashKey Capital' },
+  { logo: require('../../../assets/images/unicorn/jury6.png').default, name: 'Jeff Nowak', desc: 'Maven Capital' },
+  {
+    logo: require('../../../assets/images/unicorn/jury7.png').default,
+    name: 'Joris van Velzen',
+    desc: 'Skyman Ventures',
+  },
+  { logo: require('../../../assets/images/unicorn/jury8.png').default, name: 'Yao', desc: 'KuCoin Ventures' },
+  { logo: require('../../../assets/images/unicorn/jury9.png').default, name: 'Han', desc: 'KuCoin Labs' },
+  { logo: require('../../../assets/images/unicorn/jury10.png').default, name: 'Hen Vai', desc: 'Blogtienao' },
 ]
 
 const juryList = [...juryList1, ...juryList2]

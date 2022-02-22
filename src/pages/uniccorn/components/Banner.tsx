@@ -1,10 +1,9 @@
 import React from 'react'
-import styled, { keyframes,css } from 'styled-components'
+import styled, { keyframes, css } from 'styled-components'
 import { FadeInUp } from '../../../utils/animation'
 
 const BannerBg = require('../../../assets/images/unicorn/banner.png').default
 const BannerCircle = require('../../../assets/images/unicorn/dot-circle.png').default
-
 
 const bnAnimation = keyframes`
   0%{
@@ -31,7 +30,7 @@ const BannerWrap = styled.div<{ show: boolean }>`
   ${({ show }) =>
     show &&
     css`
-      background: url(${BannerBg}) 620px top no-repeat,rgb(11,16,19);
+      background: url(${BannerBg}) 620px top no-repeat, rgb(11, 16, 19);
     `};
 
   animation: ${bnAnimation} 1s ease-in-out 0.1s;
@@ -99,13 +98,15 @@ const BannerDesc = styled.div`
 `
 
 const Banner = () => {
-
-  const [show,setShow] = React.useState<boolean>(false)
+  const [show, setShow] = React.useState<boolean>(false)
 
   return (
-    <BannerWrap show={show} onAnimationEnd={() => {
-      setShow(() => true)
-    }}>
+    <BannerWrap
+      show={show}
+      onAnimationEnd={() => {
+        setShow(() => true)
+      }}
+    >
       <BannerContent>
         <FadeInUp delay={200}>
           <TopPic src={BannerCircle} />
@@ -113,7 +114,7 @@ const Banner = () => {
             KuCoin <br /> Community <br /> Chain(KCC) <br /> Unicorn Contest
           </BannerTitle>
           <BannerDesc>
-          DeFi Infrastructure, NFT, GameFi, SocailFi, Metaverse, Web3 - Building a thriving and vibrant KCC ecosystem 
+            DeFi, Infrastructure, NFT, GameFi, SocailFi, Metaverse, Web3 - Building a thriving and vibrant KCC ecosystem
           </BannerDesc>
         </FadeInUp>
       </BannerContent>

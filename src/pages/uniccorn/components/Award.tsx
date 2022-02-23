@@ -29,7 +29,7 @@ const Desc = styled.div`
   text-align: center;
   color: #ffffff;
   margin-top: 85px;
-  max-width: 900px;
+  max-width: 1100px;
   @media (max-width: 768px) {
     font-size: 14px;
     line-height: 32px;

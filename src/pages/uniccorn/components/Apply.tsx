@@ -83,7 +83,7 @@ const Desc = styled.div`
   margin-top: 36px;
   /* or 178% */
   padding-left: 30px;
-  padding-right: 48px;
+  padding-right: 30px;
   color: #0b1013;
   &::before {
     content: '';

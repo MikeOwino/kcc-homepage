@@ -1,7 +1,8 @@
 import { KCC } from './index'
 
+import UnicornLink from '../components/UnicornLink';
 export interface NavItemType {
-  name: string
+  name: any
   hasChildren?: boolean
   hasGroup?: boolean
   route?: string
@@ -35,6 +36,10 @@ export const HOME_MENU_LIST = [
     icon: require('../assets/images/Icons/menu/github@2x.png').default,
   }
 ]
+
+
+
+
 
 export const MENU_LIST = [
   {
@@ -180,5 +185,10 @@ export const MENU_LIST = [
         icon: require('../assets/images/Icons/menu/grant@2x.png').default,
       },
     ],
+  },
+  {
+    name: null,
+    route: 'https://kcc.io/unicorn',
+    hasChildren: false,
   },
 ]

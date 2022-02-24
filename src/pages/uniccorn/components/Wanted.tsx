@@ -313,27 +313,27 @@ const Link = styled.a`
 const TypeList = [
   {
     index: 'I',
+    title: 'Defi Projects',
+    list: ['Dex', 'Lending', 'Derivatives', 'Insurance'],
+    icon: require('../../../assets/images/unicorn/t0.png').default,
+  },
+  {
+    index: 'II',
     title: 'Infrastructure Projects',
     list: ['Oracles', 'Front Ends', 'Wallets', 'Block Explorers', 'Analytics'],
     icon: require('../../../assets/images/unicorn/t1.png').default,
   },
   {
-    index: 'II',
+    index: 'III',
     title: 'NFT',
     list: ['Collectibles', 'Artworks', 'Event Tickets', 'Music and Media'],
     icon: require('../../../assets/images/unicorn/t2.png').default,
   },
   {
-    index: 'III',
-    title: 'GameFi',
+    index: 'IV',
+    title: 'GameFi &  Metaverse',
     list: [],
     icon: require('../../../assets/images/unicorn/t3.png').default,
-  },
-  {
-    index: 'IV',
-    title: ' Metaverse',
-    list: [],
-    icon: require('../../../assets/images/unicorn/t4.png').default,
   },
   {
     index: 'V',
@@ -413,7 +413,7 @@ const Wanted = () => {
             </TypeListWrap>
           ) : (
             <ContentImageWrap>
-              <ContentImage src={require('../../../assets/images/unicorn/content.png').default} />
+              <ContentImage src={require('../../../assets/images/unicorn/types.png').default} />
             </ContentImageWrap>
           )}
 

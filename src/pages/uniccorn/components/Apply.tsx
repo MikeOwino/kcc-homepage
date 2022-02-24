@@ -70,7 +70,6 @@ const Title = styled.div`
   font-weight: bold;
   font-size: 48px;
   line-height: 57px;
-
   color: #0b1013;
 `
 const Desc = styled.div`

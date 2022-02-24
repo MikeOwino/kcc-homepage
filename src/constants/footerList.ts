@@ -45,6 +45,15 @@ export const FOOTER_LIST = [
     ],
   },
   {
+    title: 'Event',
+    children: [
+      {
+        navText: 'Unicorn Contest',
+        navRoute: '/unicorn',
+      },
+    ],
+  },
+  {
     title: 'Contact Us',
     children: [
       {

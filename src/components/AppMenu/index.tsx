@@ -18,6 +18,7 @@ import { changeMobileMenuShow } from '../../state/application/actions'
 import { KCC } from '../../constants/index'
 
 import './index.less'
+import UnicornLink from '../UnicornLink'
 
 export interface AppMenuProps {
   style?: CSSProperties
@@ -160,16 +161,20 @@ const AppMenu: React.FunctionComponent<AppMenuProps> = ({ style }) => {
     if (!navItem.hasChildren && navItem?.route) {
       return (
         <Menu.Item key={navItem.name}>
-          <NavLink
-            to={getNavRoute(navItem.route)}
-            onClick={() => {
-              dispatch(changeMobileMenuShow({ show: false }))
-            }}
-            activeClassName="selected"
-            style={{ color: theme.colors.primary }}
-          >
-            <NavTitle style={{ position: 'relative', top: '-2px' }}>{t(`${navItem.name}`)}</NavTitle>
-          </NavLink>
+          {typeof navItem.name === 'string' ? (
+            <NavLink
+              to={getNavRoute(navItem.route)}
+              onClick={() => {
+                dispatch(changeMobileMenuShow({ show: false }))
+              }}
+              activeClassName="selected"
+              style={{ color: theme.colors.primary }}
+            >
+              <NavTitle style={{ position: 'relative', top: '-2px' }}>{t(`${navItem.name}`)}</NavTitle>
+            </NavLink>
+          ) : (
+            <UnicornLink />
+          )}
         </Menu.Item>
       )
     }

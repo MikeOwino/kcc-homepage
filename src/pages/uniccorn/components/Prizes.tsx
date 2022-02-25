@@ -167,7 +167,7 @@ const DescText = styled.div`
 const awardList1 = [
   {
     icon: require('../../../assets/images/unicorn/p-1.png').default,
-    title: 'Most Innovative Technology',
+    title: 'Top GameFi/Metaverse Project',
     desc: '– Sponsored by Skyman Ventures',
   },
   {

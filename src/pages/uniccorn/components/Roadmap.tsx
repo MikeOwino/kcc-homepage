@@ -147,27 +147,27 @@ const DateSubText = styled.div<{ index: number }>`
 `
 const roadmapList = [
   {
-    date: 'Feb 23 - March 7',
+    date: 'March 2nd - March 14th',
     text: 'Warm-up & Marketing',
   },
   {
-    date: 'March 7 -April 9',
-    text: 'Submission and Technical Integration',
+    date: 'March 15th - April 17th',
+    text: 'Submission & Technical integration',
   },
   {
-    date: 'April 11 - April 30',
-    text: 'Data Competition',
+    date: 'April 18th - May 8th',
+    text: 'Project Contest',
   },
   {
-    date: 'May 05 - May 09',
+    date: 'May 9th - May 12th',
     text: 'Overall Top 10 and some individual award & prize-winning projects announced',
   },
   {
-    date: 'May 10 - May 12',
+    date: 'May 13th - May 16th',
     text: 'Community voting for Final Top 5 ranked projects on snapshot.eth',
   },
   {
-    date: 'May 13',
+    date: 'May 17th',
     text: 'Grant Prize Winning Projects Announced',
   },
 ]

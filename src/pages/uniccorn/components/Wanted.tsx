@@ -454,14 +454,14 @@ const Wanted = () => {
           <DollarImage
             src={
               isMobile
-                ? require('../../../assets/images/unicorn/m-dollar.png').default
+                ? require('../../../assets/images/unicorn/m-liquidity.png').default
                 : require('../../../assets/images/unicorn/dollar.png').default
             }
           />
           <LiquidityImage
             src={
               isMobile
-                ? require('../../../assets/images/unicorn/m-liquidity.png').default
+                ? require('../../../assets/images/unicorn/m-dollar.png').default
                 : require('../../../assets/images/unicorn/liquidity.png').default
             }
           />

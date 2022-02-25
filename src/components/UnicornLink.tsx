@@ -1,7 +1,10 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
+import { changeMobileMenuShow } from '../state/application/actions'
+import { useResponsive } from '../utils/responsive'
 
 const UnicornWrap = styled.div`
   display: flex;
@@ -9,6 +12,9 @@ const UnicornWrap = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
 `
 
 const Link = styled.div`
@@ -30,11 +36,16 @@ const Image = styled.img`
 const UnicornLink = () => {
   const history = useHistory()
   const { t } = useTranslation()
+  const dispatch = useDispatch()
+  const { isMobile } = useResponsive()
   return (
     <UnicornWrap>
       <Link
         onClick={() => {
           history.push('/unicorn')
+          if (isMobile) {
+            dispatch(changeMobileMenuShow({ show: false }))
+          }
         }}
       >
         {t('Unicorn Contest')}

@@ -180,7 +180,7 @@ const Roadmap = () => {
         <Content>
           <UnicornTitle title="Roadmap" />
           <Desc>
-            Unicorn Contest will start in February 2022 and end in April 2022. During this contest, we will select the
+            Unicorn Contest will start in March 2022 and end in May 2022. During this contest, we will select the
             most-outstanding projects at the end of the contest. Winners will get awarded and rewarded by KCC along with
             other sponsors of the event. For specifics, please follow the roadmap as a reference:
           </Desc>

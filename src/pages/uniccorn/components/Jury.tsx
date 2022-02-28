@@ -56,12 +56,18 @@ const Image = styled.img`
   height: 160px;
 `
 
-const JuryDescWrap = styled.div`
+const JuryDescWrap = styled.div<{ show: boolean }>`
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
   height: 80px;
+  opacity: ${({ show }) => {
+    if (show) {
+      return 1
+    }
+    return 0
+  }};
 `
 
 const JuryDesc = styled.div`
@@ -102,24 +108,72 @@ const Desc = styled.div`
   }
 `
 
+const unknownJury = require('../../../assets/images/unicorn/unknown.png').default
+
 const juryList1 = [
-  { logo: require('../../../assets/images/unicorn/jury1.png').default, name: 'KCC DAO', desc: '' },
-  { logo: require('../../../assets/images/unicorn/jury2.png').default, name: 'Jun Park', desc: 'Hashed' },
-  { logo: require('../../../assets/images/unicorn/jury3.png').default, name: 'Péter Garamvölgyi', desc: 'Conflux' },
-  { logo: require('../../../assets/images/unicorn/jury4.png').default, name: 'Tracy', desc: 'Cointelegraph' },
-  { logo: require('../../../assets/images/unicorn/jury5.png').default, name: 'Jacob', desc: 'HashKey Capital' },
+  {
+    logo: require('../../../assets/images/unicorn/jury1.png').default,
+    name: 'KCC DAO',
+    desc: '',
+    date: '2022/03/02 18:00:00',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/jury2.png').default,
+    name: 'Jun Park',
+    desc: 'Hashed',
+    date: '2022/03/03 18:00:00',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/jury3.png').default,
+    name: 'Péter Garamvölgyi',
+    desc: 'Conflux',
+    date: '2022/03/04 18:00:00',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/jury5.png').default,
+    name: 'Jacob',
+    desc: 'HashKey Capital',
+    date: '2022/03/05 18:00:00',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/jury6.png').default,
+    name: 'Jeff Nowak',
+    desc: 'Maven Capital',
+    date: '2022/03/06 18:00:00',
+  },
 ]
 
 const juryList2 = [
-  { logo: require('../../../assets/images/unicorn/jury6.png').default, name: 'Jeff Nowak', desc: 'Maven Capital' },
   {
     logo: require('../../../assets/images/unicorn/jury7.png').default,
     name: 'Joris van Velzen',
     desc: 'Skyman Ventures',
+    date: '2022/03/07 18:00:00',
   },
-  { logo: require('../../../assets/images/unicorn/jury8.png').default, name: 'Yao', desc: 'KuCoin Ventures' },
-  { logo: require('../../../assets/images/unicorn/jury9.png').default, name: 'Han', desc: 'KuCoin Labs' },
-  { logo: require('../../../assets/images/unicorn/jury10.png').default, name: 'Hen Vai', desc: 'Blogtienao' },
+  {
+    logo: require('../../../assets/images/unicorn/jury4.png').default,
+    name: 'Tracy',
+    desc: 'Cointelegraph',
+    date: '2022/03/08 18:00:00',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/jury8.png').default,
+    name: 'Yao',
+    desc: 'KuCoin Ventures',
+    date: '2022/03/09 18:00:00',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/jury9.png').default,
+    name: 'Han',
+    desc: 'KuCoin Labs',
+    date: '2022/03/10 18:00:00',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/jury10.png').default,
+    name: 'Hen Vai',
+    desc: 'Blogtienao',
+    date: '2022/03/11 18:00:00',
+  },
 ]
 
 const juryList = [...juryList1, ...juryList2]
@@ -138,10 +192,15 @@ const Jury = () => {
           </Desc>
           <JuryListWrap>
             {juryList1.map((jury, index) => {
+              const timestamp = new Date(jury.date).getTime()
+              const nowTimestamp = new Date().getTime()
+              const show = nowTimestamp > timestamp
+              const icon = show ? jury.logo : unknownJury
               return (
                 <JuryItem key={index}>
-                  <Image src={jury.logo} />
-                  <JuryDescWrap>
+                  <Image src={icon} />
+
+                  <JuryDescWrap show={show}>
                     <JuryName>{jury.name}</JuryName>
                     {jury.desc && <JuryDesc>{jury.desc}</JuryDesc>}
                   </JuryDescWrap>
@@ -151,10 +210,16 @@ const Jury = () => {
           </JuryListWrap>
           <JuryListWrap style={{ marginTop: isMobile ? '60px' : '80px' }}>
             {juryList2.map((jury, index) => {
+              const timestamp = new Date(jury.date).getTime()
+              const nowTimestamp = new Date().getTime()
+              const show = nowTimestamp > timestamp
+              const icon = show ? jury.logo : unknownJury
+
               return (
                 <JuryItem key={index}>
-                  <Image src={jury.logo} />
-                  <JuryDescWrap>
+                  <Image src={icon} />
+
+                  <JuryDescWrap show={show}>
                     <JuryName>{jury.name}</JuryName>
                     {jury.desc && <JuryDesc>{jury.desc}</JuryDesc>}
                   </JuryDescWrap>

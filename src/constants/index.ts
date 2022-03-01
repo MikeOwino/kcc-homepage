@@ -96,6 +96,16 @@ export const KCC = {
       route: 'https://www.kucoin.com/',
     },
     {
+      name: 'KucoinVentures',
+      logo: require('../assets/images/home/kucoinventures.png').default,
+      route: 'https://www.kucoin.com/kucoin-ventures',
+    },
+    {
+      name: 'Kucoinlabs',
+      logo: require('../assets/images/home/kucoinlab.png').default,
+      route: 'https://www.kucoin.com/land/kucoinlabs',
+    },
+    {
       name: 'TokenView',
       logo: require('../assets/images/home/tokenview.png').default,
       route: 'https://tokenview.com/en',
@@ -103,7 +113,38 @@ export const KCC = {
     {
       name: 'Conflux',
       logo: require('../assets/images/home/conflux.png').default,
-      route: 'https://tokenview.com/en',
+      route: 'https://confluxnetwork.org/',
+    },
+    {
+      name: 'Hashed',
+      logo: require('../assets/images/home/hashed.png').default,
+      route: 'https://www.hashed.com/',
+    },
+    {
+      name: 'Hashkey',
+      logo: require('../assets/images/home/hashkey.png').default,
+      route: 'https://www.hashkey.com/',
+    },
+    {
+      name: 'maven',
+      logo: require('../assets/images/home/maven.png').default,
+      route: 'https://www.mavencp.com/',
+    },
+    {
+      name: 'SkymanVentures',
+      logo: require('../assets/images/home/skyman.png').default,
+      route: 'https://www.skymanventures.com',
+    },
+    {
+      name: 'coinletegraph',
+      logo: require('../assets/images/home/Cointelegraph.png').default,
+      route: 'https://cointelegraph.com/',
+    },
+
+    {
+      name: 'blog',
+      logo: require('../assets/images/home/blog.png').default,
+      route: 'https://blogtienao.com/',
     },
   ],
 }

@@ -114,7 +114,7 @@ const Banner = () => {
             KuCoin <br /> Community <br /> Chain(KCC) <br /> Unicorn Contest
           </BannerTitle>
           <BannerDesc>
-            DeFi, Infrastructure, NFT, GameFi, SocailFi, Metaverse, Web3 - Building a thriving and vibrant KCC ecosystem
+            DeFi, Infrastructure, NFT, GameFi, SocialFi, Metaverse, Web3 - Building a thriving and vibrant KCC ecosystem
           </BannerDesc>
         </FadeInUp>
       </BannerContent>

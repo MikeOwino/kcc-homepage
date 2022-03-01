@@ -394,7 +394,7 @@ const Wanted = () => {
             The Unicorn Contest aims to accelerate all Defi projects in the KCC ecosystem, and it will hopefully take a
             big effect in driving innovation and progress within the KCC ecosystem and the whole blockchain industry.
             Consistent with the vision of KCC, Unicorn Contest welcomes many types of projects such as DeFi,
-            Infrastructure, NFT, GameFi, SocailFi, Metaverse, Web3.
+            Infrastructure, NFT, GameFi, SocialFi, Metaverse, Web3.
           </Text>
           <YellowText
             style={{

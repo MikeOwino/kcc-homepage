@@ -105,7 +105,7 @@ const cardList = [
     icon: require('../../../assets/images/unicorn/gift.png').default,
   },
   {
-    desc: 'Opportunity to enter an accelerator/incubating process from KCC GoDao as well as anyone of this event’s sponsors/partners',
+    desc: 'Opportunity to enter an accelerator/incubating process from KCC GoDAO as well as anyone of this event’s sponsors/partners',
     icon: require('../../../assets/images/unicorn/money.png').default,
   },
   {

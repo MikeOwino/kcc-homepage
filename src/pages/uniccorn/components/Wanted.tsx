@@ -313,14 +313,14 @@ const Link = styled.a`
 const TypeList = [
   {
     index: 'I',
-    title: 'Defi Projects',
-    list: ['Dex', 'Lending', 'Derivatives', 'Insurance'],
+    title: 'DeFi Projects',
+    list: ['DEX', 'Lending', 'Derivatives', 'Insurance'],
     icon: require('../../../assets/images/unicorn/t0.png').default,
   },
   {
     index: 'II',
     title: 'Infrastructure Projects',
-    list: ['Oracles', 'Front Ends', 'Wallets', 'Block Explorers', 'Analytics'],
+    list: ['Oracles', 'Front Ends', 'Wallets', 'Blockchain Explorers', 'Analytics'],
     icon: require('../../../assets/images/unicorn/t1.png').default,
   },
   {
@@ -338,7 +338,7 @@ const TypeList = [
   {
     index: 'V',
     title: 'Others',
-    list: ['SocialFi', 'Dao', 'Web3'],
+    list: ['SocialFi', 'DAO', 'Web3'],
     icon: require('../../../assets/images/unicorn/t5.png').default,
   },
 ]
@@ -391,7 +391,7 @@ const Wanted = () => {
             <ThreeLine color="#34EABD" height={isMobile ? 30 : 74} type="dotted" />
           </CenterBox>
           <Text style={{ marginTop: isMobile ? '20px' : '45px' }}>
-            The Unicorn Contest aims to accelerate all Defi projects in the KCC ecosystem, and it will hopefully take a
+            The Unicorn Contest aims to accelerate all DeFi projects in the KCC ecosystem, and it will hopefully take a
             big effect in driving innovation and progress within the KCC ecosystem and the whole blockchain industry.
             Consistent with the vision of KCC, Unicorn Contest welcomes many types of projects such as DeFi,
             Infrastructure, NFT, GameFi, SocialFi, Metaverse, Web3.
@@ -413,7 +413,7 @@ const Wanted = () => {
             </TypeListWrap>
           ) : (
             <ContentImageWrap>
-              <ContentImage src={require('../../../assets/images/unicorn/types.png').default} />
+              <ContentImage src={require('../../../assets/images/unicorn/content.png').default} />
             </ContentImageWrap>
           )}
 

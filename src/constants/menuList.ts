@@ -173,7 +173,7 @@ export const MENU_LIST = [
         icon: require('../assets/images/Icons/menu/activity@2x.png').default,
       },
       {
-        title: 'GoDao',
+        title: 'GoDAO',
         subTitle: 'Dao Desc',
         route: KCC.DAO,
         icon: require('../assets/images/Icons/menu/dao@2x.png').default,

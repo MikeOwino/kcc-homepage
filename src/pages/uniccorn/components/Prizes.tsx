@@ -176,7 +176,7 @@ const awardList1 = [
   },
   {
     icon: require('../../../assets/images/unicorn/p-3.png').default,
-    title: 'Top Social/Dao/Web3 Project',
+    title: 'Top Social/DAO/Web3 Project',
   },
   {
     icon: require('../../../assets/images/unicorn/p-4.png').default,

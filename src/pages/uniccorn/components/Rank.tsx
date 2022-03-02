@@ -3,13 +3,14 @@ import styled, { css } from 'styled-components'
 import ThreeLine from './ThreeLine'
 import { useResponsive } from '../../../utils/responsive'
 import { FadeInUp } from '../../../utils/animation'
+import UnicornTitle from './UnicornTitle'
 
 const RankWrap = styled.div`
   width: 100%;
   padding-top: 100px;
   margin: 0 auto;
   @media (max-width: 768px) {
-    padding-top: 0px;
+    padding-top: 50px;
     padding-bottom: 0px;
   }
 `
@@ -28,13 +29,13 @@ const RankContent = styled.div`
   justify-content: center;
   align-items: flex-end;
   position: relative;
+  margin-top: 50px;
   @media (max-width: 768px) {
     padding: 0px 10px;
     height: auto;
+    margin-top: 20px;
   }
 `
-
-
 
 const AwardText = styled.div`
   font-family: 'SF Pro Display Bold';
@@ -88,18 +89,18 @@ const RankItem = styled.div`
     ${AwardText} {
       transition: all 0.5s ease-in-out;
       position: relative;
-      transform:  rotateY(360deg);
+      transform: rotateY(360deg);
     }
   }
-  @media (max-width:768px){
-    width:20%;
+  @media (max-width: 768px) {
+    width: 20%;
   }
 `
 
 const Image = styled.img`
-  width:100%;
+  width: 100%;
   height: auto;
-  margin-top:50px;
+  margin-top: 50px;
 `
 
 const Text = styled.div`
@@ -113,7 +114,7 @@ const Text = styled.div`
   color: #ebdaa9;
   max-width: 140px;
   height: 100px;
-  margin-top:20px;
+  margin-top: 20px;
 `
 
 const awardList = [
@@ -168,29 +169,28 @@ const Rank = () => {
   const { isMobile } = useResponsive()
 
   return (
-
     <RankWrap>
-      {isMobile ? (
-        <Image src={ require('../../../assets/images/unicorn/m-ranking.png').default}/>
-      ): (
-         <FadeInUp>
-        <RankContent>
-          {awardList.map((award, index) => {
-            return (
-              <RankItem key={index}>
-                <AwardText style={{ color: award.color }}>{award.award}</AwardText>
-                <AwardAvatar src={award.icon} />
-                <AwardBg height={award.height} bg={award.bg}>
-                  {award.rank}
-                </AwardBg>
-                <Text style={{color:award.color}}>{ award.name}</Text>
-              </RankItem>
-            )
-          })}
-        </RankContent>
+      <FadeInUp>
+        <UnicornTitle color="#FFB547" title="Grand Prize Awards" />
+        {isMobile ? (
+          <Image src={require('../../../assets/images/unicorn/m-ranking.png').default} />
+        ) : (
+          <RankContent>
+            {awardList.map((award, index) => {
+              return (
+                <RankItem key={index}>
+                  <AwardText style={{ color: award.color }}>{award.award}</AwardText>
+                  <AwardAvatar src={award.icon} />
+                  <AwardBg height={award.height} bg={award.bg}>
+                    {award.rank}
+                  </AwardBg>
+                  <Text style={{ color: award.color }}>{award.name}</Text>
+                </RankItem>
+              )
+            })}
+          </RankContent>
+        )}
       </FadeInUp>
-      )}
-     
     </RankWrap>
   )
 }

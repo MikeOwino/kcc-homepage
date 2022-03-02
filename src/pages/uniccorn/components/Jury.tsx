@@ -187,7 +187,7 @@ const Jury = () => {
         <Content>
           <UnicornTitle title="KCC Unicorn Contest Jury" />
           <Desc style={{ color: '#fff', marginTop: '60px', maxWidth: '960px', textAlign: 'center' }}>
-            KCC GODAO has invited top industry players to form the Unicorn Contest jury to enable a more comprehensive
+            KCC GoDAO has invited top industry players to form the Unicorn Contest jury to enable a more comprehensive
             and objective evaluation of all entries
           </Desc>
           <JuryListWrap>

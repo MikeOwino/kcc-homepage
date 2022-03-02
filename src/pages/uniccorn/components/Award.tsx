@@ -73,7 +73,7 @@ const AwardText = styled.div`
   transform: rotateY(180deg);
   border-radius: 8px;
   font-family: 'SF Pro Display Bold';
-  padding: 0 40px;
+  padding: 0 10px;
   background: #0b1013;
   @media (max-width: 768px) {
     padding: 0 40px;

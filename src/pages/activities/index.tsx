@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { BaseWrap, HomePageWrap } from '../home/index'
 import Card from '../../components/ActivityCard'
 import Helmet from 'react-helmet'
+import { MediaList } from './components/contact'
 
 export interface GrantsPageProps {}
 
@@ -13,7 +14,7 @@ const ActivitiesPageWrap = styled(HomePageWrap)`
   padding-bottom: 40px;
   height: auto;
   min-height: calc(100vh - 320px);
-  background: linear-gradient(0deg, #277453 0%, rgba(0, 0, 0, 1) 100%);
+  background: rgba(0, 0, 0, 1);
 `
 const ContentWrap = styled(BaseWrap)`
   margin-top: 68px;
@@ -200,6 +201,9 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
           <ListWrap>{overList}</ListWrap>
         </ContentWrap>
       ) : null}
+      <ContentWrap>
+        <MediaList />
+      </ContentWrap>
     </ActivitiesPageWrap>
   )
 }

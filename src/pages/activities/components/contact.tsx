@@ -2,8 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrap = styled.div`
-  margin: 0 auto;
+  margin: 0px auto;
+  padding-top: 86px;
   width: 100%;
+  @media (max-width: 768px) {
+    padding-top: 6px;
+  }
 `
 
 const Title = styled.div`
@@ -22,6 +26,9 @@ const ListWrap = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin-top: 48px;
+  @media (max-width: 768px) {
+    margin-top: 42px;
+  }
 `
 const Item = styled.div`
   width: 100%;
@@ -35,12 +42,22 @@ const Item = styled.div`
   & + & {
     margin-top: 24px;
   }
+  @media (max-width: 768px) {
+    height: auto;
+    padding-left: 0px;
+    flex-flow: column nowrap;
+    padding-bottom: 64px;
+  }
 `
 const LogoWrap = styled.div`
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
+  @media (max-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 42px;
+  }
 `
 const Logo = styled.img`
   width: 80px;
@@ -62,6 +79,12 @@ const LanguageList = styled.div`
   flex-flow: column wrap;
   height: 140px;
   margin-left: 150px;
+  @media (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-left: 0px;
+  }
 `
 
 const LanguageItem = styled.div`
@@ -73,6 +96,12 @@ const LanguageItem = styled.div`
   width: 120px;
   margin-left: 80px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    margin-left: 0px;
+  }
 `
 const LanguageText = styled.div`
   font-family: URWDIN-Regular;

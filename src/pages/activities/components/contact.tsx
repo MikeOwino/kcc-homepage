@@ -54,6 +54,7 @@ const LogoWrap = styled.div`
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
+  width: 80px;
   @media (max-width: 768px) {
     padding-top: 80px;
     padding-bottom: 42px;

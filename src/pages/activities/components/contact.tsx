@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
 const Wrap = styled.div`
@@ -156,9 +157,10 @@ const contactList = [
 ]
 
 function MediaList() {
+  const { t } = useTranslation()
   return (
     <Wrap>
-      <Title>KCC Community</Title>
+      <Title>{t(`KCC Community`)}</Title>
       <ListWrap>
         {contactList.map((media, index) => {
           return (

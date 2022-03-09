@@ -210,7 +210,6 @@ const PartnerListWrap = styled.div`
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 24px;
   }
 `
 const PartnerItemWrap = styled.div`
@@ -232,6 +231,9 @@ const PartnerItemWrap = styled.div`
   @media (max-width: 768px) {
     height: 80px;
     width: 80px;
+    & + & {
+      margin-left: 0px;
+    }
   }
   @media (min-width: 769px) and (max-width: 1200px) {
     height: 100px;
@@ -534,6 +536,9 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
   const MilestoneTitle = styled(MilestoneDateText)`
     color: #ffffff;
     text-align: center;
+    @media (max-width: 768px) {
+      text-align: left;
+    }
   `
 
   const TwoLine = require('../../assets/images/home/threeline.svg').default
@@ -547,7 +552,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
     position: relative;
     margin-bottom: 140px;
     height: 550px;
-    background: url(${TwoLine}) top center no-repeat;
+    background: url(${TwoLine}) 0px 0px no-repeat;
     background-size: 99% 100%;
     @media (max-width: 768px) {
       flex-flow: column nowrap;
@@ -562,7 +567,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
   const RightOrder = styled.div`
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     max-width: 1000px;
@@ -575,7 +580,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
     width: 100%;
     max-width: 1000px;
     flex-flow: row-reverse nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
   `
@@ -858,7 +863,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
                     transform: 'rotate(90deg)',
                     transformOrigin: 'top left',
                     zIndex: 3,
-                    width: '540px',
+                    width: '660px',
                     left: '40px',
                     top: '0px',
                   }}
@@ -887,7 +892,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
 
       {/* Partner */}
       <HomePageWrap>
-        <BaseWrap style={{ padding: !isPC ? '0px 24px 0px 24px' : '0px 0 0 ', position: 'relative', zIndex: 5 }}>
+        <BaseWrap style={{ padding: !isPC ? '0px 24px 0px 24px' : '0px 0 0 0 ', position: 'relative', zIndex: 5 }}>
           <ColumnCenter>
             <TitleText>{t('Partner')}</TitleText>
             <PartnerListWrap>{PartnerListComponent}</PartnerListWrap>

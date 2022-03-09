@@ -85,6 +85,11 @@ export const KCC = {
       icon: require('../assets/images/home/milestone-icon@2x.png').default,
     },
     {
+      date: '2022-03-02',
+      title: 'Unicorn Contest',
+      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+    },
+    {
       date: '',
       title: 'Milestone Last',
     },

@@ -45,6 +45,27 @@ export const FOOTER_LIST = [
     ],
   },
   {
+    title: 'Community',
+    children: [
+      {
+        navText: 'Telegram',
+        navRoute: KCC.TELEGRAM,
+      },
+      {
+        navText: 'Twitter',
+        navRoute: KCC.TWITTER,
+      },
+      {
+        navText: 'Discord',
+        navRoute: KCC.DISCORD_URL,
+      },
+      {
+        navText: 'Medium',
+        navRoute: KCC.MEDIA_URL,
+      },
+    ],
+  },
+  {
     title: 'Event',
     children: [
       {

@@ -70,6 +70,11 @@ export const KCC = {
       icon: require('../assets/images/home/milestone-icon@2x.png').default,
     },
     {
+      date: '2021-09-24',
+      title: 'KCC GODAO Foundation registered',
+      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+    },
+    {
       date: '2021-09-27',
       title: 'Discover Launched',
       icon: require('../assets/images/home/milestone-icon@2x.png').default,
@@ -85,13 +90,18 @@ export const KCC = {
       icon: require('../assets/images/home/milestone-icon@2x.png').default,
     },
     {
-      date: '2022-03-02',
-      title: 'Unicorn Contest',
+      date: '2022-02-25',
+      title: 'Ecosystem Incentive Funds announced',
       icon: require('../assets/images/home/milestone-icon@2x.png').default,
     },
     {
-      date: '',
-      title: 'Milestone Last',
+      date: '2022-03-15',
+      title: 'First Hackathon kicked off',
+      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+    },
+    {
+      date: 'Coming Soon',
+      title: 'Incubating most valued projects in Unicorn',
     },
   ],
   PARTNER_LIST: [

@@ -20,7 +20,6 @@ import { CenterRow } from '../../components/Row/index'
 import { theme } from '../../constants/theme'
 import DotComponent from '../../components/Dot/index'
 import { useResponsive } from '../../utils/responsive'
-import MilestoneEventList from './components/Milestone'
 
 export interface HomePageProps {}
 
@@ -510,12 +509,12 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
   const MilestoneIconWrap = styled.div`
     text-align: center;
     width: 100%;
-    height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     z-index: 6;
+    
     @media (max-width: 768px) {
       width: 32px;
       left: -56px;
@@ -538,6 +537,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
     text-align: center;
     @media (max-width: 768px) {
       text-align: left;
+      line-height:1.4;
     }
   `
 
@@ -610,11 +610,11 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
   const FourPerGroupList = []
 
   for (let i = 0, len = KCC.MILESTONES.length; i < len; i += 4) {
-    console.log(KCC.MILESTONES.slice(i, i + 4))
     FourPerGroupList.push(KCC.MILESTONES.slice(i, i + 4))
   }
 
   const PcMileStone = FourPerGroupList.map((item, index) => {
+
     const C = milestoreId % 2 === 0 ? RightOrder : ReverseOrder
 
     const list = item
@@ -636,9 +636,13 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
             >
               <MilestoneIconWrap>
                 {(index === FourPerGroupList.length - 1 && nth === list.length - 1) || (index === 0 && nth === 0) ? (
-                  <DotComponent shining={index === FourPerGroupList.length - 1 && nth === list.length - 1} />
+                  <div style={{ height: '30px', display: 'flex', flexFlow: 'row nowrap', alignItems: 'center' }}>
+                    <DotComponent shining={index === FourPerGroupList.length - 1 && nth === list.length - 1} />
+                  </div>
                 ) : (
-                  <img src={milestore.icon} width="32px" />
+                  <div style={{ height: '30px', display: 'flex', flexFlow: 'row nowrap', alignItems: 'center' }}>
+                    <img src={milestore.icon} width="32px" />
+                  </div>
                 )}
               </MilestoneIconWrap>
               <MilestoneDateText style={{ marginTop: '10px' }}>{milestore.date}</MilestoneDateText>
@@ -657,16 +661,20 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
   const MilestoneList = KCC.MILESTONES.map((item, index) => {
     const Icon =
       index === 0 || index === KCC.MILESTONES.length - 1 ? (
-        <DotComponent shining={index === KCC.MILESTONES.length - 1} />
+        <div style={{ width:'26px',height: '30px', display: 'flex',marginLeft:'9px', flexFlow: 'row nowrap', alignItems: 'center' }}>
+          <DotComponent shining={index === KCC.MILESTONES.length - 1} />
+        </div>
       ) : (
-        <img src={item.icon} width="32px" />
+        <div style={{ height: '30px', display: 'flex', flexFlow: 'row nowrap', alignItems: 'center' }}>
+          <img src={item.icon} width="32px" />
+        </div>
       )
     return (
       <Row
         style={{
           alignItems: 'center',
           justifyContent: 'flex-start',
-          height: '65px',
+          height: '80px',
           position: 'relative',
         }}
       >
@@ -863,7 +871,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
                     transform: 'rotate(90deg)',
                     transformOrigin: 'top left',
                     zIndex: 3,
-                    width: '660px',
+                    width: '960px',
                     left: '40px',
                     top: '0px',
                   }}

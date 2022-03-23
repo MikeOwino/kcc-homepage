@@ -71,7 +71,7 @@ export const KCC = {
     },
     {
       date: '2021-09-24',
-      title: 'KCC GODAO Foundation registered',
+      title: 'KCC GoDAO Foundation registered',
       icon: require('../assets/images/home/milestone-icon@2x.png').default,
     },
     {

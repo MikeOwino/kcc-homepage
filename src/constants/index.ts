@@ -71,7 +71,7 @@ export const KCC = {
     },
     {
       date: '2021-09-24',
-      title: 'KCC GoDAO Foundation registered',
+      title: 'KCC GoDAO Foundation Registered',
       icon: require('../assets/images/home/milestone-icon@2x.png').default,
     },
     {
@@ -91,17 +91,17 @@ export const KCC = {
     },
     {
       date: '2022-02-25',
-      title: 'Ecosystem Incentive Funds announced',
+      title: 'Ecosystem Incentive Funds Announced',
       icon: require('../assets/images/home/milestone-icon@2x.png').default,
     },
     {
       date: '2022-03-15',
-      title: 'First Hackathon kicked off',
+      title: 'First Hackathon Kicked Off',
       icon: require('../assets/images/home/milestone-icon@2x.png').default,
     },
     {
       date: 'Coming Soon',
-      title: 'Incubating most valued projects in Unicorn',
+      title: 'Incubating Most Valued Projects in Unicorn',
     },
   ],
   PARTNER_LIST: [

@@ -66,7 +66,7 @@ const ActivityCard: React.FunctionComponent<ActivityCardProps> = (props) => {
 
   const nav2Activity = () => {
     if (!props.url_ch?.startsWith('http') || !props.url_en?.startsWith('http')) {
-      history.push(props.url_ch as string)
+      props.url_ch && history.push(props.url_ch as string)
       return
     }
 
@@ -78,11 +78,9 @@ const ActivityCard: React.FunctionComponent<ActivityCardProps> = (props) => {
   }
   return (
     <ActivityCardWrap lng={i18n.language} enBg={props.thumbnail_en} chBg={props.thumbnail_ch}>
-      {props.valid ? (
-        <Button onClick={nav2Activity}>{t('Participate now')}</Button>
-      ) : (
-        <Button onClick={nav2Activity}>{t(`View Event`)}</Button>
-      )}
+      {props.valid && props.url_ch && props.url_en && <Button onClick={nav2Activity}>{t('Participate now')}</Button>}
+
+      {!props.valid && props.url_ch && props.url_en && <Button onClick={nav2Activity}>{t(`View Event`)}</Button>}
     </ActivityCardWrap>
   )
 }

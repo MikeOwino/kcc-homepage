@@ -92,6 +92,81 @@ const ActivityImaga = styled.img`
 
 const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
   const activities: any[] = [
+    // super kcs week
+    {
+      thumbnail_ch: require('../../assets/images/activity/g-mojitoswap-cn.png').default,
+      thumbnail_en: require('../../assets/images/activity/g-mojitoswap-en.png').default,
+      deadline: '2022/04/03 10:00:00',
+      url_ch: '',
+      url_en: '',
+    },
+
+    {
+      thumbnail_ch: require('../../assets/images/activity/g-multi-cn.png').default,
+      thumbnail_en: require('../../assets/images/activity/g-multi-en.png').default,
+      deadline: '2022/04/03 10:00:00',
+      url_ch: '',
+      url_en: '',
+    },
+
+    {
+      thumbnail_ch: require('../../assets/images/activity/g-kuswap-cn.png').default,
+      thumbnail_en: require('../../assets/images/activity/g-kuswap-en.png').default,
+      deadline: '2022/04/03 10:00:00',
+      url_ch: '',
+      url_en: '',
+    },
+
+    {
+      thumbnail_ch: require('../../assets/images/activity/g-umbrella-cn.png').default,
+      thumbnail_en: require('../../assets/images/activity/g-umbrella-en.png').default,
+      deadline: '2022/04/03 10:00:00',
+      url_ch: '',
+      url_en: '',
+    },
+
+    {
+      thumbnail_ch: require('../../assets/images/activity/g-dextools-cn.png').default,
+      thumbnail_en: require('../../assets/images/activity/g-dextools-en.png').default,
+      deadline: '2022/04/03 10:00:00',
+      url_ch: '',
+      url_en: '',
+    },
+
+    // kcs kcc telegram
+
+    {
+      thumbnail_ch: require('../../assets/images/activity/kcs-kcc-tele-cn.png').default,
+      thumbnail_en: require('../../assets/images/activity/kcs-kcc-tele-en.png').default,
+      deadline: '2022/04/03 10:00:00',
+      url_ch: 'https://t.me/KCCOfficialEnglishCommunity',
+      url_en: 'https://t.me/KCCOfficialEnglishCommunity',
+    },
+
+    {
+      thumbnail_ch: require('../../assets/images/activity/kcs-new-address-cn.png').default,
+      thumbnail_en: require('../../assets/images/activity/kcs-new-address-en.png').default,
+      deadline: '2022/04/03 10:00:00',
+      url_ch: '',
+      url_en: '',
+    },
+
+    {
+      thumbnail_ch: require('../../assets/images/activity/kcs-free-gas-cn.png').default,
+      thumbnail_en: require('../../assets/images/activity/kcs-free-gas-en.png').default,
+      deadline: '2022/04/03 10:00:00',
+      url_ch: '',
+      url_en: '',
+    },
+
+    {
+      thumbnail_ch: require('../../assets/images/activity/kcs-cross-chain-en.png').default,
+      thumbnail_en: require('../../assets/images/activity/kcs-cross-chain-en.png').default,
+      deadline: '2022/04/03 10:00:00',
+      url_ch: '',
+      url_en: '',
+    },
+
     {
       thumbnail_ch: require('../../assets/images/activity/activity-1-ch.png').default,
       thumbnail_en: require('../../assets/images/activity/activity-1-en.png').default,
@@ -192,7 +267,7 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
       {/* banner */}
       <ContentWrap>
         <Title>{t(`KCC Activity Center`)}</Title>
-        <SubTitle>{t(`In Progress`)}</SubTitle>
+        <SubTitle>{t(`KCS Super Week`)}</SubTitle>
         <ListWrap>{ActivityList}</ListWrap>
       </ContentWrap>
       {endedList.length ? (

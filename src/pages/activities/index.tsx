@@ -91,6 +91,16 @@ const ActivityImaga = styled.img`
 `
 
 const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
+  const alwaysShow: any[] = [
+    {
+      thumbnail_ch: require('../../assets/images/activity/activity-1-ch.png').default,
+      thumbnail_en: require('../../assets/images/activity/activity-1-en.png').default,
+      deadline: '2023/07/07 10:57:33',
+      url_ch: '/ambassador',
+      url_en: '/ambassador',
+    },
+  ]
+
   const activities: any[] = [
     // super kcs week
     {
@@ -165,14 +175,6 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
       deadline: '2022/04/03 10:00:00',
       url_ch: '',
       url_en: '',
-    },
-
-    {
-      thumbnail_ch: require('../../assets/images/activity/activity-1-ch.png').default,
-      thumbnail_en: require('../../assets/images/activity/activity-1-en.png').default,
-      deadline: '2023/07/07 10:57:33',
-      url_ch: '/ambassador',
-      url_en: '/ambassador',
     },
     {
       thumbnail_ch: require('../../assets/images/activity/KCC-AMA-CN.png').default,
@@ -250,6 +252,10 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
 
   const { t } = useTranslation()
 
+  const alwaysListCard = alwaysShow.map((item, index) => {
+    return <Card key={index} {...item} />
+  })
+
   const ActivityList = onGoingList.map((item, index) => {
     return <Card key={index} {...item} />
   })
@@ -269,6 +275,10 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
         <Title>{t(`KCC Activity Center`)}</Title>
         <SubTitle>{t(`KCS Super Week`)}</SubTitle>
         <ListWrap>{ActivityList}</ListWrap>
+      </ContentWrap>
+      <ContentWrap>
+        <SubTitle>{t(`In Progress`)}</SubTitle>
+        <ListWrap>{alwaysListCard}</ListWrap>
       </ContentWrap>
       {endedList.length ? (
         <ContentWrap>

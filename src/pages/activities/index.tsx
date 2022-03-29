@@ -107,40 +107,40 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
       thumbnail_ch: require('../../assets/images/activity/g-mojitoswap-cn.png').default,
       thumbnail_en: require('../../assets/images/activity/g-mojitoswap-en.png').default,
       deadline: '2022/04/03 10:00:00',
-      url_ch: '',
-      url_en: '',
+      url_ch: 'https://gleam.io/xsZY6/kcc-special-event-mojitoswap-giveaway',
+      url_en: 'https://gleam.io/xsZY6/kcc-special-event-mojitoswap-giveaway',
     },
 
     {
       thumbnail_ch: require('../../assets/images/activity/g-multi-cn.png').default,
       thumbnail_en: require('../../assets/images/activity/g-multi-en.png').default,
       deadline: '2022/04/03 10:00:00',
-      url_ch: '',
-      url_en: '',
+      url_ch: 'https://gleam.io/Mdzq6/kcc-special-event-multichain-giveaway',
+      url_en: 'https://gleam.io/Mdzq6/kcc-special-event-multichain-giveaway',
     },
 
     {
       thumbnail_ch: require('../../assets/images/activity/g-kuswap-cn.png').default,
       thumbnail_en: require('../../assets/images/activity/g-kuswap-en.png').default,
       deadline: '2022/04/03 10:00:00',
-      url_ch: '',
-      url_en: '',
+      url_ch: 'https://gleam.io/Lzr2j/kcc-special-event-kuswap-giveaway',
+      url_en: 'https://gleam.io/Lzr2j/kcc-special-event-kuswap-giveaway',
     },
 
     {
       thumbnail_ch: require('../../assets/images/activity/g-umbrella-cn.png').default,
       thumbnail_en: require('../../assets/images/activity/g-umbrella-en.png').default,
       deadline: '2022/04/03 10:00:00',
-      url_ch: '',
-      url_en: '',
+      url_ch: 'https://gleam.io/6GDWZ/kcc-special-event-umbrella-giveaway',
+      url_en: 'https://gleam.io/6GDWZ/kcc-special-event-umbrella-giveaway',
     },
 
     {
       thumbnail_ch: require('../../assets/images/activity/g-dextools-cn.png').default,
       thumbnail_en: require('../../assets/images/activity/g-dextools-en.png').default,
       deadline: '2022/04/03 10:00:00',
-      url_ch: '',
-      url_en: '',
+      url_ch: 'https://gleam.io/uovXT/kcc-special-event-dextools-giveaway',
+      url_en: 'https://gleam.io/uovXT/kcc-special-event-dextools-giveaway',
     },
 
     // kcs kcc telegram
@@ -157,24 +157,30 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
       thumbnail_ch: require('../../assets/images/activity/kcs-new-address-cn.png').default,
       thumbnail_en: require('../../assets/images/activity/kcs-new-address-en.png').default,
       deadline: '2022/04/03 10:00:00',
-      url_ch: '',
-      url_en: '',
+      url_ch:
+        'https://kccofficial.medium.com/kcc-special-events-is-coming-get-lottery-tickets-to-win-21-000-kcs-92c6f022963',
+      url_en:
+        'https://kccofficial.medium.com/kcc-special-events-is-coming-get-lottery-tickets-to-win-21-000-kcs-92c6f022963',
     },
 
     {
       thumbnail_ch: require('../../assets/images/activity/kcs-free-gas-cn.png').default,
       thumbnail_en: require('../../assets/images/activity/kcs-free-gas-en.png').default,
       deadline: '2022/04/03 10:00:00',
-      url_ch: '',
-      url_en: '',
+      url_ch:
+        'https://kccofficial.medium.com/kcc-special-events-is-coming-get-lottery-tickets-to-win-21-000-kcs-92c6f022963',
+      url_en:
+        'https://kccofficial.medium.com/kcc-special-events-is-coming-get-lottery-tickets-to-win-21-000-kcs-92c6f022963',
     },
 
     {
       thumbnail_ch: require('../../assets/images/activity/kcs-cross-chain-cn.png').default,
       thumbnail_en: require('../../assets/images/activity/kcs-cross-chain-en.png').default,
       deadline: '2022/04/03 10:00:00',
-      url_ch: '',
-      url_en: '',
+      url_ch:
+        'https://multichainorg.medium.com/join-the-cross-chain-mega-event-multichain-x-kcc-x-mojitoswap-x-coolmining-e7b403dba5c4',
+      url_en:
+        'https://multichainorg.medium.com/join-the-cross-chain-mega-event-multichain-x-kcc-x-mojitoswap-x-coolmining-e7b403dba5c4',
     },
     {
       thumbnail_ch: require('../../assets/images/activity/KCC-AMA-CN.png').default,

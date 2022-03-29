@@ -170,7 +170,7 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
     },
 
     {
-      thumbnail_ch: require('../../assets/images/activity/kcs-cross-chain-en.png').default,
+      thumbnail_ch: require('../../assets/images/activity/kcs-cross-chain-cn.png').default,
       thumbnail_en: require('../../assets/images/activity/kcs-cross-chain-en.png').default,
       deadline: '2022/04/03 10:00:00',
       url_ch: '',

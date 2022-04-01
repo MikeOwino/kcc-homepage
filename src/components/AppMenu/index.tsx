@@ -160,6 +160,23 @@ const AppMenu: React.FunctionComponent<AppMenuProps> = ({ style }) => {
   const genNavList = (navItem: NavItemType) => {
     // no children
     if (!navItem.hasChildren && navItem?.route) {
+      if (navItem.route.startsWith('http') && typeof navItem.name === 'string') {
+        return (
+          <Menu.Item key={navItem.name}>
+            <a
+              onClick={() => {
+                dispatch(changeMobileMenuShow({ show: false }))
+              }}
+              href={navItem.route}
+              style={{ color: theme.colors.primary }}
+              target="_blank"
+            >
+              <NavTitle style={{ position: 'relative', top: '-2px' }}>{t(`${navItem.name}`)}</NavTitle>
+            </a>
+          </Menu.Item>
+        )
+      }
+
       return (
         <Menu.Item key={navItem.name}>
           {typeof navItem.name === 'string' ? (

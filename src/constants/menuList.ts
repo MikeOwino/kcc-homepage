@@ -102,12 +102,12 @@ export const MENU_LIST = [
       {
         groupName: 'Dapp',
         groupMember: [
-          {
-            title: 'Discover',
-            subTitle: 'Discover Desc',
-            route: KCC.DISCOVER,
-            icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
-          },
+          // {
+          //   title: 'Discover',
+          //   subTitle: 'Discover Desc',
+          //   route: KCC.DISCOVER,
+          //   icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
+          // },
           {
             title: 'Gnosis Safe Multisig',
             subTitle: 'Protect asset security',

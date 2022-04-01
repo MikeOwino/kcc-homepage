@@ -35,6 +35,7 @@ const MenuWrap = styled.div`
     top: 70px;
     left: 0px;
     width: 100%;
+    margin-left: 0;
     background: #000;
   }
 `

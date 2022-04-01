@@ -103,12 +103,6 @@ export const MENU_LIST = [
         groupName: 'Dapp',
         groupMember: [
           {
-            title: 'KCC BRIDGE TITLE',
-            subTitle: 'KCC BRIDGE DESC',
-            route: '/bridge/transfer',
-            icon: require('../assets/images/Icons/menu/bridge.png').default,
-          },
-          {
             title: 'Discover',
             subTitle: 'Discover Desc',
             route: KCC.DISCOVER,
@@ -165,14 +159,6 @@ export const MENU_LIST = [
     hasChildren: true,
     childrens: [
       {
-        title: 'Activites',
-        subTitle: 'View the exciting activites information, Includes hackathons,meetups,and more',
-        route: '/community/activity',
-        // route: '',
-        // subTitle: 'Coming Soon...',
-        icon: require('../assets/images/Icons/menu/activity@2x.png').default,
-      },
-      {
         title: 'GoDAO',
         subTitle: 'Dao Desc',
         route: KCC.DAO,
@@ -185,6 +171,29 @@ export const MENU_LIST = [
         icon: require('../assets/images/Icons/menu/grant@2x.png').default,
       },
     ],
+  },
+  {
+    name: 'KCC BRIDGE TITLE',
+    subTitle: 'KCC BRIDGE DESC',
+    route: '/bridge/transfer',
+    icon: require('../assets/images/Icons/menu/bridge.png').default,
+    hasChildren: false,
+  },
+  {
+    name: 'Discover',
+    subTitle: 'Discover Desc',
+    route: KCC.DISCOVER,
+    icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
+    hasChildren: false,
+  },
+  {
+    name: 'Activites',
+    subTitle: 'View the exciting activites information, Includes hackathons,meetups,and more',
+    route: '/community/activity',
+    // route: '',
+    // subTitle: 'Coming Soon...',
+    icon: require('../assets/images/Icons/menu/activity@2x.png').default,
+    hasChildren: false,
   },
   {
     name: null,

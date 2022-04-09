@@ -277,11 +277,11 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
         <meta name="description" content="Join exciting KCC activities, including hackathon, meet-up and more." />
       </Helmet>
       {/* banner */}
-      <ContentWrap>
+      {/* <ContentWrap>
         <Title>{t(`KCC Activity Center`)}</Title>
         <SubTitle>{t(`KCS Super Week`)}</SubTitle>
         <ListWrap>{ActivityList}</ListWrap>
-      </ContentWrap>
+      </ContentWrap> */}
       <ContentWrap>
         <SubTitle>{t(`In Progress`)}</SubTitle>
         <ListWrap>{alwaysListCard}</ListWrap>

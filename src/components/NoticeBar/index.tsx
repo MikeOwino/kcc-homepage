@@ -6,6 +6,7 @@ import axios from 'axios'
 import { message } from 'antd'
 import { useTranslation } from 'react-i18next'
 import moment from 'moment'
+import parser from 'rss-parser'
 
 import Slider from 'react-slick'
 
@@ -127,12 +128,20 @@ const NoticeBar: React.FunctionComponent<NoticeBarProps> = () => {
     link: 'https://docs.kcc.io/#/zh-cn/?id=%e9%a3%8e%e9%99%a9%e6%8f%90%e7%a4%ba',
   }
 
+  // const parser = require("rss-parser");
+  // const feed = await new parser().parseURL('https://mailsubscribe.kcc.io/rss-feed')
+  // console.log(JSON.stringify(feed, null, 4))
+
   const getAnnouncemet = async () => {
     try {
-      const res = await axios({
-        url: KCC.MEDIA_API,
-      })
-      const list = [...res?.data?.items]
+      // const res = await axios({
+      //   url:'https://mailsubscribe.kcc.io/rss-feed',
+      //   // url: KCC.MEDIA_API,
+      // })
+
+      const res = await new parser().parseURL('https://mailsubscribe.kcc.io/rss-feed')
+
+      const list: any[] = [...res?.items]
       // filter by language
       let announcment: any[] = []
       if (i18n.language === 'zh-CN') {

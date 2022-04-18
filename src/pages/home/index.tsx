@@ -514,7 +514,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
     align-items: center;
     position: relative;
     z-index: 6;
-    
+
     @media (max-width: 768px) {
       width: 32px;
       left: -56px;
@@ -537,7 +537,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
     text-align: center;
     @media (max-width: 768px) {
       text-align: left;
-      line-height:1.4;
+      line-height: 1.4;
     }
   `
 
@@ -614,7 +614,6 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
   }
 
   const PcMileStone = FourPerGroupList.map((item, index) => {
-
     const C = milestoreId % 2 === 0 ? RightOrder : ReverseOrder
 
     const list = item
@@ -661,16 +660,27 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
   const MilestoneList = KCC.MILESTONES.map((item, index) => {
     const Icon =
       index === 0 || index === KCC.MILESTONES.length - 1 ? (
-        <div style={{ width:'26px',height: '30px', display: 'flex',marginLeft:'9px', flexFlow: 'row nowrap', alignItems: 'center' }}>
+        <div
+          key={index}
+          style={{
+            width: '26px',
+            height: '30px',
+            display: 'flex',
+            marginLeft: '9px',
+            flexFlow: 'row nowrap',
+            alignItems: 'center',
+          }}
+        >
           <DotComponent shining={index === KCC.MILESTONES.length - 1} />
         </div>
       ) : (
-        <div style={{ height: '30px', display: 'flex', flexFlow: 'row nowrap', alignItems: 'center' }}>
+        <div key={index} style={{ height: '30px', display: 'flex', flexFlow: 'row nowrap', alignItems: 'center' }}>
           <img src={item.icon} width="32px" />
         </div>
       )
     return (
       <Row
+        key={index}
         style={{
           alignItems: 'center',
           justifyContent: 'flex-start',

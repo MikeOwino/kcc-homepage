@@ -81,7 +81,7 @@ const DateText = styled.div`
   height: 20px;
   line-height: 20px;
   margin-left: 8px;
-  width: 120px;
+  width: 200px;
   text-align: right;
 `
 
@@ -141,19 +141,19 @@ const NoticeBar: React.FunctionComponent<NoticeBarProps> = () => {
 
       const res = await new parser().parseURL('https://mailsubscribe.kcc.io/rss-feed')
 
+      console.log('res', res)
+
       const list: any[] = [...res?.items]
       // filter by language
       let announcment: any[] = []
       if (i18n.language === 'zh-CN') {
         announcment.push(cnRiskAnnouncement)
         for (let i = 0; i < list.length; i++) {
-          if (list[i].categories.includes('zh') || list[i].categories.includes('Zh')) {
-            const validDate = list[i]?.pubDate.replace(/-/g, '/') // competible ios
-            const t = new Date(validDate).getTime() + 1000 * 60 * 60 * 8
-            const temp: any = { ...list[i] }
-            temp.pubDate = t && moment(new Date(t)).format('YYYY-MM-DD HH:mm:ss')
-            announcment.push(temp)
-          }
+          const validDate = list[i]?.isoDate // competible ios
+          const t = new Date(validDate).getTime()
+          const temp: any = { ...list[i] }
+          temp.pubDate = t && moment(new Date(t)).format('YYYY-MM-DD HH:mm:ss')
+          announcment.push(temp)
         }
       } else {
         announcment.push(enRiskAnnouncement)

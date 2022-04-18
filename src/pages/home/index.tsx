@@ -702,6 +702,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
       {HOME_MENU_LIST.map((item) => {
         return (
           <InfoItem
+            key={item.title}
             onClick={() => {
               window.open(item.route)
             }}

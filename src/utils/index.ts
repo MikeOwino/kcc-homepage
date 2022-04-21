@@ -38,8 +38,7 @@ export function getWalletInfo(walletId: number) {
 export async function getApproveStatus(account: string, tokenAddress: string, bridgeAddress: string, library: any) {
   const tokenContract = getErc20Contract(tokenAddress, library)
   const allowance = await tokenContract.methods.allowance(account, bridgeAddress).call()
-  console.log('allowance', allowance)
-  return allowance > 0
+  return allowance ?? 0
 }
 
 /**

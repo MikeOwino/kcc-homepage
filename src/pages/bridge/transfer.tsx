@@ -475,7 +475,10 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
       getApproveStatus(account, selectedPairInfo.srcChainInfo.contract, network.bridgeCoreAddress, lib)
         .then((allowance) => {
           setCheckList((list) => {
-            return { ...list, approve: Boolean(allowance) }
+            // if allowance less than input amount, return false
+            console.log('allowance', allowance)
+            console.log('amount', new BN(amount).times(10 ** 18).toString())
+            return { ...list, approve: new BN(allowance).gte(new BN(amount).times(10 ** 18)) }
           })
         })
         .catch(() => {
@@ -484,7 +487,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
           })
         })
     }
-  }, [selectedPairInfo, account])
+  }, [selectedPairInfo, account, amount])
 
   const isTransferToSelf = React.useMemo(() => {
     if (account && receiveAddress) {

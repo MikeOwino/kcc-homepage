@@ -70,6 +70,12 @@ export const MENU_LIST = [
         icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
       },
       {
+        title: 'Mainnet faucet',
+        subTitle: 'Get KCC testnet tokens',
+        route: KCC.MAINNET_FAUCET,
+        icon: require('../assets/images/Icons/menu/main-faucet.png').default,
+      },
+      {
         title: 'Testnet faucet',
         subTitle: 'Get KCC testnet tokens',
         route: KCC.FAUCET,

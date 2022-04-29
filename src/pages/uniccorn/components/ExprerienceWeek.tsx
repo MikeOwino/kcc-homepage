@@ -38,12 +38,11 @@ const Desc = styled.div`
 `
 
 const ExperienceWeek = () => {
-
   return (
     <ActiveWrap>
       <Content>
         <UnicornTitle title="Unicorn Exprerience Week" />
-        <Desc style={{ color: "#fff", textAlign: "center" }}>
+        <Desc style={{ color: '#fff', textAlign: 'center' }}>
           KCC Unicorn Carnival Week is a great event held by KCC during the Unicorn Contest. During the <br />
           event, users have the opportunity to share 5,000 KCS provided by KCC and the enormous <br />
           rewards provided by the project party.

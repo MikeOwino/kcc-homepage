@@ -4,7 +4,6 @@ import UnicornTitle from './UnicornTitle'
 
 
 const Content = styled.div`
-
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;

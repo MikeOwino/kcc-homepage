@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 import UnicornTitle from './UnicornTitle'
 import ParticipantPro from './Participant'
@@ -38,8 +38,8 @@ const Desc = styled.div`
 `
 
 const TipMsg = styled.a`
-  font-family: 'SF Pro Text';
-  font-style: Bold;
+  font-family: 'SF Pro Display Bold';
+  font-style: bold;
   font-size: 28px;
   height: 32px;
   line-height: 32px;
@@ -48,6 +48,14 @@ const TipMsg = styled.a`
   background: linear-gradient(to right, #39d7e1, #38eabc);
   -webkit-background-clip: text;
   color: transparent;
+  &:hover{
+    text-decoration:underline;
+  }
+  @media (max-width:768px){
+     height:auto;
+     padding:0 24px;
+     font-size:20px;
+  }
 `
 
 const ExperienceWeek = () => {
@@ -58,7 +66,7 @@ const ExperienceWeek = () => {
         <Desc style={{ color: '#fff', textAlign: 'center' }}>
           KCC Unicorn Carnival Week will be officially launched at 10:00 (UTC) on May 6th, 2022. During the event, users
           have the <br />
-          eopportunity to share 5,000 KCS provided by KCC and the enormous rewards provided by the project party.
+          opportunity to share 5,000 KCS provided by KCC and the enormous rewards provided by the project party.
           <br />
         </Desc>
         <TipMsg href="https://kccofficial.medium.com/4ae521dc9ec" target="_blank">

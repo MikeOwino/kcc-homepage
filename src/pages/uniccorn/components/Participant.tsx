@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
-import UnicornTitle from './UnicornTitle'
 
 const Content = styled.div`
   width: 100%;
@@ -20,6 +19,11 @@ const ListCon = styled.div`
   text-align: center;
   align-items: center;
   margin-top: 98px;
+  @media (max-width: 768px) {
+    flex-flow: column nowrap;
+    justify-content: center;
+      margin-top: 48px;
+  }
 `
 const ListItem = styled.a`
   width: 273px;
@@ -34,8 +38,12 @@ const ListItem = styled.a`
   &:hover {
     transform: scale(1.1);
   }
-  &:nth-child(4n+0) {
+  &:nth-child(4n + 0) {
     margin-right: 0;
+  }
+  @media (max-width: 768px) {
+    margin-right: 0px;
+    line-height: 142px;
   }
 `
 
@@ -258,10 +266,44 @@ const partnerList1 = [
   },
 ]
 
+const UnicornTitleWrap = styled.div`
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 768px) {
+    padding: 0 24px;
+  }
+`
+
+const Title = styled.div`
+  font-family: 'SF Pro Display Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  /* identical to box height */
+  text-align: center;
+  color: #ffffff;
+  margin: 0 20px;
+  @media (max-width: 768px) {
+    font-size: 26px;
+    margin: 0 8px;
+  }
+`
+
+const UnicornTitle: FunctionComponent<{ title: string; color?: string }> = ({ title, color }) => {
+  return (
+    <UnicornTitleWrap>
+      <Title style={{ color: color ?? '#fff' }}>{title}</Title>
+    </UnicornTitleWrap>
+  )
+}
+
 const participantPro = () => {
   return (
     <Content>
-      <UnicornTitle title="Participating projects" />
+      <UnicornTitle title="Participating Projects" />
       <ListCon>
         {partnerList1.map((item, index) => {
           return (

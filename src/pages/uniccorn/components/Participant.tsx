@@ -16,7 +16,7 @@ const ListCon = styled.div`
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   text-align: center;
   align-items: center;
   margin-top: 98px;
@@ -25,6 +25,7 @@ const ListItem = styled.a`
   width: 273px;
   height: 142px;
   margin-bottom: 44px;
+  margin-right: 32px;
   border-radius: 8px;
   text-align: center;
   background: rgba(255, 255, 255, 0.16);
@@ -32,6 +33,9 @@ const ListItem = styled.a`
   transition: all 0.3s ease-in-out;
   &:hover {
     transform: scale(1.1);
+  }
+  &:nth-child(4n+0) {
+    margin-right: 0;
   }
 `
 
@@ -201,6 +205,56 @@ const partnerList1 = [
     logo: require('../../../assets/images/unicorn/dexTools.png').default,
     name: 'Dextools',
     link: 'https://www.dextools.io/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/alend.png').default,
+    name: 'Alend',
+    link: 'https://app.alend.xyz/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/nash.png').default,
+    name: 'Nash Metaverse',
+    link: 'https://www.nashmetaverse.xyz/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/vixen.png').default,
+    name: 'VixenPunks',
+    link: 'https://discord.gg/uWaW9HqjAu',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/stoneage.png').default,
+    name: 'IdleStoneAge / SAX',
+    link: 'https://www.idlestoneage.com/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/myMetaFarm.png').default,
+    name: 'My Meta Farm',
+    link: 'https://mymetafarm.com/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/coolmin.png').default,
+    name: 'Coolmining',
+    link: 'https://coolmining.io/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/pikaster.png').default,
+    name: 'Pikaster',
+    link: 'https://www.pikaster.com/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/fabwelt.png').default,
+    name: 'Fabwelt',
+    link: 'http://www.fabwelt.com/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/killbox.png').default,
+    name: 'The Killbox Game',
+    link: 'https://www.thekillboxgame.com/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/ball.png').default,
+    name: 'Crypto Elite’s Battlegrounds(CEBG)',
+    link: 'https://linktr.ee/cebggames',
   },
 ]
 

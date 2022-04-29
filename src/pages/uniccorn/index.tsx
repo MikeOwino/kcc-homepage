@@ -12,6 +12,8 @@ import Award from './components/Award'
 import Apply from './components/Apply'
 import Prize from './components/Prizes'
 import Jury from './components/Jury'
+import ExperienceWeek from './components/ExprerienceWeek'
+import ActiveWeek from './components/ActiveWeek'
 
 const UnicornPageWrap = styled.div`
   position: relative;
@@ -106,6 +108,8 @@ const UnicornPage: React.FunctionComponent = () => {
       {/* banner */}
       <Banner />
       <StartBg id="start-bg"></StartBg>
+      <ExperienceWeek />
+      {/* <ActiveWeek /> */}
       {/* <KCCDesc /> */}
       <Wanted />
       {/* <RankWrap>

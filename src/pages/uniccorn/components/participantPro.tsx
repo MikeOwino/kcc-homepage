@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import UnicornTitle from './UnicornTitle'
 
-
 const Content = styled.div`
   width: 100%;
   max-width: 1440px;
@@ -13,36 +12,41 @@ const Content = styled.div`
   }
 `
 const ListCon = styled.div`
-   max-width: 1440px;
-   margin: 0 auto;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-around;
-   text-align: center;
-   align-items: center;
-   margin-top: 98px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  margin-top: 98px;
 `
 const ListItem = styled.a`
-    width: 273px;
-    height: 142px;
-    margin-bottom: 44px;
-    border-radius: 8px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.16);
-    line-height: 142px;
-    transition: all 0.3s ease-in-out;
-    &:hover {
-      transform: scale(1.1);
-    }
+  width: 273px;
+  height: 142px;
+  margin-bottom: 44px;
+  border-radius: 8px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.16);
+  line-height: 142px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 
 const Image = styled.img`
-    max-width: 210px;
-    max-height: 97px;
-    object-fit: scale-down;
+  max-width: 210px;
+  max-height: 97px;
+  object-fit: scale-down;
 `
 
 const partnerList1 = [
+  {
+    logo: require('../../../assets/images/unicorn/mojito.png').default,
+    name: 'MojitoSwap',
+    link: 'https://app.mojitoswap.finance/',
+  },
   {
     logo: require('../../../assets/images/unicorn/saffron.png').default,
     name: 'saffron',
@@ -55,7 +59,6 @@ const partnerList1 = [
   },
   {
     logo: require('../../../assets/images/unicorn/pencilDao.png').default,
-
     name: 'PencilDAO',
     link: 'https://www.pencildao.com/staking.html#lomen-staking',
   },
@@ -88,11 +91,6 @@ const partnerList1 = [
     logo: require('../../../assets/images/unicorn/bridge.png').default,
     name: 'Bridge',
     link: 'https://www.bridgenetwork.com/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/mojito.png').default,
-    name: 'MojitoSwap',
-    link: 'https://app.mojitoswap.finance/',
   },
   {
     logo: require('../../../assets/images/unicorn/boringDao.png').default,
@@ -129,8 +127,6 @@ const partnerList1 = [
     name: 'Coinhub Wallet',
     link: 'https://www.coinhub.org/',
   },
-
-
   {
     logo: require('../../../assets/images/unicorn/swap.png').default,
     name: 'Transit Finance',
@@ -139,7 +135,7 @@ const partnerList1 = [
   {
     logo: require('../../../assets/images/unicorn/dcent.png').default,
     name: "D'Cent Wallet",
-    link: '	https://dcentwallet.com/MobileApp',
+    link: 'https://dcentwallet.com/MobileApp',
   },
   {
     logo: require('../../../assets/images/unicorn/nabox.png').default,
@@ -164,7 +160,7 @@ const partnerList1 = [
   {
     logo: require('../../../assets/images/unicorn/organix.png').default,
     name: 'Organix',
-    link: 'https://app.turbostarter.iohttps://www.ogx.network/#/',
+    link: 'https://www.ogx.network/#/',
   },
   {
     logo: require('../../../assets/images/unicorn/kuCake.png').default,
@@ -190,7 +186,8 @@ const partnerList1 = [
     logo: require('../../../assets/images/unicorn/sumer.png').default,
     name: 'Sumer.money',
     link: 'https://app.sumer.money/',
-  }, {
+  },
+  {
     logo: require('../../../assets/images/unicorn/light.png').default,
     name: 'Light DeFi',
     link: 'https://lightdefi.org/',
@@ -204,7 +201,7 @@ const partnerList1 = [
     logo: require('../../../assets/images/unicorn/dexTools.png').default,
     name: 'Dextools',
     link: 'https://www.dextools.io/',
-  }
+  },
 ]
 
 const participantPro = () => {
@@ -212,18 +209,13 @@ const participantPro = () => {
     <Content>
       <UnicornTitle title="Participating projects" />
       <ListCon>
-        {
-          partnerList1.map((item, index) => {
-            return (
-              <ListItem
-                key={index}
-                href={item.link}
-              >
-                <Image src={item.logo}></Image>
-              </ListItem>
-            )
-          })
-        }
+        {partnerList1.map((item, index) => {
+          return (
+            <ListItem key={index} href={item.link} target="_blank">
+              <Image src={item.logo}></Image>
+            </ListItem>
+          )
+        })}
       </ListCon>
     </Content>
   )

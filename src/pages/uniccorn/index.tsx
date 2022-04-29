@@ -12,7 +12,7 @@ import Award from './components/Award'
 import Apply from './components/Apply'
 import Prize from './components/Prizes'
 import Jury from './components/Jury'
-import ExperienceWeek from './components/ExprerienceWeek'
+import ExperienceWeek from './components/ExperienceWeek'
 import ActiveWeek from './components/ActiveWeek'
 
 const UnicornPageWrap = styled.div`

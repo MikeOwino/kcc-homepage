@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FadeInUp } from '../../../utils/animation'
 import UnicornTitle from './UnicornTitle'
-import { useResponsive } from '../../../utils/responsive'
 
 
 const Content = styled.div`
@@ -21,7 +19,7 @@ const ListCon = styled.div`
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
-   textAlign: center;
+   text-align: center;
    align-items: center;
    margin-top: 98px;
 `
@@ -37,22 +35,12 @@ const ListItem = styled.a`
     &:hover {
       transform: scale(1.1);
     }
-`   
+`
 
 const Image = styled.img`
     max-width: 210px;
     max-height: 97px;
     object-fit: scale-down;
-`
-const ParticipantName = styled.div`
-    font-family: 'SF Pro Text';
-    font-size: 18px;
-    line-height: 20px;
-    textAlign: 'center';
-    /* identical to box height, or 133% */
-    color: #ffffff;
-    margin-top: 20px;
-    height: 40px;
 `
 
 const partnerList1 = [
@@ -193,7 +181,7 @@ const partnerList1 = [
     logo: require('../../../assets/images/unicorn/fort.png').default,
     name: 'FORT Protocol',
     link: 'https://fortprotocol.com/',
-  }, 
+  },
   {
     logo: require('../../../assets/images/unicorn/poly.png').default,
     name: 'Poly Network',
@@ -207,7 +195,7 @@ const partnerList1 = [
     logo: require('../../../assets/images/unicorn/light.png').default,
     name: 'Light DeFi',
     link: 'https://lightdefi.org/',
-  }, 
+  },
   {
     logo: require('../../../assets/images/unicorn/guru.png').default,
     name: 'Guru Network',
@@ -219,28 +207,27 @@ const partnerList1 = [
     link: 'https://www.dextools.io/',
   }
 ]
-  
+
 const participantPro = () => {
-    const { isMobile } = useResponsive();
-    return (
-        <Content>
-          <UnicornTitle title="Participating projects" />
-          <ListCon>
-               {
-                partnerList1.map((item, index)=>{
-                    return (
-                        <ListItem
-                            key={index}
-                            href={item.link}
-                        >
-                         <Image   src={item.logo}></Image>
-                        </ListItem>
-                    )
-                })
-               } 
-          </ListCon>
-        </Content>
-    )
+  return (
+    <Content>
+      <UnicornTitle title="Participating projects" />
+      <ListCon>
+        {
+          partnerList1.map((item, index) => {
+            return (
+              <ListItem
+                key={index}
+                href={item.link}
+              >
+                <Image src={item.logo}></Image>
+              </ListItem>
+            )
+          })
+        }
+      </ListCon>
+    </Content>
+  )
 }
 
 export default participantPro

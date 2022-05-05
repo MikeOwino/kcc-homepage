@@ -28,8 +28,8 @@ const ListCon = styled.div`
 const ListItem = styled.a`
   width: 273px;
   height: 142px;
-  margin-bottom: 44px;
-  margin-right: 32px;
+  margin-bottom: 36px;
+  margin-right: 36px;
   border-radius: 8px;
   text-align: center;
   background: rgba(255, 255, 255, 0.16);

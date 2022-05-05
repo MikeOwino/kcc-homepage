@@ -132,6 +132,46 @@ const ActiveWeekList = [
     name: 'Crypto Elite’s Battlegrounds (CEBG)',
     link: 'https://www.kucoin.com/news/crypto-elites-battlegrounds-igo-is-coming-soon-limited-sale-of-8000-genesis-nfts?_cms_ts=1650699562&_cms_hash=5840d90d5a79f7375b67b394993c32eb20ed28496a7b5d94024080c235bd26e3&type=1',
   },
+  {
+    logo: require('../../../assets/images/unicorn/contest.png').default,
+    name: 'NaBox',
+    link: 'https://naboxwallet.medium.com/kcc-nabox-carnival-week-baa950b84d37?source=social.tw',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/contest.png').default,
+    name: 'Token Pocket',
+    link: 'https://www.tokenpocket.pro/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/contest.png').default,
+    name: 'Bitkeep',
+    link: 'https://blog.bitkeep.com/en/?p=584',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/contest.png').default,
+    name: 'Coinhub',
+    link: 'https://coinhub8483.zendesk.com/hc/en-001/articles/6063385176212',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/contest.png').default,
+    name: 'Ambire Wallet',
+    link: 'https://www.tokenpocket.pro/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/contest.png').default,
+    name: 'EmiSwap',
+    link: 'https://gleam.io/swVYm/kcc-carnival-week-general-event',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/contest.png').default,
+    name: '0xlend',
+    link: 'https://twitter.com/0xLendProtocol/status/1520689942266998785?s=20&t=aPBmM8W4ny8wwYzBeo--Mw',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/contest.png').default,
+    name: 'Transit Finance',
+    link: 'https://twitter.com/0xLendProtocol/status/1520689942266998785?s=20&t=aPBmM8W4ny8wwYzBeo--Mw',
+  }
 ]
 
 const ActiveWeek = () => {

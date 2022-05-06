@@ -52,7 +52,6 @@ const ListItem = styled.a`
   width: 376px;
   height: 282px;
   align-items: center;
-  background: #ffffff;
   margin-bottom: 48px;
   border-radius: 8px;
   transition: all 0.3s ease-in-out;
@@ -127,7 +126,7 @@ const ActiveWeekList = [
   {
     logo: require('../../../assets/images/unicorn/mojito-kcc.png').default,
     name: 'MojitoSwap',
-    link: 'https://twitter.com/MojitoSwap',
+    link: 'https://twitter.com/MojitoSwap/status/1522545212002029568?s=20&t=lr6D3eUrEBR-1SwSMDClgg',
   },
   {
     logo: require('../../../assets/images/unicorn/boringDao-kcc.jpg').default,
@@ -188,7 +187,7 @@ const ActiveWeekList = [
   {
     logo: require('../../../assets/images/unicorn/nabox-kcc.png').default,
     name: 'NaBox',
-    link: 'https://naboxwallet.medium.com/kcc-nabox-carnival-week-baa950b84d37?source=social.tw',
+    link: 'https://twitter.com/naboxwallet/status/1521822414661120000?s=20&t=ReipeGFJVZMm4y6_PYEOcw',
   },
   {
     logo: require('../../../assets/images/unicorn/tp-kcc.png').default,
@@ -203,12 +202,12 @@ const ActiveWeekList = [
   {
     logo: require('../../../assets/images/unicorn/coin-kcc.png').default,
     name: 'Coinhub',
-    link: 'https://coinhub8483.zendesk.com/hc/en-001/articles/6063385176212',
+    link: 'https://coinhubwallet.zendesk.com/hc/en-001/articles/6063385176212-KCC-Unicorn-Carnival-Announcement',
   },
   {
     logo: require('../../../assets/images/unicorn/ambire-kcc.png').default,
     name: 'Ambire Wallet',
-    link: 'https://www.tokenpocket.pro/',
+    link: 'https://blog.ambire.com/ambire-wallet-integrates-kucoin-community-chain-and-joins-unicorn-carnival-week-84abad1cea1e',
   },
   {
     logo: require('../../../assets/images/unicorn/emi-kcc.png').default,
@@ -218,7 +217,7 @@ const ActiveWeekList = [
   {
     logo: require('../../../assets/images/unicorn/oxlend-kcc.png').default,
     name: '0xlend',
-    link: 'https://twitter.com/0xLendProtocol/status/1520689942266998785?s=20&t=aPBmM8W4ny8wwYzBeo--Mw',
+    link: 'https://twitter.com/0xLendProtocol/status/1522496583702487040',
   },
   {
     logo: require('../../../assets/images/unicorn/transit-kcc.png').default,

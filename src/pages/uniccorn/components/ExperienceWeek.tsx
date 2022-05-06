@@ -48,13 +48,13 @@ const TipMsg = styled.a`
   background: linear-gradient(to right, #39d7e1, #38eabc);
   -webkit-background-clip: text;
   color: transparent;
-  &:hover{
-    text-decoration:underline;
+  &:hover {
+    text-decoration: underline;
   }
-  @media (max-width:768px){
-     height:auto;
-     padding:0 24px;
-     font-size:20px;
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 0 24px;
+    font-size: 20px;
   }
 `
 
@@ -64,13 +64,12 @@ const ExperienceWeek = () => {
       <Content>
         <UnicornTitle title="KCC Unicorn Carnival Week" />
         <Desc style={{ color: '#fff', textAlign: 'center' }}>
-          KCC Unicorn Carnival Week will be officially launched at 10:00 (UTC) on May 6th, 2022. During the event, users
-          have the <br />
-          opportunity to share 5,000 KCS provided by KCC and the enormous rewards provided by the project party.
-          <br />
+          KCC Unicorn Carnival Week is an on-chain-projects-joint-event hosted by KCC. During this Carnival, users only
+          need to complete specific tasks on KCC to get the opportunity to share a total of 5,000 KCS rewards, which are
+          provided by KCC and even additional rewards provided by projects.
         </Desc>
-        <TipMsg href="https://kccofficial.medium.com/4ae521dc9ec" target="_blank">
-          KCC Unicorn Carnival Week is Coming Soon!
+        <TipMsg href="https://kccofficial.medium.com/4c8dbfca0696" target="_blank">
+          Join the KCC Unicorn Carnival Week and Share 5,000 KCS Rewards Pool
         </TipMsg>
         <ParticipantPro />
       </Content>

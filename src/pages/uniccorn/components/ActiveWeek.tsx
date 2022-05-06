@@ -43,7 +43,7 @@ const Title = styled.div`
   text-align: center;
   color: #ffffff;
   margin: 0 20px;
-  @media (max-width: 768px) {
+  @media (max-width: 768px) { 
     font-size: 26px;
     margin: 0 8px;
   }
@@ -81,7 +81,7 @@ const ActiveWeekList = [
   {
     logo: require('../../../assets/images/unicorn/saffron-kcc.png').default,
     name: 'Saffron',
-    link: 'https://twitter.com/saffronfinance_/status/1519240111107579904?s=20&t=8Gw1f29l-aFFoE4QSuQrfg',
+    link: 'https://twitter.com/saffronfinance_/status/1522474703792885762?s=21&t=DsP0-jvxm1IVuE1PX3sEwA',
   },
   {
     logo: require('../../../assets/images/unicorn/kuSwap-kcc.png').default,
@@ -118,11 +118,11 @@ const ActiveWeekList = [
     name: 'KillSwitch',
     link: 'https://medium.com/killswitch-finance/eggo-kcc-collection-nfts-kcc-carnival-event-ebfb07e171c6',
   },
-  {
-    logo: require('../../../assets/images/unicorn/bridge-kcc.jpg').default,
-    name: 'Bridge',
-    link: 'https://gleam.io/aDdFR/kucoin-carnival-week',
-  },
+  // {
+  //   logo: require('../../../assets/images/unicorn/bridge-kcc.jpg').default,
+  //   name: 'Bridge',
+  //   link: 'https://gleam.io/aDdFR/kucoin-carnival-week',
+  // },
   {
     logo: require('../../../assets/images/unicorn/mojito-kcc.png').default,
     name: 'MojitoSwap',

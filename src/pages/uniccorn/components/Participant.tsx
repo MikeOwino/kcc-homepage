@@ -22,7 +22,7 @@ const ListCon = styled.div`
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     justify-content: center;
-      margin-top: 48px;
+    margin-top: 48px;
   }
 `
 const ListItem = styled.a`

@@ -18,6 +18,9 @@ const ListCon = styled.div`
   justify-content: flex-start;
   text-align: center;
   margin-top: 72px;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `
 
 const UnicornTitleWrap = styled.div`
@@ -56,6 +59,10 @@ const ListItem = styled.a`
   margin-right: 36px;
   &:nth-child(3n + 0) {
     margin-right: 0;
+  }
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 32px;
   }
 `
 
@@ -117,11 +124,11 @@ const ActiveWeekList = [
     name: 'Bridge',
     link: 'https://gleam.io/aDdFR/kucoin-carnival-week',
   },
-  // {
-  //   logo: require('../../../assets/images/unicorn/contest.png').default,
-  //   name: 'MojitoSwap',
-  //   link: 'https://twitter.com/MojitoSwap',
-  // },
+  {
+    logo: require('../../../assets/images/unicorn/mojito-kcc.png').default,
+    name: 'MojitoSwap',
+    link: 'https://twitter.com/MojitoSwap',
+  },
   {
     logo: require('../../../assets/images/unicorn/boringDao-kcc.jpg').default,
     name: 'BoringDAO',
@@ -150,13 +157,13 @@ const ActiveWeekList = [
   {
     logo: require('../../../assets/images/unicorn/coolming-kcc.png').default,
     name: 'Coolmining',
-    link: 'https://coolmininggame.medium.com/coolmining-trading-carnival-nabox-mojitoswap-coolmining-6184236b2d2e',
+    link: 'https://coolmininggame.medium.com/stake-cooha-share-1000-cooha-3a2a076b904b',
   },
-  // {
-  //   logo: require('../../../assets/images/unicorn/pikaster-kcc.jpg').default,
-  //   name: 'Pikaster',
-  //   link: 'https://twitter.com/PikasterNFT/status/1522110457313562625?s=20&t=f_ZfX0rQn5cu8TA6ILofTg',
-  // },
+  {
+    logo: require('../../../assets/images/unicorn/pikaster-kcc.jpg').default,
+    name: 'Pikaster',
+    link: 'https://app.mojitoswap.finance/nfts/collections/0x420FFeA7CB9d0c06C178a1485478d4C3B29055da',
+  },
   // {
   //   logo: require('../../../assets/images/unicorn/fabwelt-kcc.png').default,
   //   name: 'Fabwelt',
@@ -246,3 +253,4 @@ const ActiveWeek = () => {
 }
 
 export default ActiveWeek
+

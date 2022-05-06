@@ -68,7 +68,7 @@ const ExperienceWeek = () => {
           need to complete specific tasks on KCC to get the opportunity to share a total of 5,000 KCS rewards, which are
           provided by KCC and even additional rewards provided by projects.
         </Desc>
-        <TipMsg href="https://kccofficial.medium.com/4c8dbfca0696" target="_blank">
+        <TipMsg href="https://kccofficial.medium.com/join-the-kcc-unicorn-carnival-week-and-share-5-000-kcs-rewards-pool-160a31c0c0bd" target="_blank">
           Join the KCC Unicorn Carnival Week and Share 5,000 KCS Rewards Pool
         </TipMsg>
         <ParticipantPro />

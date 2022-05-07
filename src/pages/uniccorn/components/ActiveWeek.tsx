@@ -133,11 +133,11 @@ const ActiveWeekList = [
     name: 'BoringDAO',
     link: 'https://oportal.boringdao.com/twoway',
   },
-  // {
-  //   logo: require('../../../assets/images/unicorn/nash-kcc.png').default,
-  //   name: 'Nash Metaverse',
-  //   link: 'https://mirror.xyz/0xCa8feE2B3185381D690Dac5CfE8CE367Bf14d1A2/jHZTosUTGN7yRQIBSaN5SMlXEsB2WrDtlyLixihZ90g',
-  // },
+  {
+    logo: require('../../../assets/images/unicorn/nash-kcc.png').default,
+    name: 'Nash Metaverse',
+    link: 'https://mirror.xyz/0xCa8feE2B3185381D690Dac5CfE8CE367Bf14d1A2/jHZTosUTGN7yRQIBSaN5SMlXEsB2WrDtlyLixihZ90g',
+  },
   {
     logo: require('../../../assets/images/unicorn/vixenpups-kcc.png').default,
     name: 'VixenPunks',

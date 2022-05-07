@@ -62,6 +62,8 @@ const ListItem = styled.a`
   @media (max-width: 768px) {
     margin-right: 0;
     margin-bottom: 32px;
+    width: 320px;
+    height: 240px;
   }
 `
 

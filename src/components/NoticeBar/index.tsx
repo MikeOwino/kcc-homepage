@@ -158,7 +158,7 @@ const NoticeBar: React.FunctionComponent<NoticeBarProps> = () => {
       } else {
         announcment.push(enRiskAnnouncement)
         for (let i = 0; i < list.length; i++) {
-          if (!list[i].categories.includes('zh') || list[i].categories.includes('Zh')) {
+          if (!list[i].categories?.includes('zh') || list[i].categories?.includes('Zh')) {
             announcment.push(list[i])
           }
         }
@@ -166,7 +166,8 @@ const NoticeBar: React.FunctionComponent<NoticeBarProps> = () => {
       const arr = announcment.length > 3 ? announcment.splice(0, 3) : announcment
       console.log('arr', arr)
       setAnnoucementList(() => arr)
-    } catch {
+    } catch (e) {
+      console.log(e)
       message.error(t(`Get Announcement Faied`))
     }
   }

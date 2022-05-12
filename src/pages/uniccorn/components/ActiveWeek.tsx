@@ -150,11 +150,11 @@ const ActiveWeekList = [
     name: 'IdleStoneAge/SAX',
     link: 'https://gleam.io/XXfUq/airdrop-for-kcc-carnival-week-general-event',
   },
-  // {
-  //   logo: require('../../../assets/images/unicorn/myfarm-kcc.jpg').default,
-  //   name: 'My Meta Farm',
-  //   link: 'https://gleam.io/sT1Ea/kcc-carnival-week-general-event',
-  // },
+  {
+    logo: require('../../../assets/images/unicorn/myfarm-kcc.jpg').default,
+    name: 'My Meta Farm',
+    link: 'https://gleam.io/sT1Ea/kcc-carnival-week-general-event',
+  },
   {
     logo: require('../../../assets/images/unicorn/coolming-kcc.png').default,
     name: 'Coolmining',
@@ -165,11 +165,7 @@ const ActiveWeekList = [
     name: 'Pikaster',
     link: 'https://app.mojitoswap.finance/nfts/collections/0x420FFeA7CB9d0c06C178a1485478d4C3B29055da',
   },
-  // {
-  //   logo: require('../../../assets/images/unicorn/fabwelt-kcc.png').default,
-  //   name: 'Fabwelt',
-  //   link: '',
-  // },
+  
   // {
   //   logo: require('../../../assets/images/unicorn/armeda-kcc.png').default,
   //   name: 'Armeda',
@@ -225,6 +221,11 @@ const ActiveWeekList = [
     logo: require('../../../assets/images/unicorn/transit-kcc.png').default,
     name: 'Transit Finance',
     link: 'https://swap.transit.finance/#/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/pop_kcc.png').default,
+    name: 'Popop World',
+    link: 'https://twitter.com/popop_world/status/1522536517012697088',
   },
 ]
 

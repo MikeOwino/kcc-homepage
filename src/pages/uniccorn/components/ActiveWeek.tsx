@@ -91,7 +91,7 @@ const ActiveWeekList = [
     link: 'https://openleverage.medium.com/trade-vote-and-share-the-prize-in-kcc-unicorn-contest-f20758d6808c',
   },
   {
-    logo: require('../../../assets/images/unicorn/kuswap-kcc.png').default,
+    logo: require('../../../assets/images/unicorn/kuSwapunic-kcc.png').default,
     name: 'KuSwap',
     link: 'https://kuswap.finance/#/unicorn',
   },

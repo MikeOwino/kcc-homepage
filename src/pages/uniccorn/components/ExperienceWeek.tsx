@@ -71,6 +71,7 @@ const ExperienceWeek = () => {
         <TipMsg href="https://kccofficial.medium.com/join-the-kcc-unicorn-carnival-week-and-share-5-000-kcs-rewards-pool-160a31c0c0bd" target="_blank">
           Join the KCC Unicorn Carnival Week and Share 5,000 KCS Rewards Pool
         </TipMsg>
+        <ParticipantPro title="Top 10 Project" name="topTen"/>
         <ParticipantPro />
       </Content>
     </ActiveWrap>

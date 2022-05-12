@@ -240,7 +240,7 @@ const UnicornTitle: FunctionComponent<{ title: string; color?: string }> = ({ ti
 const ActiveWeek = () => {
   return (
     <Content>
-      <UnicornTitle title="KCC Unicorn Carnival Week" />
+      <UnicornTitle title="KCC Top Unicorns Week" />
       <ListCon>
         {ActiveWeekList.map((item, index) => {
           return (

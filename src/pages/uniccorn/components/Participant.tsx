@@ -264,6 +264,21 @@ const partnerList1 = [
     name: 'Crypto Elite’s Battlegrounds(CEBG)',
     link: 'https://linktr.ee/cebggames',
   },
+  {
+    logo: require('../../../assets/images/unicorn/ambire.png').default,
+    name: 'Ambire Wallet',
+    link: 'https://www.ambire.com/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/rush.png').default,
+    name: 'xrush',
+    link: 'https://www.xrush.io/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/popworld.png').default,
+    name: 'Popop World',
+    link: 'https://www.popop.world/',
+  },
 ]
 
 const UnicornTitleWrap = styled.div`

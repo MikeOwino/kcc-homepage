@@ -135,7 +135,7 @@
   "Connect your wallet": "Connect your wallet",
   "Connect Wallet": "Connect Wallet",
   "Invalid address": "Invalid address",
-  "Invalid address notice": "Please enter the correct address. Any error will result to the inability to receive the transferred amount. (Not the exchange/contact address)",
+  "Invalid address notice": "Please enter the correct address. Any error will result to the inability to receive the transferred amount. (Not the exchange/contract address)",
   "Next": "Next",
   "Transaction History": "Transaction History",
   "Amount received": "Amount received",

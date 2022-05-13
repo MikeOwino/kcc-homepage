@@ -10,12 +10,14 @@ const Content = styled.div`
     margin-top: 30px;
   }
 `
-const ListCon = styled.div`
+const ListCon = styled.div<{ name?: string }>`
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: ${({ name }) => {
+    return name === "topTen" ? "center" : "flex-start"
+  }};
   text-align: center;
   align-items: center;
   margin-top: 98px;
@@ -25,7 +27,7 @@ const ListCon = styled.div`
     margin-top: 48px;
   }
 `
-const ListItem = styled.a`
+const ListItem = styled.a<{ name?: string }>`
   width: 273px;
   height: 142px;
   margin-bottom: 36px;
@@ -41,6 +43,9 @@ const ListItem = styled.a`
   &:nth-child(4n + 0) {
     margin-right: 0;
   }
+  &:nth-last-child(1) {
+    margin-right: 0;
+  }
   @media (max-width: 768px) {
     margin-right: 0px;
     line-height: 142px;
@@ -53,31 +58,16 @@ const Image = styled.img`
   object-fit: scale-down;
 `
 
-const partnerList1 = [
-  {
-    logo: require('../../../assets/images/unicorn/mojito.png').default,
-    name: 'MojitoSwap',
-    link: 'https://app.mojitoswap.finance/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/saffron.png').default,
-    name: 'saffron',
-    link: 'https://kcc.saffron.finance/#home',
-  },
+const topTenList = [
   {
     logo: require('../../../assets/images/unicorn/kuSwap.png').default,
     name: 'KuSwap',
     link: 'https://kuswap.finance/#/swap',
   },
   {
-    logo: require('../../../assets/images/unicorn/pencilDao.png').default,
-    name: 'PencilDAO',
-    link: 'https://www.pencildao.com/staking.html#lomen-staking',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/kupay.png').default,
-    name: 'KuPay',
-    link: 'https://kupay.finance/',
+    logo: require('../../../assets/images/unicorn/mojito.png').default,
+    name: 'MojitoSwap',
+    link: 'https://app.mojitoswap.finance/',
   },
   {
     logo: require('../../../assets/images/unicorn/openLeverage.png').default,
@@ -85,20 +75,45 @@ const partnerList1 = [
     link: 'https://openleverage.finance/',
   },
   {
-    logo: require('../../../assets/images/unicorn/kuDoge.png').default,
-    name: 'KuDoge',
-    link: 'https://kudoge.io/home',
+    logo: require('../../../assets/images/unicorn/bithotel.png').default,
+    name: 'bitHotel',
+    link: '	https://bithotel.io/#/',
   },
   {
-    logo: require('../../../assets/images/unicorn/killSwitch.png').default,
-    name: 'KillSwitch',
-    link: 'https://killswitch.finance/',
+    logo: require('../../../assets/images/unicorn/nest.png').default,
+    name: 'Nest',
+    link: '	https://nestprotocol.org',
+  },
+
+  {
+    logo: require('../../../assets/images/unicorn/saffron.png').default,
+    name: 'saffron',
+    link: 'https://kcc.saffron.finance/#home',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/bitkeep.png').default,
+    name: 'Bitkeep',
+    link: 'https://bitkeep.com/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/infinity.png').default,
+    name: 'Infinity Wallet',
+    link: 'https://infinitywallet.io/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/tokenPocket.png').default,
+    name: 'Token Pocket',
+    link: 'https://www.tokenpocket.pro/',
   },
   {
     logo: require('../../../assets/images/unicorn/hashtag.png').default,
     name: 'XHashtag',
     link: 'https://www.xhashtag.io/',
   },
+]
+
+const partnerList = [
+
   {
     logo: require('../../../assets/images/unicorn/bridge.png').default,
     name: 'Bridge',
@@ -124,16 +139,8 @@ const partnerList1 = [
     name: 'Treasureland',
     link: 'https://treasureland.market/',
   },
-  {
-    logo: require('../../../assets/images/unicorn/tokenPocket.png').default,
-    name: 'Token Pocket',
-    link: 'https://www.tokenpocket.pro/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/bitkeep.png').default,
-    name: 'Bitkeep',
-    link: 'https://bitkeep.com/',
-  },
+
+
   {
     logo: require('../../../assets/images/unicorn/coinhub.png').default,
     name: 'Coinhub Wallet',
@@ -159,11 +166,7 @@ const partnerList1 = [
     name: 'TurboStarter',
     link: 'https://app.turbostarter.io',
   },
-  {
-    logo: require('../../../assets/images/unicorn/infinity.png').default,
-    name: 'Infinity Wallet',
-    link: 'https://infinitywallet.io/',
-  },
+
   {
     logo: require('../../../assets/images/unicorn/lend.png').default,
     name: 'Oxlend',
@@ -264,6 +267,21 @@ const partnerList1 = [
     name: 'Crypto Elite’s Battlegrounds(CEBG)',
     link: 'https://linktr.ee/cebggames',
   },
+  {
+    logo: require('../../../assets/images/unicorn/ambire.png').default,
+    name: 'Ambire Wallet',
+    link: 'https://www.ambire.com/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/rush.png').default,
+    name: 'xrush',
+    link: 'https://www.xrush.io/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/popworld.png').default,
+    name: 'Popop World',
+    link: 'https://www.popop.world/',
+  }
 ]
 
 const UnicornTitleWrap = styled.div`
@@ -300,18 +318,28 @@ const UnicornTitle: FunctionComponent<{ title: string; color?: string }> = ({ ti
   )
 }
 
-const participantPro = () => {
+
+interface Props {
+  title?: string,
+  name?: string
+}
+const participantPro: React.FunctionComponent<Props> = ({ title, name }) => {
+  console.log("title::", title);
+
   return (
+
     <Content>
-      <UnicornTitle title="Participating Projects" />
-      <ListCon>
-        {partnerList1.map((item, index) => {
-          return (
-            <ListItem key={index} href={item.link} target="_blank">
-              <Image src={item.logo}></Image>
-            </ListItem>
-          )
-        })}
+      <UnicornTitle title={title ? title : "Participating Projects"} />
+      <ListCon name={name}>
+        {
+          (name === "topTen" ? topTenList : partnerList).map((item, index) => {
+            return (
+              <ListItem name={name} key={index} href={item.link} target="_blank">
+                <Image src={item.logo}></Image>
+              </ListItem>
+            )
+          })
+        }
       </ListCon>
     </Content>
   )

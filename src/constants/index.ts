@@ -162,6 +162,11 @@ export const KCC = {
       logo: require('../assets/images/home/blog.png').default,
       route: 'https://blogtienao.com/',
     },
+    {
+      name: 'nest',
+      logo: require('../assets/images/home/nest.png').default,
+      route: 'https://www.nestprotocol.org',
+    },
   ],
 }
 

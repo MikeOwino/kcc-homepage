@@ -113,7 +113,26 @@ const topTenList = [
 ]
 
 const partnerList = [
-
+  {
+    logo: require('../../../assets/images/unicorn/pencilDao.png').default,
+    name: 'PencilDAO',
+    link: 'https://www.pencildao.com/staking.html#lomen-staking',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/kupay.png').default,
+    name: 'KuPay',
+    link: 'https://kupay.finance/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/kuDoge.png').default,
+    name: 'KuDoge',
+    link: 'https://kudoge.io/home',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/killSwitch.png').default,
+    name: 'KillSwitch',
+    link: 'https://killswitch.finance/',
+  },
   {
     logo: require('../../../assets/images/unicorn/bridge.png').default,
     name: 'Bridge',

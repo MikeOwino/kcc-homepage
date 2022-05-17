@@ -60,11 +60,6 @@ const Image = styled.img`
 
 const topTenList = [
   {
-    logo: require('../../../assets/images/unicorn/kuSwap.png').default,
-    name: 'KuSwap',
-    link: 'https://kuswap.finance/#/swap',
-  },
-  {
     logo: require('../../../assets/images/unicorn/mojito.png').default,
     name: 'MojitoSwap',
     link: 'https://app.mojitoswap.finance/',
@@ -74,21 +69,11 @@ const topTenList = [
     name: 'OpenLeverage',
     link: 'https://openleverage.finance/',
   },
-  {
-    logo: require('../../../assets/images/unicorn/bithotel.png').default,
-    name: 'bitHotel',
-    link: '	https://bithotel.io/#/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/nest.png').default,
-    name: 'Nest',
-    link: '	https://nestprotocol.org',
-  },
 
   {
-    logo: require('../../../assets/images/unicorn/saffron.png').default,
-    name: 'saffron',
-    link: 'https://kcc.saffron.finance/#home',
+    logo: require('../../../assets/images/unicorn/tokenPocket.png').default,
+    name: 'Token Pocket',
+    link: 'https://www.tokenpocket.pro/',
   },
   {
     logo: require('../../../assets/images/unicorn/bitkeep.png').default,
@@ -101,15 +86,31 @@ const topTenList = [
     link: 'https://infinitywallet.io/',
   },
   {
-    logo: require('../../../assets/images/unicorn/tokenPocket.png').default,
-    name: 'Token Pocket',
-    link: 'https://www.tokenpocket.pro/',
-  },
-  {
     logo: require('../../../assets/images/unicorn/hashtag.png').default,
     name: 'XHashtag',
     link: 'https://www.xhashtag.io/',
   },
+  {
+    logo: require('../../../assets/images/unicorn/nest.png').default,
+    name: 'Nest',
+    link: '	https://nestprotocol.org',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/bithotel.png').default,
+    name: 'bitHotel',
+    link: '	https://bithotel.io/#/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/kuSwap.png').default,
+    name: 'KuSwap',
+    link: 'https://kuswap.finance/#/swap',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/saffron.png').default,
+    name: 'saffron',
+    link: 'https://kcc.saffron.finance/#home',
+  },
+
 ]
 
 const partnerList = [

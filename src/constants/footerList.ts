@@ -38,10 +38,10 @@ export const FOOTER_LIST = [
         navText: 'Testnet Explorer',
         navRoute: KCC.TEST_EXPLORER,
       },
-      // {
-      //   navText: 'Mainnet faucet',
-      //   navRoute: KCC.MAINNET_FAUCET,
-      // },
+      {
+        navText: 'Mainnet faucet',
+        navRoute: KCC.MAINNET_FAUCET,
+      },
       {
         navText: 'Testnet faucet',
         navRoute: KCC.FAUCET,

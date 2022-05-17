@@ -69,12 +69,12 @@ export const MENU_LIST = [
         route: KCC.TEST_EXPLORER,
         icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
       },
-      // {
-      //   title: 'KCC Faucet',
-      //   subTitle: 'Get KCS tokens',
-      //   route: KCC.MAINNET_FAUCET,
-      //   icon: require('../assets/images/Icons/menu/main-faucet.png').default,
-      // },
+      {
+        title: 'KCC Faucet',
+        subTitle: 'Get KCS tokens',
+        route: KCC.MAINNET_FAUCET,
+        icon: require('../assets/images/Icons/menu/main-faucet.png').default,
+      },
       {
         title: 'Testnet faucet',
         subTitle: 'Get KCC testnet tokens',

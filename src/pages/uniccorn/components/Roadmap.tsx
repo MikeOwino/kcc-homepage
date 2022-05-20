@@ -163,11 +163,11 @@ const roadmapList = [
     text: 'Overall Top 10 and some individual award & prize-winning projects announced',
   },
   {
-    date: 'May 13th - May 16th',
+    date: 'May 25th - May 27th',
     text: 'Community voting for Final Top 5 ranked projects on snapshot.eth',
   },
   {
-    date: 'May 17th',
+    date: 'May 27th',
     text: 'Grant Prize Winning Projects Announced',
   },
 ]

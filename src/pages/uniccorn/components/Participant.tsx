@@ -60,11 +60,6 @@ const Image = styled.img`
 
 const topTenList = [
   {
-    logo: require('../../../assets/images/unicorn/kuSwap.png').default,
-    name: 'KuSwap',
-    link: 'https://kuswap.finance/#/swap',
-  },
-  {
     logo: require('../../../assets/images/unicorn/mojito.png').default,
     name: 'MojitoSwap',
     link: 'https://app.mojitoswap.finance/',
@@ -74,21 +69,11 @@ const topTenList = [
     name: 'OpenLeverage',
     link: 'https://openleverage.finance/',
   },
-  {
-    logo: require('../../../assets/images/unicorn/bithotel.png').default,
-    name: 'bitHotel',
-    link: '	https://bithotel.io/#/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/nest.png').default,
-    name: 'Nest',
-    link: '	https://nestprotocol.org',
-  },
 
   {
-    logo: require('../../../assets/images/unicorn/saffron.png').default,
-    name: 'saffron',
-    link: 'https://kcc.saffron.finance/#home',
+    logo: require('../../../assets/images/unicorn/tokenPocket.png').default,
+    name: 'Token Pocket',
+    link: 'https://www.tokenpocket.pro/',
   },
   {
     logo: require('../../../assets/images/unicorn/bitkeep.png').default,
@@ -101,27 +86,95 @@ const topTenList = [
     link: 'https://infinitywallet.io/',
   },
   {
-    logo: require('../../../assets/images/unicorn/tokenPocket.png').default,
-    name: 'Token Pocket',
-    link: 'https://www.tokenpocket.pro/',
-  },
-  {
     logo: require('../../../assets/images/unicorn/hashtag.png').default,
     name: 'XHashtag',
     link: 'https://www.xhashtag.io/',
   },
+  {
+    logo: require('../../../assets/images/unicorn/nest.png').default,
+    name: 'Nest',
+    link: '	https://nestprotocol.org',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/bithotel.png').default,
+    name: 'bitHotel',
+    link: '	https://bithotel.io/#/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/kuSwap.png').default,
+    name: 'KuSwap',
+    link: 'https://kuswap.finance/#/swap',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/saffron.png').default,
+    name: 'saffron',
+    link: 'https://kcc.saffron.finance/#home',
+  },
+
 ]
 
 const partnerList = [
+  {
+    logo: require('../../../assets/images/unicorn/kupay.png').default,
+    name: 'KuPay',
+    link: 'https://kupay.finance/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/pikaster.png').default,
+    name: 'Pikaster',
+    link: 'https://www.pikaster.com/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/swap.png').default,
+    name: 'Transit Finance',
+    link: 'https://swap.transit.finance/#/',
+  },
   {
     logo: require('../../../assets/images/unicorn/pencilDao.png').default,
     name: 'PencilDAO',
     link: 'https://www.pencildao.com/staking.html#lomen-staking',
   },
   {
-    logo: require('../../../assets/images/unicorn/kupay.png').default,
-    name: 'KuPay',
-    link: 'https://kupay.finance/',
+    logo: require('../../../assets/images/unicorn/boringDao.png').default,
+    name: 'BoringDAO',
+    link: 'https://www.boringdao.com/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/ambire.png').default,
+    name: 'Ambire Wallet',
+    link: 'https://www.ambire.com/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/treasureland.png').default,
+    name: 'Treasureland',
+    link: 'https://treasureland.market/',
+  },
+
+
+  {
+    logo: require('../../../assets/images/unicorn/ball.png').default,
+    name: 'Crypto Elite’s Battlegrounds(CEBG)',
+    link: 'https://linktr.ee/cebggames',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/coolmin.png').default,
+    name: 'Coolmining',
+    link: 'https://coolmining.io/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/poly.png').default,
+    name: 'Poly Network',
+    link: 'https://poly.network/#/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/nash.png').default,
+    name: 'Nash Metaverse',
+    link: 'https://www.nashmetaverse.xyz/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/stoneage.png').default,
+    name: 'IdleStoneAge / SAX',
+    link: 'https://www.idlestoneage.com/',
   },
   {
     logo: require('../../../assets/images/unicorn/kuDoge.png').default,
@@ -134,14 +187,19 @@ const partnerList = [
     link: 'https://killswitch.finance/',
   },
   {
-    logo: require('../../../assets/images/unicorn/bridge.png').default,
-    name: 'Bridge',
-    link: 'https://www.bridgenetwork.com/',
+    logo: require('../../../assets/images/unicorn/vixen.png').default,
+    name: 'VixenPunks',
+    link: 'https://discord.gg/uWaW9HqjAu',
   },
   {
-    logo: require('../../../assets/images/unicorn/boringDao.png').default,
-    name: 'BoringDAO',
-    link: 'https://www.boringdao.com/',
+    logo: require('../../../assets/images/unicorn/fort.png').default,
+    name: 'FORT Protocol',
+    link: 'https://fortprotocol.com/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/guru.png').default,
+    name: 'Guru Network',
+    link: 'https://kcc.guru/',
   },
   {
     logo: require('../../../assets/images/unicorn/amara.png').default,
@@ -149,26 +207,54 @@ const partnerList = [
     link: 'https://www.amara.link/',
   },
   {
+    logo: require('../../../assets/images/unicorn/dexTools.png').default,
+    name: 'Dextools',
+    link: 'https://www.dextools.io/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/light.png').default,
+    name: 'Light DeFi',
+    link: 'https://lightdefi.org/',
+  },
+  {
     logo: require('../../../assets/images/unicorn/emiSwap.png').default,
     name: 'EmiSwap',
     link: 'https://emiswap.com/main',
   },
   {
-    logo: require('../../../assets/images/unicorn/treasureland.png').default,
-    name: 'Treasureland',
-    link: 'https://treasureland.market/',
-  },
-
-
-  {
-    logo: require('../../../assets/images/unicorn/coinhub.png').default,
-    name: 'Coinhub Wallet',
-    link: 'https://www.coinhub.org/',
+    logo: require('../../../assets/images/unicorn/kuCake.png').default,
+    name: 'KuCake',
+    link: 'https://kucake.com/#/',
   },
   {
-    logo: require('../../../assets/images/unicorn/swap.png').default,
-    name: 'Transit Finance',
-    link: 'https://swap.transit.finance/#/',
+    logo: require('../../../assets/images/unicorn/bridge.png').default,
+    name: 'Bridge',
+    link: 'https://www.bridgenetwork.com/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/lend.png').default,
+    name: 'Oxlend',
+    link: 'https://www.0xlend.io/#/market',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/alend.png').default,
+    name: 'Alend',
+    link: 'https://app.alend.xyz/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/organix.png').default,
+    name: 'Organix',
+    link: 'https://www.ogx.network/#/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/sumer.png').default,
+    name: 'Sumer.money',
+    link: 'https://app.sumer.money/',
+  },
+  {
+    logo: require('../../../assets/images/unicorn/killbox.png').default,
+    name: 'The Killbox Game',
+    link: 'https://www.thekillboxgame.com/',
   },
   {
     logo: require('../../../assets/images/unicorn/dcent.png').default,
@@ -185,21 +271,10 @@ const partnerList = [
     name: 'TurboStarter',
     link: 'https://app.turbostarter.io',
   },
-
   {
-    logo: require('../../../assets/images/unicorn/lend.png').default,
-    name: 'Oxlend',
-    link: 'https://www.0xlend.io/#/market',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/organix.png').default,
-    name: 'Organix',
-    link: 'https://www.ogx.network/#/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/kuCake.png').default,
-    name: 'KuCake',
-    link: 'https://kucake.com/#/',
+    logo: require('../../../assets/images/unicorn/coinhub.png').default,
+    name: 'Coinhub Wallet',
+    link: 'https://www.coinhub.org/',
   },
   {
     logo: require('../../../assets/images/unicorn/tatum.png').default,
@@ -207,69 +282,9 @@ const partnerList = [
     link: 'https://tatum.io/',
   },
   {
-    logo: require('../../../assets/images/unicorn/fort.png').default,
-    name: 'FORT Protocol',
-    link: 'https://fortprotocol.com/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/poly.png').default,
-    name: 'Poly Network',
-    link: 'https://poly.network/#/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/sumer.png').default,
-    name: 'Sumer.money',
-    link: 'https://app.sumer.money/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/light.png').default,
-    name: 'Light DeFi',
-    link: 'https://lightdefi.org/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/guru.png').default,
-    name: 'Guru Network',
-    link: 'https://kcc.guru/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/dexTools.png').default,
-    name: 'Dextools',
-    link: 'https://www.dextools.io/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/alend.png').default,
-    name: 'Alend',
-    link: 'https://app.alend.xyz/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/nash.png').default,
-    name: 'Nash Metaverse',
-    link: 'https://www.nashmetaverse.xyz/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/vixen.png').default,
-    name: 'VixenPunks',
-    link: 'https://discord.gg/uWaW9HqjAu',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/stoneage.png').default,
-    name: 'IdleStoneAge / SAX',
-    link: 'https://www.idlestoneage.com/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/myMetaFarm.png').default,
-    name: 'My Meta Farm',
-    link: 'https://mymetafarm.com/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/coolmin.png').default,
-    name: 'Coolmining',
-    link: 'https://coolmining.io/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/pikaster.png').default,
-    name: 'Pikaster',
-    link: 'https://www.pikaster.com/',
+    logo: require('../../../assets/images/unicorn/popworld.png').default,
+    name: 'Popop World',
+    link: 'https://www.popop.world/',
   },
   {
     logo: require('../../../assets/images/unicorn/fabwelt.png').default,
@@ -277,29 +292,14 @@ const partnerList = [
     link: 'http://www.fabwelt.com/',
   },
   {
-    logo: require('../../../assets/images/unicorn/killbox.png').default,
-    name: 'The Killbox Game',
-    link: 'https://www.thekillboxgame.com/',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/ball.png').default,
-    name: 'Crypto Elite’s Battlegrounds(CEBG)',
-    link: 'https://linktr.ee/cebggames',
-  },
-  {
-    logo: require('../../../assets/images/unicorn/ambire.png').default,
-    name: 'Ambire Wallet',
-    link: 'https://www.ambire.com/',
-  },
-  {
     logo: require('../../../assets/images/unicorn/rush.png').default,
     name: 'xrush',
     link: 'https://www.xrush.io/',
   },
   {
-    logo: require('../../../assets/images/unicorn/popworld.png').default,
-    name: 'Popop World',
-    link: 'https://www.popop.world/',
+    logo: require('../../../assets/images/unicorn/myMetaFarm.png').default,
+    name: 'My Meta Farm',
+    link: 'https://mymetafarm.com/',
   }
 ]
 

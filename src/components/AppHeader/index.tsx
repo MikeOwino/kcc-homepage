@@ -72,7 +72,7 @@ const AppHeader: React.FunctionComponent = (props: any) => {
         <HeaderLeftWrap>
           <KccLogo abbr={true} sourceType={PictureType.svg} styles={{ width: '90px', textAlign: 'left' }} />
           <BrowserView>
-            <AppMenu style={{ width: 'calc(100vw - 460px)', position: 'relative', top: '3px' }} />
+            <AppMenu style={{ width: 'calc(100vw - 500px)', position: 'relative', top: '3px' }} />
           </BrowserView>
         </HeaderLeftWrap>
 

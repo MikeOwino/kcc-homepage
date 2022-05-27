@@ -554,6 +554,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
     height: 550px;
     background: url(${TwoLine}) 0px 0px no-repeat;
     background-size: 99% 100%;
+    overflow: hidden;
     @media (max-width: 768px) {
       flex-flow: column nowrap;
       align-items: flex-start;

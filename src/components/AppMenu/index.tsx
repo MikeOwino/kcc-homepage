@@ -30,7 +30,7 @@ const MenuWrap = styled.div`
   z-index: 2;
   @media (max-width: 768px) {
     margin-left: 0px;
-    justify-align: flex-end;
+    justify-self: flex-end;
     position: absolute;
     top: 70px;
     left: 0px;

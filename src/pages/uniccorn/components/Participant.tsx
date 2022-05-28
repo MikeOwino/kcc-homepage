@@ -101,9 +101,9 @@ const topTenList = [
     link: '	https://bithotel.io/#/',
   },
   {
-    logo: require('../../../assets/images/unicorn/kuSwap.png').default,
-    name: 'KuSwap',
-    link: 'https://kuswap.finance/#/swap',
+    logo: require('../../../assets/images/unicorn/openLeverage.png').default,
+    name: 'OpenLeverage',
+    link: 'https://openleverage.finance/',
   },
   {
     logo: require('../../../assets/images/unicorn/saffron.png').default,

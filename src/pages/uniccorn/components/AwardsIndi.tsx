@@ -77,7 +77,7 @@ const PrizeText = styled.div`
   }
 `
 
-const CardItem = styled.div`
+const CardItem = styled.a`
   width: 920px;
   height: 140px;
   border: 2px solid #31e1b9;
@@ -254,13 +254,13 @@ const AwardsIndi = () => {
         <Content>
           <UnicornTitle title="Individual Awards" />
           <Desc>
-            Individual prizes are<NumberText>$20,000</NumberText> respectively
+            Individual prizes are<NumberText>$30,000</NumberText> respectively
           </Desc>
 
           <CardList>
             {awardList1.map((avatar, index) => {
               return (
-                <CardItem key={index}>
+                <CardItem key={index} href={avatar.link} target="_blank">
                   <PrizeImage src={avatar.icon} key={index} />
                   <TextWrap>
                     <PrizeText>{avatar.title}</PrizeText>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import styled, { css } from 'styled-components'
 import ThreeLine from './ThreeLine'
 import { useResponsive } from '../../../utils/responsive'
@@ -85,7 +85,7 @@ const AwardBg = styled.div<{ bg: string; width: string }>`
     `};
 `
 
-const RankItem = styled.div`
+const RankItem = styled.a`
   height: 130px;
   margin-bottom: 34px;
   display: flex;
@@ -111,16 +111,14 @@ const RankItem = styled.div`
   }
 `
 
-
 const AwardWarp = styled.div`
   height: 130px;
   /* width: 680px; */
   margin-bottom: 34px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-
 
   @media (max-width: 768px) {
     width: 20%;
@@ -231,33 +229,27 @@ const GrandPrize = () => {
   return (
     <RankWrap>
       <FadeInUp>
-        {/* <UnicornTitle color="#FFB547" title="Grand Prize Awards" /> */}
-        {isMobile ? (
-          <Image src={require('../../../assets/images/unicorn/m-ranking.png').default} />
-        ) : (
-          <RankContent>
-            {awardList.map((award, index) => {
-              return (
-                <RankItem key={index}>
-                  <AwardText style={{ color: award.color }}>{award.rank}</AwardText>
-                  <AwardAvatar src={award.icon} />
-                  <AwardBg width={award.width || '300px'} bg={award.bg}>
-                    <AwardWarp>
+        <RankContent>
+          {awardList.map((award, index) => {
+            return (
+              <RankItem key={index} href={award.link} target="_blank">
+                <AwardText style={{ color: award.color }}>{award.rank}</AwardText>
+                <AwardAvatar src={award.icon} />
+                <AwardBg width={award.width || '300px'} bg={award.bg}>
+                  <AwardWarp>
                     <AwardPrize>
-                      <Text style={{fontSize: '36px'}}> {award.award}</Text>
+                      <Text style={{ fontSize: '36px' }}> {award.award}</Text>
                       <Text style={{ color: '#ffffff' }}>{award.name}</Text>
                     </AwardPrize>
                     <AwardLink href={award.link} target="_blank">
                       <AwardLogo src={award.logo}></AwardLogo>
                     </AwardLink>
-                    </AwardWarp>
-                  
-                  </AwardBg>
-                </RankItem>
-              )
-            })}
-          </RankContent>
-        )}
+                  </AwardWarp>
+                </AwardBg>
+              </RankItem>
+            )
+          })}
+        </RankContent>
       </FadeInUp>
     </RankWrap>
   )

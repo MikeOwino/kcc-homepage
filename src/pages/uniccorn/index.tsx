@@ -118,7 +118,7 @@ const UnicornPage: React.FunctionComponent = () => {
       <Award />
       <Prize />
       <Roadmap />
-      <Apply />
+      {/* <Apply /> */}
       <Jury />
     </UnicornPageWrap>
   )

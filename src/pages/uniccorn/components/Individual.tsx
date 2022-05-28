@@ -176,7 +176,7 @@ const Individual: React.FunctionComponent<Props> = ({ title, name }) => {
 
   return (
     <Content>
-      <UnicornTitle title={title ? title : "Grand Prize Awards"} />
+      <UnicornTitle title={title ? title : "Grand Prize Awards "} />
       <GrandPrize/>
       <AwardsInde/>
       <AwardsIndi/>

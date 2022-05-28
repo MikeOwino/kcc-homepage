@@ -9,7 +9,7 @@ const AwardWrap = styled.div`
     padding-top: 60px;
   }
 `
-const AwardImageWrap = styled.div`
+const AwardImageWrap = styled.a`
   overflow: hidden;
   width: 240px;
   height: 248px;
@@ -215,14 +215,14 @@ const AwardsInde = () => {
         <Content>
           <UnicornTitle title="Independent Awards" />
           <Desc>
-            Individual prizes are <NumberText>$30,000</NumberText> respectively
+            Independent prizes are <NumberText>$20,000</NumberText> respectively
           </Desc>
           <CardList>
             {awardList1.map((avatar, index) => {
               return (
-                <AwardImageWrap key={index}>
+                <AwardImageWrap key={index} href={avatar.link} target="_blank">
                   <AwardImage src={avatar.src} key={index} />
-                  <AwardLink>
+                  <AwardLink  href={avatar.link} target="_blank">
                     <AwardLogo src={avatar.logo}></AwardLogo>
                   </AwardLink>
                 </AwardImageWrap>
@@ -232,7 +232,7 @@ const AwardsInde = () => {
           <CardList>
             {awardList2.map((avatar, index) => {
               return (
-                <AwardImageWrap key={index}>
+                <AwardImageWrap key={index} href={avatar.link} target="_blank">
                   <AwardImage src={avatar.src} key={index} />
                   <AwardLink href={avatar.link} target="_blank">
                     <AwardLogo src={avatar.logo}></AwardLogo>

@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
-import UnicornTitle from './UnicornTitle'
 import { useResponsive } from '../../../utils/responsive'
 import { FadeInUp } from '../../../utils/animation'
 
@@ -133,6 +132,30 @@ const NumberText = styled.div`
     font-size: 40px;
   }
 `
+const UnicornTitleWrap = styled.div`
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 768px) {
+    padding: 0 24px;
+  }
+`
+const Title = styled.div`
+  font-family: 'SF Pro Display Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  /* identical to box height */
+  text-align: center;
+  color: #ffffff;
+  margin: 0 20px;
+  @media (max-width: 768px) {
+    font-size: 26px;
+    margin: 0 8px;
+  }
+`
 
 const awardList1 = [
   {
@@ -156,26 +179,32 @@ const awardList1 = [
     name: 'KuSwap',
     link: 'https://kuswap.finance/#/swap',
   },
-
-
 ]
 
 const awardList2 = [
-    {
-        src: require('../../../assets/images/unicorn/award5.png').default,
-        text: 'Best Social Contribution Award',
-        logo: require('../../../assets/images/unicorn/kupay.png').default,
-        name: 'KuPay',
-        link: 'https://kupay.finance/',
-      },
-      {
-        src: require('../../../assets/images/unicorn/award3.png').default,
-        text: 'Best Wallet Experience Award ',
-        logo: require('../../../assets/images/unicorn/tokenPocket.png').default,
-        name: 'Token Pocket',
-        link: 'https://www.tokenpocket.pro/',
-      },
+  {
+    src: require('../../../assets/images/unicorn/award5.png').default,
+    text: 'Best Social Contribution Award',
+    logo: require('../../../assets/images/unicorn/kupay.png').default,
+    name: 'KuPay',
+    link: 'https://kupay.finance/',
+  },
+  {
+    src: require('../../../assets/images/unicorn/award3.png').default,
+    text: 'Best Wallet Experience Award ',
+    logo: require('../../../assets/images/unicorn/tokenPocket.png').default,
+    name: 'Token Pocket',
+    link: 'https://www.tokenpocket.pro/',
+  },
 ]
+
+const UnicornTitle: FunctionComponent<{ title: string; color?: string }> = ({ title, color }) => {
+  return (
+    <UnicornTitleWrap>
+      <Title style={{ color: color ?? '#fff' }}>{title}</Title>
+    </UnicornTitleWrap>
+  )
+}
 
 const AwardsInde = () => {
   const { isMobile } = useResponsive()
@@ -198,8 +227,8 @@ const AwardsInde = () => {
                 </AwardImageWrap>
               )
             })}
-              </CardList>
-              <CardList>
+          </CardList>
+          <CardList>
             {awardList2.map((avatar, index) => {
               return (
                 <AwardImageWrap key={index}>
@@ -210,7 +239,7 @@ const AwardsInde = () => {
                 </AwardImageWrap>
               )
             })}
-            </CardList>
+          </CardList>
         </Content>
       </FadeInUp>
     </AwardWrap>

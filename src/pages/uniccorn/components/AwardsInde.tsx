@@ -24,8 +24,9 @@ const AwardImageWrap = styled.div`
   justify-content: center;
   align-items: center;
   @media (max-width: 768px) {
+    margin-right: 0;
     width: 323px;
-    height: 123px;
+    height: 248px;
     & + & {
       margin-left: 0px;
       margin-top: 30px;

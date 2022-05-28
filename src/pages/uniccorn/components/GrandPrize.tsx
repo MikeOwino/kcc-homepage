@@ -93,6 +93,7 @@ const RankItem = styled.div`
   justify-content: flex-start;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  align-items: center;
 
   /* &:hover {
     ${AwardAvatar} {
@@ -148,15 +149,16 @@ const Image = styled.img`
 `
 
 const Text = styled.div`
+  width: 300px;
   font-family: 'SF Pro Display Bold';
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
   line-height: 38px;
   /* or 136% */
-  text-align: center;
+  text-align: left;
   color: #fff;
-  margin-top: 20px;
+  margin-top: 10px;
 `
 const awardList = [
   {
@@ -192,9 +194,9 @@ const awardList = [
     bg: require('../../../assets/images/unicorn/Rectangle3st.png').default,
     width: '760px',
     name: 'Diamond Unicorn',
-    logo: require('../../../assets/images/unicorn/openLeverage.png').default,
-    title: 'OpenLeverage',
-    link: 'https://openleverage.finance/',
+    logo: require('../../../assets/images/unicorn/kuSwap.png').default,
+    title: 'KuSwap',
+    link: 'https://kuswap.finance/#/swap',
   },
   {
     award: '$50,000',

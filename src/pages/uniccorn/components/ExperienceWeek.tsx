@@ -2,6 +2,7 @@ import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 import UnicornTitle from './UnicornTitle'
 import ParticipantPro from './Participant'
+import Individual from './Individual'
 
 const ActiveWrap = styled.div`
   padding-top: 168px;
@@ -62,18 +63,20 @@ const ExperienceWeek = () => {
   return (
     <ActiveWrap>
       <Content>
-        <UnicornTitle title="KCC Unicorn Carnival Week" />
-        <Desc style={{ color: '#fff', textAlign: 'center' }}>
+        <UnicornTitle title="KCC Unicorn Contest Winners Revealed" />
+        {/* <Desc style={{ color: '#fff', textAlign: 'center' }}>
           KCC Unicorn Carnival Week is an on-chain-projects-joint-event hosted by KCC. During this Carnival, users only
           need to complete specific tasks on KCC to get the opportunity to share a total of 5,000 KCS rewards, which are
           provided by KCC and even additional rewards provided by projects.
         </Desc>
         <TipMsg href="https://kccofficial.medium.com/16c5ef54bf67" target="_blank">
          Join KCC Top Unicorns Week and Win Limited NFT Airdrop
-        </TipMsg>
+        </TipMsg> */}
+         <Individual />
         <ParticipantPro title="Top 10 Projects" name="topTen"/>
-        <ParticipantPro />
+        {/* <ParticipantPro /> */}
       </Content>
+     
     </ActiveWrap>
   )
 }

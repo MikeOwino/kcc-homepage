@@ -109,7 +109,7 @@ const UnicornPage: React.FunctionComponent = () => {
       <Banner />
       <StartBg id="start-bg"></StartBg>
       <ExperienceWeek />
-      <ActiveWeek />
+      {/* <ActiveWeek /> */}
       {/* <KCCDesc /> */}
       <Wanted />
       {/* <RankWrap>
@@ -118,7 +118,7 @@ const UnicornPage: React.FunctionComponent = () => {
       <Award />
       <Prize />
       <Roadmap />
-      <Apply />
+      {/* <Apply /> */}
       <Jury />
     </UnicornPageWrap>
   )

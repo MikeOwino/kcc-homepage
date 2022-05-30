@@ -174,7 +174,7 @@ const SelectToken: React.FunctionComponent<SelectTokenProps> = ({ list, currency
       >
         <SelectItem>
           <TokenWrap>
-            <TokenIcon src={token?.logoUrl} />
+            <TokenIcon src={`/token/${token?.symbol.toLowerCase()}.png`} />
             <TokenDescriptionWrap>
               <TokenName>{token?.symbol.toUpperCase()}</TokenName>
               <FullName>{token.name ?? token.symbol}</FullName>
@@ -196,7 +196,7 @@ const SelectToken: React.FunctionComponent<SelectTokenProps> = ({ list, currency
             setShow(() => true)
           }}
         >
-          <TokenIcon src={currency?.logoUrl} />
+          <TokenIcon src={`/token/${currency?.symbol.toLowerCase()}.png`} />
           <TokenText>{currency?.symbol.toUpperCase()}</TokenText>
         </TokenWrap>
         <RightOutlined style={{ fontSize: '10px', color: '#01081e' }} />
@@ -225,9 +225,18 @@ const SelectToken: React.FunctionComponent<SelectTokenProps> = ({ list, currency
             suffix={null}
             placeholder={t('Search')}
           />
-          <ListWrap> 
+          <ListWrap>
             {tokenList}
-            <InfoText>{t("Didn't find your token？or you can try")} <span style={{color: '#31D7A0', cursor: 'pointer'}} onClick={() => window.open('https://forms.office.com/r/fBYJgH68ZX')}>{t("submit")}</span> {t("it to us.")}</InfoText>
+            <InfoText>
+              {t("Didn't find your token？or you can try")}{' '}
+              <span
+                style={{ color: '#31D7A0', cursor: 'pointer' }}
+                onClick={() => window.open('https://forms.office.com/r/fBYJgH68ZX')}
+              >
+                {t('submit')}
+              </span>{' '}
+              {t('it to us.')}
+            </InfoText>
           </ListWrap>
         </TokenListModal>
       </Modal>

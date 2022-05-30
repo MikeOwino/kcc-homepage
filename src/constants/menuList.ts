@@ -1,6 +1,6 @@
 import { KCC } from './index'
 
-import UnicornLink from '../components/UnicornLink';
+import UnicornLink from '../components/UnicornLink'
 export interface NavItemType {
   name: any
   hasChildren?: boolean
@@ -34,12 +34,8 @@ export const HOME_MENU_LIST = [
     subTitle: 'Visit our Github community',
     route: KCC.GITHUB_URL,
     icon: require('../assets/images/Icons/menu/github@2x.png').default,
-  }
+  },
 ]
-
-
-
-
 
 export const MENU_LIST = [
   {
@@ -137,6 +133,12 @@ export const MENU_LIST = [
             subTitle: 'Visit and link to metamask',
             route: 'https://metamask.io',
             icon: require('../assets/images/Icons/menu/metamask@2x.png').default,
+          },
+          {
+            title: 'KuCoin Wallet',
+            subTitle: 'Go to KuCoin Wallet',
+            route: 'https://www.kuwallet.com',
+            icon: require('../assets/images/Icons/menu/kuwallet.svg').default,
           },
           // {
           //   title: 'ImToken',

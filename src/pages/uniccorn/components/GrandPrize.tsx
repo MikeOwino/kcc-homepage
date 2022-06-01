@@ -2,15 +2,13 @@ import React, { FunctionComponent } from 'react'
 import styled, { css } from 'styled-components'
 import ThreeLine from './ThreeLine'
 import { useResponsive } from '../../../utils/responsive'
-import { FadeInUp } from '../../../utils/animation'
 import UnicornTitle from './UnicornTitle'
 
 const RankWrap = styled.div`
   width: 100%;
-  padding-top: 100px;
   margin: 0 auto;
   @media (max-width: 768px) {
-    padding-top: 50px;
+    /* padding-top: 50px; */
     padding-bottom: 0px;
   }
 `
@@ -27,7 +25,7 @@ const RankContent = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   position: relative;
-  margin-top: 50px;
+  margin-top: 64px;
   @media (max-width: 768px) {
     padding: 0px 10px;
     height: auto;
@@ -63,7 +61,6 @@ const AwardAvatar = styled.img`
   margin-top: 10px;
   transition: all 0.3s ease-in-out;
 `
-
 const AwardBg = styled.div<{ bg: string; width: string }>`
   height: 100%;
   margin-left: 25px;
@@ -143,7 +140,7 @@ const AwardLogo = styled.img`
 const Image = styled.img`
   width: 100%;
   height: auto;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 `
 
 const Text = styled.div`
@@ -228,7 +225,6 @@ const GrandPrize = () => {
 
   return (
     <RankWrap>
-      <FadeInUp>
         <RankContent>
           {awardList.map((award, index) => {
             return (
@@ -250,7 +246,6 @@ const GrandPrize = () => {
             )
           })}
         </RankContent>
-      </FadeInUp>
     </RankWrap>
   )
 }

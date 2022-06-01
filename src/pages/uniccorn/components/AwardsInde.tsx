@@ -4,15 +4,15 @@ import { useResponsive } from '../../../utils/responsive'
 import { FadeInUp } from '../../../utils/animation'
 
 const AwardWrap = styled.div`
-  padding-top: 210px;
+  padding-top: 160px;
   @media (max-width: 768px) {
     padding-top: 60px;
   }
 `
 const AwardImageWrap = styled.a`
   overflow: hidden;
-  width: 240px;
-  height: 248px;
+  width: 280px;
+  height: 240px;
   margin-right: 36px;
   cursor: pointer;
   transform-style: preserve-3d;
@@ -51,7 +51,7 @@ const Desc = styled.div`
   line-height: 32px;
   text-align: center;
   color: #ffffff;
-  margin-top: 85px;
+  margin-top: 20px;
   max-width: 1100px;
   @media (max-width: 768px) {
     font-size: 14px;

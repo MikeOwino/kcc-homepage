@@ -1,10 +1,9 @@
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 import { useResponsive } from '../../../utils/responsive'
-import { FadeInUp } from '../../../utils/animation'
 
 const PrizeWrap = styled.div`
-  padding-top: 210px;
+  padding-top: 160px;
   @media (max-width: 768px) {
     padding-top: 100px;
     padding-right: 20px;
@@ -29,7 +28,7 @@ const Desc = styled.div`
   line-height: 32px;
   text-align: center;
   color: #ffffff;
-  margin-top: 85px;
+  margin-top: 20px;
   max-width: 900px;
   @media (max-width: 768px) {
     margin-top: 58px;
@@ -47,7 +46,7 @@ const CardList = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 85px;
+  margin-top: 64px;
 
   @media (max-width: 768px) {
     margin-top: 48px;
@@ -80,11 +79,12 @@ const PrizeText = styled.div`
 const CardItem = styled.a`
   width: 920px;
   height: 140px;
+  padding-left: 34px;
   border: 2px solid #31e1b9;
   box-sizing: border-box;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -119,7 +119,8 @@ const PrizeImage = styled.img`
 const TextWrap = styled.div`
   height: 64px;
   width: 100%;
-  max-width: 550px;
+  max-width: 400px;
+  margin-right: 100px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -154,7 +155,7 @@ const AwardLogo = styled.img`
   max-height: 40px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   object-fit: fill;
   @media (max-width: 768px) {
@@ -250,7 +251,6 @@ const AwardsIndi = () => {
   const { isMobile } = useResponsive()
   return (
     <PrizeWrap>
-      <FadeInUp delay={200}>
         <Content>
           <UnicornTitle title="Individual Awards" />
           <Desc>
@@ -273,7 +273,7 @@ const AwardsIndi = () => {
             })}
           </CardList>
         </Content>
-      </FadeInUp>
+    
     </PrizeWrap>
   )
 }

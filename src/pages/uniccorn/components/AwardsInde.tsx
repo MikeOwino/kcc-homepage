@@ -23,10 +23,17 @@ const AwardImageWrap = styled.a`
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+  @media (min-width: 768px) {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
   @media (max-width: 768px) {
     margin-right: 0;
-    width: 323px;
-    height: 248px;
+    width: 327px;
+    height: 210px;
     & + & {
       margin-left: 0px;
       margin-top: 30px;
@@ -69,7 +76,6 @@ const CardList = styled.div`
   align-items: center;
   width: 100%;
   margin-top: 36px;
-
   @media (max-width: 768px) {
     margin-top: 48px;
     flex-flow: column nowrap;
@@ -82,8 +88,8 @@ const Link = styled.a`
 `
 
 const AwardLogo = styled.img`
-  max-width: 180px;
-  max-height: 40px;
+  max-width: 210px;
+  height: auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -103,9 +109,7 @@ const AwardImage = styled.img`
   cursor: pointer;
   /* transition: all 0.3s ease-in-out; */
   @media (max-width: 768px) {
-    width: 100%;
     height: auto;
-    max-width: 400px;
     & + & {
       margin-left: 0px;
       margin-top: 30px;
@@ -129,8 +133,8 @@ const NumberText = styled.div`
   text-align: center;
   color: #2fd7b5;
   @media (max-width: 768px) {
-    margin: 16px 60px;
-    font-size: 40px;
+    margin: 0 5px;
+    font-size: 20px;
   }
 `
 const UnicornTitleWrap = styled.div`
@@ -222,7 +226,7 @@ const AwardsInde = () => {
               return (
                 <AwardImageWrap key={index} href={avatar.link} target="_blank">
                   <AwardImage src={avatar.src} key={index} />
-                  <AwardLink  href={avatar.link} target="_blank">
+                  <AwardLink href={avatar.link} target="_blank">
                     <AwardLogo src={avatar.logo}></AwardLogo>
                   </AwardLink>
                 </AwardImageWrap>

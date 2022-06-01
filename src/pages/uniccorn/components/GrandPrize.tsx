@@ -41,6 +41,10 @@ const AwardText = styled.div`
   font-size: 36px;
   margin-right: 25px;
   /* identical to box height */
+  @media (max-width: 768px) {
+    margin-right: 0;
+    font-size: 24px;
+  }
 `
 const AwardPrize = styled.div`
   font-family: 'SF Pro Display Bold';
@@ -60,8 +64,16 @@ const AwardAvatar = styled.img`
   height: 120px;
   margin-top: 10px;
   transition: all 0.3s ease-in-out;
+  @media (max-width: 768px) {
+    position: absolute;
+    left: 113px;
+    top: -60px;
+    width: 100px;
+    height: 100px;
+  }
 `
-const AwardBg = styled.div<{ bg: string; width: string }>`
+const AwardBg = styled.div<{ bg: string; width?: string }>`
+  position: relative;
   height: 100%;
   margin-left: 25px;
   font-family: 'SF Pro Display Bold';
@@ -80,31 +92,44 @@ const AwardBg = styled.div<{ bg: string; width: string }>`
       background-size: cover;
       width: ${width};
     `};
+  @media (max-width: 768px) {
+    width: 327px;
+    height: 240px;
+    text-align: center;
+    padding-left: 0;
+    margin: 0 auto;
+  }
 `
 
 const RankItem = styled.a`
   height: 130px;
   margin-bottom: 34px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row;
   justify-content: flex-start;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   align-items: center;
-
-  /* &:hover {
-    ${AwardAvatar} {
-      position: relative;
-      transform: translateY(-20px);
+  @media (min-width: 768px) {
+    &:hover {
+      ${AwardAvatar} {
+        position: relative;
+        transform: scale(1.1);
+      }
+      ${AwardText} {
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        transform: rotateY(360deg);
+      }
     }
-    ${AwardText} {
-      transition: all 0.5s ease-in-out;
-      position: relative;
-      transform: rotateY(360deg);
-    }
-  } */
+  }
   @media (max-width: 768px) {
-    width: 20%;
+    flex-flow: column;
+    /* justify-content: flex-start; */
+    margin: 0 0 58px 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 240px;
   }
 `
 
@@ -118,22 +143,27 @@ const AwardWarp = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
-    width: 20%;
+    /* width: 20%; */
+    height: 240px;
+    justify-content: center;
+    flex-flow: column;
+    margin-bottom: 20px;
   }
 `
 
 const AwardLogo = styled.img`
-  max-width: 180px;
-  max-height: 40px;
+  max-width: 250px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   object-fit: fill;
   @media (max-width: 768px) {
+    width: auto;
     padding: 0 40px;
     font-size: 20px;
     line-height: 24px;
+    object-fit: fill;
   }
 `
 
@@ -154,6 +184,11 @@ const Text = styled.div`
   text-align: left;
   color: #fff;
   margin-top: 10px;
+  @media (max-width: 768px) {
+    width: auto;
+    font-size: 16px;
+    line-height: 16px;
+  }
 `
 const awardList = [
   {
@@ -162,6 +197,7 @@ const awardList = [
     icon: require('../../../assets/images/unicorn/gold.png').default,
     color: '#F18449',
     bg: require('../../../assets/images/unicorn/Rectangle1st.png').default,
+    bgm: require('../../../assets/images/unicorn/RectangleM1st.png').default,
     width: '902px',
     name: 'Legendary Unicorn',
     logo: require('../../../assets/images/unicorn/mojito.png').default,
@@ -174,19 +210,20 @@ const awardList = [
     icon: require('../../../assets/images/unicorn/purple.png').default,
     color: '#A853E4',
     bg: require('../../../assets/images/unicorn/Rectangle2st.png').default,
+    bgm: require('../../../assets/images/unicorn/RectangleM2st.png').default,
     width: '872px',
     name: 'Epic Unicorn',
     logo: require('../../../assets/images/unicorn/openLeverage.png').default,
     title: 'OpenLeverage',
     link: 'https://openleverage.finance/',
   },
-
   {
     award: '$100,000',
     rank: '3rd',
     icon: require('../../../assets/images/unicorn/blue.png').default,
     color: '#3FC1F1',
     bg: require('../../../assets/images/unicorn/Rectangle3st.png').default,
+    bgm: require('../../../assets/images/unicorn/RectangleM3st.png').default,
     width: '760px',
     name: 'Diamond Unicorn',
     logo: require('../../../assets/images/unicorn/kuSwap.png').default,
@@ -199,6 +236,7 @@ const awardList = [
     icon: require('../../../assets/images/unicorn/gray-avatar.png').default,
     color: '#EBDAA9',
     bg: require('../../../assets/images/unicorn/Rectangle4st.png').default,
+    bgm: require('../../../assets/images/unicorn/RectangleM4st.png').default,
     width: '758px',
     name: 'Gold Unicorn',
     logo: require('../../../assets/images/unicorn/bitkeep.png').default,
@@ -212,6 +250,7 @@ const awardList = [
     icon: require('../../../assets/images/unicorn/gray-avatar.png').default,
     color: '#EBDAA9',
     bg: require('../../../assets/images/unicorn/Rectangle5st.png').default,
+    bgm: require('../../../assets/images/unicorn/RectangleM5st.png').default,
     width: '700px',
     name: 'Gold Unicorn',
     logo: require('../../../assets/images/unicorn/hashtag.png').default,
@@ -222,30 +261,45 @@ const awardList = [
 
 const GrandPrize = () => {
   const { isMobile } = useResponsive()
-
   return (
     <RankWrap>
-        <RankContent>
-          {awardList.map((award, index) => {
-            return (
-              <RankItem key={index} href={award.link} target="_blank">
-                <AwardText style={{ color: award.color }}>{award.rank}</AwardText>
-                <AwardAvatar src={award.icon} />
-                <AwardBg width={award.width || '300px'} bg={award.bg}>
-                  <AwardWarp>
-                    <AwardPrize>
-                      <Text style={{ fontSize: '36px' }}> {award.award}</Text>
-                      <Text style={{ color: '#ffffff' }}>{award.name}</Text>
-                    </AwardPrize>
-                    <AwardLink href={award.link} target="_blank">
+      <RankContent>
+        {isMobile
+          ? awardList.map((award, index) => {
+              return (
+                <RankItem key={index} href={award.link} target="_blank">
+                  <AwardText style={{ color: '#fff' }}>{award.rank}</AwardText>
+                  <AwardBg bg={award.bgm}>
+                    <AwardAvatar src={award.icon} />
+                    <AwardWarp>
+                      <Text style={{ fontSize: '24px' }}> {award.award}</Text>
+                      <Text style={{ color: '#ffffff', fontWeight: 'normal', margin: '20px 0' }}>{award.name}</Text>
                       <AwardLogo src={award.logo}></AwardLogo>
-                    </AwardLink>
-                  </AwardWarp>
-                </AwardBg>
-              </RankItem>
-            )
-          })}
-        </RankContent>
+                    </AwardWarp>
+                  </AwardBg>
+                </RankItem>
+              )
+            })
+          : awardList.map((award, index) => {
+              return (
+                <RankItem key={index} href={award.link} target="_blank">
+                  <AwardText style={{ color: award.color }}>{award.rank}</AwardText>
+                  <AwardAvatar src={award.icon} />
+                  <AwardBg width={award.width || '300px'} bg={award.bg}>
+                    <AwardWarp>
+                      <AwardPrize>
+                        <Text style={{ fontSize: '36px' }}> {award.award}</Text>
+                        <Text style={{ color: '#ffffff' }}>{award.name}</Text>
+                      </AwardPrize>
+                      <AwardLink href={award.link} target="_blank">
+                        <AwardLogo src={award.logo}></AwardLogo>
+                      </AwardLink>
+                    </AwardWarp>
+                  </AwardBg>
+                </RankItem>
+              )
+            })}
+      </RankContent>
     </RankWrap>
   )
 }

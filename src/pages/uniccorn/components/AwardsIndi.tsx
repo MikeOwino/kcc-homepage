@@ -31,10 +31,9 @@ const Desc = styled.div`
   margin-top: 20px;
   max-width: 900px;
   @media (max-width: 768px) {
-    margin-top: 58px;
+    margin-top: 40px;
     font-size: 20px;
     line-height: 32px;
-    padding: 0 24px;
     margin-top: 32px;
     text-align: center;
     width: 100%;
@@ -68,11 +67,11 @@ const PrizeText = styled.div`
   line-height: 64px;
   font-family: 'SF Pro Text';
   @media (max-width: 768px) {
-    margin-top: 33px;
-    font-size: 24px;
-    line-height: 40px;
+    margin: 24px auto;
+    font-size: 20px;
     text-align: center;
     max-width: 250px;
+    line-height: 20px;
   }
 `
 
@@ -91,22 +90,20 @@ const CardItem = styled.a`
   & + & {
     margin-top: 24px;
   }
-  &:hover {
+  @media (min-width: 768px) {
+    &:hover {
     background: rgba(49, 225, 185, 0.1);
     transform: translateX(-30px);
   }
+  }
   @media (max-width: 768px) {
-    justify-content: flex-start;
-    width: 100%;
-    height: auto;
-    flex-flow: column nowrap;
-    padding: 48px 22px;
+    width: 335px;
+    height: 320px;
+    justify-content: space-around;
+    flex-flow: column;
+    padding: 36px 22px;
     & + & {
       margin-top: 16px;
-    }
-    &:hover {
-      background: rgba(49, 225, 185, 0.1);
-      transform: translateX(0px);
     }
   }
 `
@@ -127,7 +124,7 @@ const TextWrap = styled.div`
   align-items: center;
   margin-left: 66px;
   @media (max-width: 768px) {
-    margin-left: 0px;
+    margin: 0 auto;
     height: auto;
   }
 `
@@ -142,8 +139,8 @@ const NumberText = styled.div`
   text-align: center;
   color: #2fd7b5;
   @media (max-width: 768px) {
-    margin: 16px 60px;
-    font-size: 40px;
+    margin: 0 15px;
+    font-size: 20px;
   }
 `
 const AwardLink = styled.a`
@@ -151,8 +148,8 @@ const AwardLink = styled.a`
 `
 
 const AwardLogo = styled.img`
-  max-width: 180px;
-  max-height: 40px;
+  max-width: 210px;
+  height: auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -236,7 +233,6 @@ const awardList1 = [
     name: 'PencilDAO',
     link: 'https://www.pencildao.com/staking.html#lomen-staking',
   },
-
 ]
 
 const UnicornTitle: FunctionComponent<{ title: string; color?: string }> = ({ title, color }) => {
@@ -251,29 +247,28 @@ const AwardsIndi = () => {
   const { isMobile } = useResponsive()
   return (
     <PrizeWrap>
-        <Content>
-          <UnicornTitle title="Individual Awards" />
-          <Desc>
-            Individual prizes are<NumberText>$30,000</NumberText> respectively
-          </Desc>
+      <Content>
+        <UnicornTitle title="Individual Awards" />
+        <Desc>
+          Individual prizes are<NumberText>$30,000</NumberText> respectively
+        </Desc>
 
-          <CardList>
-            {awardList1.map((avatar, index) => {
-              return (
-                <CardItem key={index} href={avatar.link} target="_blank">
-                  <PrizeImage src={avatar.icon} key={index} />
-                  <TextWrap>
-                    <PrizeText>{avatar.title}</PrizeText>
-                  </TextWrap>
-                  <AwardLink href={avatar.link} target="_blank">
-                    <AwardLogo src={avatar.logo}></AwardLogo>
-                    </AwardLink> 
-                </CardItem>
-              )
-            })}
-          </CardList>
-        </Content>
-    
+        <CardList>
+          {awardList1.map((avatar, index) => {
+            return (
+              <CardItem key={index} href={avatar.link} target="_blank">
+                <PrizeImage src={avatar.icon} key={index} />
+                <TextWrap>
+                  <PrizeText>{avatar.title}</PrizeText>
+                </TextWrap>
+                <AwardLink href={avatar.link} target="_blank">
+                  <AwardLogo src={avatar.logo}></AwardLogo>
+                </AwardLink>
+              </CardItem>
+            )
+          })}
+        </CardList>
+      </Content>
     </PrizeWrap>
   )
 }

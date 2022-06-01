@@ -31,12 +31,12 @@ const Desc = styled.div`
   margin-top: 20px;
   max-width: 900px;
   @media (max-width: 768px) {
-    margin-top: 40px;
-    font-size: 20px;
+    font-size: 14px;
     line-height: 32px;
+    padding: 0 24px;
     margin-top: 32px;
     text-align: center;
-    width: 100%;
+    width: 90%;
   }
 `
 const CardList = styled.div`
@@ -139,7 +139,7 @@ const NumberText = styled.div`
   text-align: center;
   color: #2fd7b5;
   @media (max-width: 768px) {
-    margin: 0 15px;
+    margin: 0 5px;
     font-size: 20px;
   }
 `

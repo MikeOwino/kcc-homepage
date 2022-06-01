@@ -75,7 +75,7 @@ const CardList = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 36px;
+  margin-top: 64px;
   @media (max-width: 768px) {
     margin-top: 48px;
     flex-flow: column nowrap;

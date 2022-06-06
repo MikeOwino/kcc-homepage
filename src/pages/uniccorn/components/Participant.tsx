@@ -5,7 +5,7 @@ const Content = styled.div`
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  margin-top: 98px;
+  margin-top: 160px;
   @media (max-width: 768px) {
     margin-top: 30px;
   }
@@ -20,7 +20,7 @@ const ListCon = styled.div<{ name?: string }>`
   }};
   text-align: center;
   align-items: center;
-  margin-top: 98px;
+  margin-top: 74px;
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     justify-content: center;

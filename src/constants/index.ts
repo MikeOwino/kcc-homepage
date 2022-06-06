@@ -122,6 +122,11 @@ export const KCC = {
       route: 'https://www.kucoin.com/land/kucoinlabs',
     },
     {
+      name: 'KuCoin Wallet',
+      logo: require('../assets/images/home/kucoin-wallet.png').default,
+      route: 'https://www.kuwallet.com',
+    },
+    {
       name: 'TokenView',
       logo: require('../assets/images/home/tokenview.png').default,
       route: 'https://tokenview.com/en',
